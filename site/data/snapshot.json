@@ -1,0 +1,2406 @@
+{
+  "generated_at": "2026-10-12T19:44:21",
+  "caveat": "A snapshot of one run of the pipeline on synthetic data, exported to static files. Not a live service.",
+  "runs": [
+    {
+      "run_id": "1ba71403-601c-4582-8903-5a6639f04796",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 499,
+      "started_at": "2026-10-12T19:44:19.548113+01:00",
+      "completed_at": "2026-10-12T19:44:19.579607+01:00",
+      "error_message": null,
+      "business_date": "2026-10-10",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 17
+    },
+    {
+      "run_id": "6f033a59-ab79-4d7e-966e-739ffe3646d3",
+      "scenario": "invalid_values",
+      "status": "success",
+      "rows_processed": 1343,
+      "started_at": "2026-10-12T19:44:18.129358+01:00",
+      "completed_at": "2026-10-12T19:44:18.183376+01:00",
+      "error_message": null,
+      "business_date": "2026-10-09",
+      "incidents": 3,
+      "failed_checks": 3,
+      "total_checks": 17
+    },
+    {
+      "run_id": "5d78c7c4-5361-44fc-95da-ccc2ec6e3820",
+      "scenario": "volume_drop",
+      "status": "success",
+      "rows_processed": 435,
+      "started_at": "2026-10-12T19:44:16.720602+01:00",
+      "completed_at": "2026-10-12T19:44:16.752912+01:00",
+      "error_message": null,
+      "business_date": "2026-10-08",
+      "incidents": 1,
+      "failed_checks": 1,
+      "total_checks": 17
+    },
+    {
+      "run_id": "71851bbc-b79d-45ed-b084-6043d2dc4f1d",
+      "scenario": "income_shift",
+      "status": "success",
+      "rows_processed": 1260,
+      "started_at": "2026-10-12T19:44:15.247650+01:00",
+      "completed_at": "2026-10-12T19:44:15.308667+01:00",
+      "error_message": null,
+      "business_date": "2026-10-07",
+      "incidents": 3,
+      "failed_checks": 0,
+      "total_checks": 17
+    },
+    {
+      "run_id": "354f80fc-1229-4bc3-8727-63aca3908a17",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1108,
+      "started_at": "2026-10-12T19:44:13.658802+01:00",
+      "completed_at": "2026-10-12T19:44:13.710824+01:00",
+      "error_message": null,
+      "business_date": "2026-10-06",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 17
+    },
+    {
+      "run_id": "2aad9305-99c0-4353-91df-d6005c88beba",
+      "scenario": "missing_income",
+      "status": "success",
+      "rows_processed": 1171,
+      "started_at": "2026-10-12T19:44:12.249387+01:00",
+      "completed_at": "2026-10-12T19:44:12.299339+01:00",
+      "error_message": null,
+      "business_date": "2026-10-05",
+      "incidents": 4,
+      "failed_checks": 2,
+      "total_checks": 17
+    },
+    {
+      "run_id": "6301c1a6-d4d4-42bb-9bb7-82d4beaae3c3",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 475,
+      "started_at": "2026-10-12T19:44:10.782701+01:00",
+      "completed_at": "2026-10-12T19:44:10.810914+01:00",
+      "error_message": null,
+      "business_date": "2026-10-04",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 17
+    },
+    {
+      "run_id": "9715f89f-cc4f-4d68-8b18-2b41a298bd22",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 466,
+      "started_at": "2026-10-12T19:44:09.386122+01:00",
+      "completed_at": "2026-10-12T19:44:09.417871+01:00",
+      "error_message": null,
+      "business_date": "2026-10-03",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 17
+    },
+    {
+      "run_id": "150713ba-26e4-4ce8-9ea0-40a2099d4309",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1123,
+      "started_at": "2026-10-12T19:44:08.724484+01:00",
+      "completed_at": "2026-10-12T19:44:08.763653+01:00",
+      "error_message": null,
+      "business_date": "2026-10-02",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "57adfaf1-eb1f-4f48-8ff3-79926c359660",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1271,
+      "started_at": "2026-10-12T19:44:08.670782+01:00",
+      "completed_at": "2026-10-12T19:44:08.714517+01:00",
+      "error_message": null,
+      "business_date": "2026-10-01",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "6cb78d4a-af97-4bd6-8905-12009e80a790",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1197,
+      "started_at": "2026-10-12T19:44:08.620597+01:00",
+      "completed_at": "2026-10-12T19:44:08.660532+01:00",
+      "error_message": null,
+      "business_date": "2026-09-30",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "813a8622-9ec8-4e7d-9508-dbd97c4cc7ae",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1073,
+      "started_at": "2026-10-12T19:44:08.572794+01:00",
+      "completed_at": "2026-10-12T19:44:08.610567+01:00",
+      "error_message": null,
+      "business_date": "2026-09-29",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "8bc1e48b-c36b-4145-98f9-583ee4b8a30d",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1100,
+      "started_at": "2026-10-12T19:44:08.523099+01:00",
+      "completed_at": "2026-10-12T19:44:08.563084+01:00",
+      "error_message": null,
+      "business_date": "2026-09-28",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "c6105110-022c-4861-8b52-084a4d8d600a",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 422,
+      "started_at": "2026-10-12T19:44:08.494976+01:00",
+      "completed_at": "2026-10-12T19:44:08.513185+01:00",
+      "error_message": null,
+      "business_date": "2026-09-27",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "04e73c64-f00a-4d73-a9c8-8f681ffb3dfa",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 484,
+      "started_at": "2026-10-12T19:44:08.467659+01:00",
+      "completed_at": "2026-10-12T19:44:08.487142+01:00",
+      "error_message": null,
+      "business_date": "2026-09-26",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "ad08bb0a-8adc-4a7a-8f27-284e43ea2a2c",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1135,
+      "started_at": "2026-10-12T19:44:08.419032+01:00",
+      "completed_at": "2026-10-12T19:44:08.457532+01:00",
+      "error_message": null,
+      "business_date": "2026-09-25",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "e4421434-9e2d-4987-ab77-1129454233b5",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1123,
+      "started_at": "2026-10-12T19:44:08.372680+01:00",
+      "completed_at": "2026-10-12T19:44:08.408780+01:00",
+      "error_message": null,
+      "business_date": "2026-09-24",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "093c140a-94b2-478b-92c2-1ed4a4889af3",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1226,
+      "started_at": "2026-10-12T19:44:08.313502+01:00",
+      "completed_at": "2026-10-12T19:44:08.363567+01:00",
+      "error_message": null,
+      "business_date": "2026-09-23",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "b05d115f-3313-45ae-841d-6a24e8636be1",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1266,
+      "started_at": "2026-10-12T19:44:08.262597+01:00",
+      "completed_at": "2026-10-12T19:44:08.303531+01:00",
+      "error_message": null,
+      "business_date": "2026-09-22",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "792ce3a5-d79d-48cb-9fd2-e463c9e26da3",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1039,
+      "started_at": "2026-10-12T19:44:08.222423+01:00",
+      "completed_at": "2026-10-12T19:44:08.253822+01:00",
+      "error_message": null,
+      "business_date": "2026-09-21",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "38beb51a-c9cb-4afe-b31b-36496316dff4",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 386,
+      "started_at": "2026-10-12T19:44:08.200286+01:00",
+      "completed_at": "2026-10-12T19:44:08.214610+01:00",
+      "error_message": null,
+      "business_date": "2026-09-20",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "d379835e-4814-4b22-8b69-9d973383c9f1",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 473,
+      "started_at": "2026-10-12T19:44:08.177924+01:00",
+      "completed_at": "2026-10-12T19:44:08.194656+01:00",
+      "error_message": null,
+      "business_date": "2026-09-19",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "1c507d8e-1a52-4321-ab43-adc32df19456",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1135,
+      "started_at": "2026-10-12T19:44:08.137381+01:00",
+      "completed_at": "2026-10-12T19:44:08.171469+01:00",
+      "error_message": null,
+      "business_date": "2026-09-18",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "1d1e3a88-3369-4c86-8bd8-355fd6e4fa26",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1078,
+      "started_at": "2026-10-12T19:44:08.090693+01:00",
+      "completed_at": "2026-10-12T19:44:08.127580+01:00",
+      "error_message": null,
+      "business_date": "2026-09-17",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "85a08630-4a80-46ce-8493-f9fa2d56bc03",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1153,
+      "started_at": "2026-10-12T19:44:08.042594+01:00",
+      "completed_at": "2026-10-12T19:44:08.081252+01:00",
+      "error_message": null,
+      "business_date": "2026-09-16",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "417079ed-d572-4304-a4e3-b510a763de44",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1261,
+      "started_at": "2026-10-12T19:44:07.995820+01:00",
+      "completed_at": "2026-10-12T19:44:08.033520+01:00",
+      "error_message": null,
+      "business_date": "2026-09-15",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "1d0477af-1e13-4f88-893b-0149a507c430",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1213,
+      "started_at": "2026-10-12T19:44:07.949871+01:00",
+      "completed_at": "2026-10-12T19:44:07.986009+01:00",
+      "error_message": null,
+      "business_date": "2026-09-14",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "53959cbc-d0fc-456c-8cc9-a9cacd86cc14",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 501,
+      "started_at": "2026-10-12T19:44:07.924456+01:00",
+      "completed_at": "2026-10-12T19:44:07.941595+01:00",
+      "error_message": null,
+      "business_date": "2026-09-13",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "b6fb4b90-8020-4471-a3e1-68dd27d601ee",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 454,
+      "started_at": "2026-10-12T19:44:07.901477+01:00",
+      "completed_at": "2026-10-12T19:44:07.918309+01:00",
+      "error_message": null,
+      "business_date": "2026-09-12",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "fa01a03b-3cab-4343-91a7-0bea722f1cf8",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1086,
+      "started_at": "2026-10-12T19:44:07.858726+01:00",
+      "completed_at": "2026-10-12T19:44:07.894605+01:00",
+      "error_message": null,
+      "business_date": "2026-09-11",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "0f35ee22-33ca-4dd9-a86d-fa22335a2f31",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1065,
+      "started_at": "2026-10-12T19:44:07.812818+01:00",
+      "completed_at": "2026-10-12T19:44:07.849211+01:00",
+      "error_message": null,
+      "business_date": "2026-09-10",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "2afc021b-67b1-4950-ba9f-de1c583a4827",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1181,
+      "started_at": "2026-10-12T19:44:07.762375+01:00",
+      "completed_at": "2026-10-12T19:44:07.803205+01:00",
+      "error_message": null,
+      "business_date": "2026-09-09",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "8100ee8f-0ef0-4acb-845f-6c6b3f044487",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1163,
+      "started_at": "2026-10-12T19:44:07.712045+01:00",
+      "completed_at": "2026-10-12T19:44:07.752320+01:00",
+      "error_message": null,
+      "business_date": "2026-09-08",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "3b1ba5c0-b079-4d40-bea7-da8890540732",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1186,
+      "started_at": "2026-10-12T19:44:07.664069+01:00",
+      "completed_at": "2026-10-12T19:44:07.702791+01:00",
+      "error_message": null,
+      "business_date": "2026-09-07",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "a3feba10-96c2-46cc-ae22-f016b4c41fc7",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 441,
+      "started_at": "2026-10-12T19:44:07.639954+01:00",
+      "completed_at": "2026-10-12T19:44:07.655822+01:00",
+      "error_message": null,
+      "business_date": "2026-09-06",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "ead176b5-00b0-4558-8fed-9dd721420f1d",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 476,
+      "started_at": "2026-10-12T19:44:07.617313+01:00",
+      "completed_at": "2026-10-12T19:44:07.634064+01:00",
+      "error_message": null,
+      "business_date": "2026-09-05",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "aae269e5-a73f-44ad-bcbf-a07fe93f8cde",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1230,
+      "started_at": "2026-10-12T19:44:07.566353+01:00",
+      "completed_at": "2026-10-12T19:44:07.610951+01:00",
+      "error_message": null,
+      "business_date": "2026-09-04",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "b665e0ef-1452-4b01-b215-8cbc4191b97d",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1316,
+      "started_at": "2026-10-12T19:44:07.510083+01:00",
+      "completed_at": "2026-10-12T19:44:07.555731+01:00",
+      "error_message": null,
+      "business_date": "2026-09-03",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "e61cbe82-0649-4eb1-a245-80e46a15a35c",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1177,
+      "started_at": "2026-10-12T19:44:07.456225+01:00",
+      "completed_at": "2026-10-12T19:44:07.499264+01:00",
+      "error_message": null,
+      "business_date": "2026-09-02",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    },
+    {
+      "run_id": "b5ce3841-3791-4c54-90c9-e9734d1ff261",
+      "scenario": "healthy",
+      "status": "success",
+      "rows_processed": 1285,
+      "started_at": "2026-10-12T19:44:07.393970+01:00",
+      "completed_at": "2026-10-12T19:44:07.446001+01:00",
+      "error_message": null,
+      "business_date": "2026-09-01",
+      "incidents": 0,
+      "failed_checks": 0,
+      "total_checks": 0
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "e381d6b8-4c51-49e8-a3de-6273a17c97e8",
+      "run_id": "6f033a59-ab79-4d7e-966e-739ffe3646d3",
+      "category": "validity",
+      "severity": "critical",
+      "status": "open",
+      "title": "CRITICAL: validity problem in credit_score",
+      "description": "credit_score has 77 values outside [300, 850]",
+      "column_name": "credit_score",
+      "evidence": {
+        "check": "credit_score_in_band",
+        "expected": {
+          "max": 850.0,
+          "min": 300.0
+        },
+        "observed": {
+          "rate": 0.05733,
+          "sample": [
+            9999.0,
+            9999.0,
+            9999.0
+          ],
+          "out_of_range": 77,
+          "affected_rows": 77
+        },
+        "check_type": "range"
+      },
+      "created_at": "2026-10-12T19:44:19.495979+01:00",
+      "scenario": "invalid_values"
+    },
+    {
+      "incident_id": "68d56e68-4e29-454f-be12-1d7c894d920c",
+      "run_id": "6f033a59-ab79-4d7e-966e-739ffe3646d3",
+      "category": "validity",
+      "severity": "critical",
+      "status": "open",
+      "title": "CRITICAL: validity problem in loan_amount",
+      "description": "loan_amount has 47 values outside [1, 1e+06]",
+      "column_name": "loan_amount",
+      "evidence": {
+        "check": "loan_amount_positive",
+        "expected": {
+          "max": 1000000.0,
+          "min": 1.0
+        },
+        "observed": {
+          "rate": 0.035,
+          "sample": [
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "out_of_range": 47,
+          "affected_rows": 47
+        },
+        "check_type": "range"
+      },
+      "created_at": "2026-10-12T19:44:19.495979+01:00",
+      "scenario": "invalid_values"
+    },
+    {
+      "incident_id": "232d938c-a19f-40f6-a10e-9026928fb277",
+      "run_id": "2aad9305-99c0-4353-91df-d6005c88beba",
+      "category": "completeness",
+      "severity": "critical",
+      "status": "open",
+      "title": "CRITICAL: completeness problem in credit_score",
+      "description": "credit_score is 15.2% null against a 6.0% limit (178 rows)",
+      "column_name": "credit_score",
+      "evidence": {
+        "check": "credit_score_complete",
+        "expected": {
+          "max_null_rate": 0.06
+        },
+        "observed": {
+          "null_rate": 0.15201,
+          "affected_rows": 178
+        },
+        "check_type": "null_rate"
+      },
+      "created_at": "2026-10-12T19:44:13.600924+01:00",
+      "scenario": "missing_income"
+    },
+    {
+      "incident_id": "cab3e400-251d-447b-b061-c384bd000441",
+      "run_id": "2aad9305-99c0-4353-91df-d6005c88beba",
+      "category": "completeness",
+      "severity": "critical",
+      "status": "open",
+      "title": "CRITICAL: completeness problem in annual_income",
+      "description": "annual_income is 20.2% null against a 5.0% limit (236 rows)",
+      "column_name": "annual_income",
+      "evidence": {
+        "check": "annual_income_complete",
+        "expected": {
+          "max_null_rate": 0.05
+        },
+        "observed": {
+          "null_rate": 0.20154,
+          "affected_rows": 236
+        },
+        "check_type": "null_rate"
+      },
+      "created_at": "2026-10-12T19:44:13.600924+01:00",
+      "scenario": "missing_income"
+    },
+    {
+      "incident_id": "d9059996-a7b0-4681-ba2a-d9e404c02cf4",
+      "run_id": "6f033a59-ab79-4d7e-966e-739ffe3646d3",
+      "category": "validity",
+      "severity": "high",
+      "status": "open",
+      "title": "HIGH: validity problem in customer_age",
+      "description": "customer_age has 32 values outside [18, 100]",
+      "column_name": "customer_age",
+      "evidence": {
+        "check": "customer_age_plausible",
+        "expected": {
+          "max": 100.0,
+          "min": 18.0
+        },
+        "observed": {
+          "rate": 0.02383,
+          "sample": [
+            7.0,
+            7.0,
+            7.0
+          ],
+          "out_of_range": 32,
+          "affected_rows": 32
+        },
+        "check_type": "range"
+      },
+      "created_at": "2026-10-12T19:44:19.495979+01:00",
+      "scenario": "invalid_values"
+    },
+    {
+      "incident_id": "0d78c206-18e3-43f4-8709-757183ac56c4",
+      "run_id": "5d78c7c4-5361-44fc-95da-ccc2ec6e3820",
+      "category": "volume",
+      "severity": "high",
+      "status": "open",
+      "title": "HIGH: volume problem in dataset",
+      "description": "435 rows is 36% of the 1,217 typical for this weekday",
+      "column_name": null,
+      "evidence": {
+        "check": "volume_within_weekday_norms",
+        "expected": {
+          "max_ratio": 1.3,
+          "min_ratio": 0.8,
+          "comparison": "same weekday median"
+        },
+        "observed": {
+          "rows": 435,
+          "ratio": 0.357,
+          "affected_rows": 782,
+          "weekday_baseline": 1217.0
+        },
+        "check_type": "volume"
+      },
+      "created_at": "2026-10-12T19:44:18.077223+01:00",
+      "scenario": "volume_drop"
+    },
+    {
+      "incident_id": "df76cc8c-c0ba-4b72-8512-7585cb816a4e",
+      "run_id": "71851bbc-b79d-45ed-b084-6043d2dc4f1d",
+      "category": "drift",
+      "severity": "high",
+      "status": "open",
+      "title": "HIGH: drift in loan_amount",
+      "description": "loan_amount (numeric) has shifted: psi 1.202 against a 0.20 gate, p<0.001; median moved +170.4%",
+      "column_name": "loan_amount",
+      "evidence": {
+        "psi": 1.20156,
+        "gate": 0.2,
+        "test": "kolmogorov_smirnov",
+        "p_value": 0.0,
+        "statistic": 0.45875,
+        "current_rows": 1260,
+        "current_median": 69940.1,
+        "reference_rows": 91925,
+        "reference_median": 25861.11,
+        "relative_median_change": 1.7045
+      },
+      "created_at": "2026-10-12T19:44:16.667796+01:00",
+      "scenario": "income_shift"
+    },
+    {
+      "incident_id": "005bbc84-abb0-4338-abcf-1bb4656ea339",
+      "run_id": "71851bbc-b79d-45ed-b084-6043d2dc4f1d",
+      "category": "drift",
+      "severity": "high",
+      "status": "open",
+      "title": "HIGH: drift in approved",
+      "description": "approved (categorical) has shifted: total_variation 0.261 against a 0.06 gate, p<0.001",
+      "column_name": "approved",
+      "evidence": {
+        "gate": 0.06,
+        "test": "chi_squared",
+        "p_value": 0.0,
+        "statistic": 347.06609,
+        "current_rows": 1260,
+        "unseen_levels": 0,
+        "reference_rows": 91925,
+        "total_variation": 0.26063,
+        "degrees_of_freedom": 1
+      },
+      "created_at": "2026-10-12T19:44:16.667796+01:00",
+      "scenario": "income_shift"
+    },
+    {
+      "incident_id": "1f27dc13-a3f4-4feb-9361-813b370e5f29",
+      "run_id": "71851bbc-b79d-45ed-b084-6043d2dc4f1d",
+      "category": "drift",
+      "severity": "high",
+      "status": "open",
+      "title": "HIGH: drift in annual_income",
+      "description": "annual_income (numeric) has shifted: psi 0.470 against a 0.20 gate, p<0.001; median moved +46.9%",
+      "column_name": "annual_income",
+      "evidence": {
+        "psi": 0.46995,
+        "gate": 0.2,
+        "test": "kolmogorov_smirnov",
+        "p_value": 0.0,
+        "statistic": 0.28599,
+        "current_rows": 1244,
+        "current_median": 67715.83,
+        "reference_rows": 90825,
+        "reference_median": 46083.81,
+        "relative_median_change": 0.4694
+      },
+      "created_at": "2026-10-12T19:44:16.667796+01:00",
+      "scenario": "income_shift"
+    },
+    {
+      "incident_id": "86d2b1cd-aba9-4ba5-9e12-f515133f7e70",
+      "run_id": "2aad9305-99c0-4353-91df-d6005c88beba",
+      "category": "drift",
+      "severity": "high",
+      "status": "open",
+      "title": "HIGH: drift in credit_score",
+      "description": "credit_score (missingness) has shifted: rate_difference 0.132 against a 0.03 gate, p<0.001; null rate 2.0% to 15.2%",
+      "column_name": "credit_score",
+      "evidence": {
+        "gate": 0.03,
+        "test": "two_proportion_z",
+        "p_value": 0.0,
+        "statistic": 30.59131,
+        "current_rate": 0.15201,
+        "current_rows": 1171,
+        "reference_rate": 0.02025,
+        "reference_rows": 90817,
+        "rate_difference": 0.13176
+      },
+      "created_at": "2026-10-12T19:44:13.600924+01:00",
+      "scenario": "missing_income"
+    },
+    {
+      "incident_id": "930e6268-cb37-45ee-9499-3893ee7b6ab2",
+      "run_id": "2aad9305-99c0-4353-91df-d6005c88beba",
+      "category": "drift",
+      "severity": "high",
+      "status": "open",
+      "title": "HIGH: drift in annual_income",
+      "description": "annual_income (missingness) has shifted: rate_difference 0.190 against a 0.03 gate, p<0.001; null rate 1.2% to 20.2%",
+      "column_name": "annual_income",
+      "evidence": {
+        "gate": 0.03,
+        "test": "two_proportion_z",
+        "p_value": 0.0,
+        "statistic": 54.06704,
+        "current_rate": 0.20154,
+        "current_rows": 1171,
+        "reference_rate": 0.012,
+        "reference_rows": 90817,
+        "rate_difference": 0.18953
+      },
+      "created_at": "2026-10-12T19:44:13.600924+01:00",
+      "scenario": "missing_income"
+    }
+  ],
+  "drift": [
+    {
+      "column_name": "loan_amount",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.458754678373933,
+      "p_value": 8.9894978574132e-240,
+      "effect_size": 1.20155956583546,
+      "threshold": 0.2,
+      "drift_detected": true,
+      "explanation": "loan_amount (numeric) has shifted: psi 1.202 against a 0.20 gate, p<0.001; median moved +170.4%",
+      "scenario": "income_shift"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.285985256619608,
+      "p_value": 2.56610907342802e-89,
+      "effect_size": 0.469946188714155,
+      "threshold": 0.2,
+      "drift_detected": true,
+      "explanation": "annual_income (numeric) has shifted: psi 0.470 against a 0.20 gate, p<0.001; median moved +46.9%",
+      "scenario": "income_shift"
+    },
+    {
+      "column_name": "approved",
+      "test_name": "chi_squared",
+      "statistic": 347.066092246657,
+      "p_value": 1.84521580819309e-77,
+      "effect_size": 0.260629524586555,
+      "threshold": 0.06,
+      "drift_detected": true,
+      "explanation": "approved (categorical) has shifted: total_variation 0.261 against a 0.06 gate, p<0.001",
+      "scenario": "income_shift"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "two_proportion_z",
+      "statistic": 54.0670404430985,
+      "p_value": 0.0,
+      "effect_size": 0.189534989550734,
+      "threshold": 0.03,
+      "drift_detected": true,
+      "explanation": "annual_income (missingness) has shifted: rate_difference 0.190 against a 0.03 gate, p<0.001; null rate 1.2% to 20.2%",
+      "scenario": "missing_income"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "two_proportion_z",
+      "statistic": 30.5913144339943,
+      "p_value": 1.59697537979687e-205,
+      "effect_size": 0.131757319011298,
+      "threshold": 0.03,
+      "drift_detected": true,
+      "explanation": "credit_score (missingness) has shifted: rate_difference 0.132 against a 0.03 gate, p<0.001; null rate 2.0% to 15.2%",
+      "scenario": "missing_income"
+    },
+    {
+      "column_name": "employment_status",
+      "test_name": "chi_squared",
+      "statistic": 6.50554670700379,
+      "p_value": 0.164441231221387,
+      "effect_size": 0.0504653410554291,
+      "threshold": 0.08,
+      "drift_detected": false,
+      "explanation": "employment_status (categorical) is stable: total_variation 0.050 against a 0.08 gate, p=0.164",
+      "scenario": "volume_drop"
+    },
+    {
+      "column_name": "approved",
+      "test_name": "chi_squared",
+      "statistic": 6.2910834351837,
+      "p_value": 0.0121346852938191,
+      "effect_size": 0.0374192978304987,
+      "threshold": 0.06,
+      "drift_detected": false,
+      "explanation": "approved (categorical) is stable: total_variation 0.037 against a 0.06 gate, p=0.012",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0342786300702367,
+      "p_value": 0.689631479735711,
+      "effect_size": 0.0328155746172281,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "credit_score (numeric) is stable: psi 0.033 against a 0.20 gate, p=0.690",
+      "scenario": "volume_drop"
+    },
+    {
+      "column_name": "approved",
+      "test_name": "chi_squared",
+      "statistic": 1.72332642406197,
+      "p_value": 0.189265423668553,
+      "effect_size": 0.0302023982685538,
+      "threshold": 0.06,
+      "drift_detected": false,
+      "explanation": "approved (categorical) is stable: total_variation 0.030 against a 0.06 gate, p=0.189",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "approved",
+      "test_name": "chi_squared",
+      "statistic": 1.70546255597334,
+      "p_value": 0.191575140588547,
+      "effect_size": 0.029032855809429,
+      "threshold": 0.06,
+      "drift_detected": false,
+      "explanation": "approved (categorical) is stable: total_variation 0.029 against a 0.06 gate, p=0.192",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "employment_status",
+      "test_name": "chi_squared",
+      "statistic": 1.91832864422445,
+      "p_value": 0.750777227238016,
+      "effect_size": 0.026503034942042,
+      "threshold": 0.08,
+      "drift_detected": false,
+      "explanation": "employment_status (categorical) is stable: total_variation 0.027 against a 0.08 gate, p=0.751",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "customer_age",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0324668822325636,
+      "p_value": 0.742452230309156,
+      "effect_size": 0.0264134564650353,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "customer_age (numeric) is stable: psi 0.026 against a 0.25 gate, p=0.742",
+      "scenario": "volume_drop"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0438081861235662,
+      "p_value": 0.376140041427708,
+      "effect_size": 0.0261714331394487,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "annual_income (numeric) is stable: psi 0.026 against a 0.20 gate, p=0.376",
+      "scenario": "volume_drop"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0582891748675246,
+      "p_value": 0.000275106246945063,
+      "effect_size": 0.0248861383203188,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "credit_score (numeric) differs detectably but not materially: psi 0.025 against a 0.20 gate, p<0.001. Reported, not raised.",
+      "scenario": "invalid_values"
+    },
+    {
+      "column_name": "debt_to_income_ratio",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0405473024929135,
+      "p_value": 0.418073895430549,
+      "effect_size": 0.0246009222613895,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "debt_to_income_ratio (numeric) is stable: psi 0.025 against a 0.20 gate, p=0.418",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "approved",
+      "test_name": "chi_squared",
+      "statistic": 2.74824939314524,
+      "p_value": 0.0973609743181879,
+      "effect_size": 0.0240601902229093,
+      "threshold": 0.06,
+      "drift_detected": false,
+      "explanation": "approved (categorical) is stable: total_variation 0.024 against a 0.06 gate, p=0.097",
+      "scenario": "missing_income"
+    },
+    {
+      "column_name": "loan_amount",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0564382290548182,
+      "p_value": 0.100134521020315,
+      "effect_size": 0.0236553471958326,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "loan_amount (numeric) is stable: psi 0.024 against a 0.20 gate, p=0.100",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "customer_age",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0515363911913209,
+      "p_value": 0.159030487424347,
+      "effect_size": 0.0228683577270868,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "customer_age (numeric) is stable: psi 0.023 against a 0.25 gate, p=0.159",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "customer_age",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0258459601889541,
+      "p_value": 0.888205116055048,
+      "effect_size": 0.0224878196894297,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "customer_age (numeric) is stable: psi 0.022 against a 0.25 gate, p=0.888",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "debt_to_income_ratio",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0466850758801808,
+      "p_value": 0.228676186636873,
+      "effect_size": 0.0222947071420039,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "debt_to_income_ratio (numeric) is stable: psi 0.022 against a 0.20 gate, p=0.229",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0278031614510227,
+      "p_value": 0.851330019281995,
+      "effect_size": 0.0213585070221561,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "annual_income (numeric) is stable: psi 0.021 against a 0.20 gate, p=0.851",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "interest_rate",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0475224441732404,
+      "p_value": 0.280848942439719,
+      "effect_size": 0.0204301164186402,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "interest_rate (numeric) is stable: psi 0.020 against a 0.25 gate, p=0.281",
+      "scenario": "volume_drop"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0461198705071596,
+      "p_value": 0.272192744875653,
+      "effect_size": 0.0186100563173547,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "annual_income (numeric) is stable: psi 0.019 against a 0.20 gate, p=0.272",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "employment_status",
+      "test_name": "chi_squared",
+      "statistic": 2.25980499957791,
+      "p_value": 0.688096426645024,
+      "effect_size": 0.0184808115992885,
+      "threshold": 0.08,
+      "drift_detected": false,
+      "explanation": "employment_status (categorical) is stable: total_variation 0.018 against a 0.08 gate, p=0.688",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0306507917546025,
+      "p_value": 0.732412676011998,
+      "effect_size": 0.0184671591721568,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "annual_income (numeric) is stable: psi 0.018 against a 0.20 gate, p=0.732",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "employment_status",
+      "test_name": "chi_squared",
+      "statistic": 3.89819177092572,
+      "p_value": 0.419959398930878,
+      "effect_size": 0.0181989048486813,
+      "threshold": 0.08,
+      "drift_detected": false,
+      "explanation": "employment_status (categorical) is stable: total_variation 0.018 against a 0.08 gate, p=0.420",
+      "scenario": "missing_income"
+    },
+    {
+      "column_name": "customer_age",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0267167626046289,
+      "p_value": 0.332570139140099,
+      "effect_size": 0.017649493428923,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "customer_age (numeric) is stable: psi 0.018 against a 0.25 gate, p=0.333",
+      "scenario": "income_shift"
+    },
+    {
+      "column_name": "employment_status",
+      "test_name": "chi_squared",
+      "statistic": 2.54731810712975,
+      "p_value": 0.636183266709715,
+      "effect_size": 0.0175055348998781,
+      "threshold": 0.08,
+      "drift_detected": false,
+      "explanation": "employment_status (categorical) is stable: total_variation 0.018 against a 0.08 gate, p=0.636",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "loan_amount",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0355144498218801,
+      "p_value": 0.577145737542566,
+      "effect_size": 0.0167338252404309,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "loan_amount (numeric) is stable: psi 0.017 against a 0.20 gate, p=0.577",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "customer_age",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0186040090859707,
+      "p_value": 0.996323561625856,
+      "effect_size": 0.0165704018813757,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "customer_age (numeric) is stable: psi 0.017 against a 0.25 gate, p=0.996",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "debt_to_income_ratio",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0489949855954236,
+      "p_value": 0.246336014683171,
+      "effect_size": 0.0139849478949303,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "debt_to_income_ratio (numeric) is stable: psi 0.014 against a 0.20 gate, p=0.246",
+      "scenario": "volume_drop"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0329907683495572,
+      "p_value": 0.683299035644512,
+      "effect_size": 0.0131139331471805,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "credit_score (numeric) is stable: psi 0.013 against a 0.20 gate, p=0.683",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0307983473685896,
+      "p_value": 0.732693203353324,
+      "effect_size": 0.0127231152137288,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "credit_score (numeric) is stable: psi 0.013 against a 0.20 gate, p=0.733",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "customer_age",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.023231024880798,
+      "p_value": 0.589193283880366,
+      "effect_size": 0.0126363244529361,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "customer_age (numeric) is stable: psi 0.013 against a 0.25 gate, p=0.589",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "loan_amount",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0358125533371471,
+      "p_value": 0.622027805831015,
+      "effect_size": 0.0125563965732596,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "loan_amount (numeric) is stable: psi 0.013 against a 0.20 gate, p=0.622",
+      "scenario": "volume_drop"
+    },
+    {
+      "column_name": "employment_status",
+      "test_name": "chi_squared",
+      "statistic": 1.62491230438535,
+      "p_value": 0.804307808536041,
+      "effect_size": 0.012135011377823,
+      "threshold": 0.08,
+      "drift_detected": false,
+      "explanation": "employment_status (categorical) is stable: total_variation 0.012 against a 0.08 gate, p=0.804",
+      "scenario": "income_shift"
+    },
+    {
+      "column_name": "employment_status",
+      "test_name": "chi_squared",
+      "statistic": 1.78838589761295,
+      "p_value": 0.774606527101435,
+      "effect_size": 0.0120044110507349,
+      "threshold": 0.08,
+      "drift_detected": false,
+      "explanation": "employment_status (categorical) is stable: total_variation 0.012 against a 0.08 gate, p=0.775",
+      "scenario": "invalid_values"
+    },
+    {
+      "column_name": "interest_rate",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.033187120363448,
+      "p_value": 0.130466813649338,
+      "effect_size": 0.0119286552918604,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "interest_rate (numeric) is stable: psi 0.012 against a 0.25 gate, p=0.130",
+      "scenario": "income_shift"
+    },
+    {
+      "column_name": "customer_age",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0318780678765183,
+      "p_value": 0.133535154548039,
+      "effect_size": 0.0117780406693738,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "customer_age (numeric) is stable: psi 0.012 against a 0.25 gate, p=0.134",
+      "scenario": "invalid_values"
+    },
+    {
+      "column_name": "loan_amount",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0237530595594235,
+      "p_value": 0.558876953868604,
+      "effect_size": 0.0115462882196552,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "loan_amount (numeric) is stable: psi 0.012 against a 0.20 gate, p=0.559",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0274078430061382,
+      "p_value": 0.482183106966681,
+      "effect_size": 0.0115102987028979,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "annual_income (numeric) is stable: psi 0.012 against a 0.20 gate, p=0.482",
+      "scenario": "missing_income"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0193808672487036,
+      "p_value": 0.810651578849112,
+      "effect_size": 0.0106682445450606,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "credit_score (numeric) is stable: psi 0.011 against a 0.20 gate, p=0.811",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "interest_rate",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0120932580699415,
+      "p_value": 0.989325290272133,
+      "effect_size": 0.0104881107736766,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "interest_rate (numeric) is stable: psi 0.010 against a 0.25 gate, p=0.989",
+      "scenario": "invalid_values"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0286989030656887,
+      "p_value": 0.386394556197881,
+      "effect_size": 0.0102128524542608,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "credit_score (numeric) is stable: psi 0.010 against a 0.20 gate, p=0.386",
+      "scenario": "missing_income"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0386852155183435,
+      "p_value": 0.0757266062207341,
+      "effect_size": 0.00995222414972266,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "annual_income (numeric) is stable: psi 0.010 against a 0.20 gate, p=0.076",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "debt_to_income_ratio",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0188832623167412,
+      "p_value": 0.829173292160273,
+      "effect_size": 0.00973997955590702,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "debt_to_income_ratio (numeric) is stable: psi 0.010 against a 0.20 gate, p=0.829",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "loan_amount",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0345149474162843,
+      "p_value": 0.124362993863562,
+      "effect_size": 0.00960060207582039,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "loan_amount (numeric) is stable: psi 0.010 against a 0.20 gate, p=0.124",
+      "scenario": "missing_income"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0321069777726425,
+      "p_value": 0.722461834029307,
+      "effect_size": 0.00941592519486465,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "credit_score (numeric) is stable: psi 0.009 against a 0.20 gate, p=0.722",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "loan_amount",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0298616578782076,
+      "p_value": 0.756623817171378,
+      "effect_size": 0.00882338145977346,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "loan_amount (numeric) is stable: psi 0.009 against a 0.20 gate, p=0.757",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "interest_rate",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0241937571741218,
+      "p_value": 0.927757075345038,
+      "effect_size": 0.00873038309461953,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "interest_rate (numeric) is stable: psi 0.009 against a 0.25 gate, p=0.928",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "loan_amount",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0349962769918094,
+      "p_value": 0.0762533492404136,
+      "effect_size": 0.00855753454358454,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "loan_amount (numeric) is stable: psi 0.009 against a 0.20 gate, p=0.076",
+      "scenario": "invalid_values"
+    },
+    {
+      "column_name": "interest_rate",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0246994073279702,
+      "p_value": 0.930298385458717,
+      "effect_size": 0.00847365622735015,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "interest_rate (numeric) is stable: psi 0.008 against a 0.25 gate, p=0.930",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "interest_rate",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0188967926939295,
+      "p_value": 0.826036164407381,
+      "effect_size": 0.00727807377618458,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "interest_rate (numeric) is stable: psi 0.007 against a 0.25 gate, p=0.826",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "debt_to_income_ratio",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0287342094703522,
+      "p_value": 0.835057599769082,
+      "effect_size": 0.00681769194829951,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "debt_to_income_ratio (numeric) is stable: psi 0.007 against a 0.20 gate, p=0.835",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "interest_rate",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0196320917462967,
+      "p_value": 0.757612318039813,
+      "effect_size": 0.00652179261155876,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "interest_rate (numeric) is stable: psi 0.007 against a 0.25 gate, p=0.758",
+      "scenario": "missing_income"
+    },
+    {
+      "column_name": "debt_to_income_ratio",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0217799726576769,
+      "p_value": 0.638210451853762,
+      "effect_size": 0.00649971778022539,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "debt_to_income_ratio (numeric) is stable: psi 0.006 against a 0.20 gate, p=0.638",
+      "scenario": "missing_income"
+    },
+    {
+      "column_name": "employment_status",
+      "test_name": "chi_squared",
+      "statistic": 0.168457022474574,
+      "p_value": 0.996645811190492,
+      "effect_size": 0.00595870280870113,
+      "threshold": 0.08,
+      "drift_detected": false,
+      "explanation": "employment_status (categorical) is stable: total_variation 0.006 against a 0.08 gate, p=0.997",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "two_proportion_z",
+      "statistic": 1.37011949331471,
+      "p_value": 0.170649603736687,
+      "effect_size": 0.00585237141014149,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "credit_score (missingness) is stable: rate_difference 0.006 against a 0.03 gate, p=0.171",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "interest_rate",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0381231941826761,
+      "p_value": 0.50081077084657,
+      "effect_size": 0.00560211107425242,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "interest_rate (numeric) is stable: psi 0.006 against a 0.25 gate, p=0.501",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "two_proportion_z",
+      "statistic": -1.10440496417715,
+      "p_value": 0.26941750835878,
+      "effect_size": 0.00558321867604106,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "annual_income (missingness) is stable: rate_difference 0.006 against a 0.03 gate, p=0.269",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0206990487394809,
+      "p_value": 0.667754644749475,
+      "effect_size": 0.00551807539500123,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "credit_score (numeric) is stable: psi 0.006 against a 0.20 gate, p=0.668",
+      "scenario": "income_shift"
+    },
+    {
+      "column_name": "debt_to_income_ratio",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0225790810601555,
+      "p_value": 0.551810500608843,
+      "effect_size": 0.0051799922329923,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "debt_to_income_ratio (numeric) is stable: psi 0.005 against a 0.20 gate, p=0.552",
+      "scenario": "income_shift"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "two_proportion_z",
+      "statistic": 0.788862416180827,
+      "p_value": 0.430192424348942,
+      "effect_size": 0.00412567716685579,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "annual_income (missingness) is stable: rate_difference 0.004 against a 0.03 gate, p=0.430",
+      "scenario": "volume_drop"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "two_proportion_z",
+      "statistic": -1.01725569767833,
+      "p_value": 0.309031805946935,
+      "effect_size": 0.00393967774969518,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "credit_score (missingness) is stable: rate_difference 0.004 against a 0.03 gate, p=0.309",
+      "scenario": "invalid_values"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "two_proportion_z",
+      "statistic": -0.806399875627996,
+      "p_value": 0.420012318630285,
+      "effect_size": 0.00392891729967335,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "annual_income (missingness) is stable: rate_difference 0.004 against a 0.03 gate, p=0.420",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "two_proportion_z",
+      "statistic": -1.26617201059525,
+      "p_value": 0.205451505906199,
+      "effect_size": 0.00377565883677307,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "annual_income (missingness) is stable: rate_difference 0.004 against a 0.03 gate, p=0.205",
+      "scenario": "invalid_values"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "two_proportion_z",
+      "statistic": -0.715412870014326,
+      "p_value": 0.474353962231764,
+      "effect_size": 0.00358110555466372,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "annual_income (missingness) is stable: rate_difference 0.004 against a 0.03 gate, p=0.474",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "two_proportion_z",
+      "statistic": -0.46916741353567,
+      "p_value": 0.638949975838024,
+      "effect_size": 0.00306683909679223,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "credit_score (missingness) is stable: rate_difference 0.003 against a 0.03 gate, p=0.639",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "two_proportion_z",
+      "statistic": -0.896246666053265,
+      "p_value": 0.370121037028252,
+      "effect_size": 0.00294100609800997,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "annual_income (missingness) is stable: rate_difference 0.003 against a 0.03 gate, p=0.370",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "two_proportion_z",
+      "statistic": 0.44868502127619,
+      "p_value": 0.653658891463226,
+      "effect_size": 0.00290838198041985,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "credit_score (missingness) is stable: rate_difference 0.003 against a 0.03 gate, p=0.654",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "approved",
+      "test_name": "chi_squared",
+      "statistic": 0.0419595844568209,
+      "p_value": 0.837696831140226,
+      "effect_size": 0.00277575016539389,
+      "threshold": 0.06,
+      "drift_detected": false,
+      "explanation": "approved (categorical) is stable: total_variation 0.003 against a 0.06 gate, p=0.838",
+      "scenario": "invalid_values"
+    },
+    {
+      "column_name": "customer_age",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0130618034268036,
+      "p_value": 0.987875308355936,
+      "effect_size": 0.00274869826581838,
+      "threshold": 0.25,
+      "drift_detected": false,
+      "explanation": "customer_age (numeric) is stable: psi 0.003 against a 0.25 gate, p=0.988",
+      "scenario": "missing_income"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "two_proportion_z",
+      "statistic": 0.67280124126334,
+      "p_value": 0.501073747973155,
+      "effect_size": 0.00269495922745855,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "credit_score (missingness) is stable: rate_difference 0.003 against a 0.03 gate, p=0.501",
+      "scenario": "income_shift"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "two_proportion_z",
+      "statistic": 0.393272808550012,
+      "p_value": 0.694117999235414,
+      "effect_size": 0.00266759195871197,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "credit_score (missingness) is stable: rate_difference 0.003 against a 0.03 gate, p=0.694",
+      "scenario": "volume_drop"
+    },
+    {
+      "column_name": "debt_to_income_ratio",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0233235614895431,
+      "p_value": 0.470177127168122,
+      "effect_size": 0.00257200365015994,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "debt_to_income_ratio (numeric) is stable: psi 0.003 against a 0.20 gate, p=0.470",
+      "scenario": "invalid_values"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "kolmogorov_smirnov",
+      "statistic": 0.0205625857070943,
+      "p_value": 0.627779247991157,
+      "effect_size": 0.00252697201405104,
+      "threshold": 0.2,
+      "drift_detected": false,
+      "explanation": "annual_income (numeric) is stable: psi 0.003 against a 0.20 gate, p=0.628",
+      "scenario": "invalid_values"
+    },
+    {
+      "column_name": "credit_score",
+      "test_name": "two_proportion_z",
+      "statistic": -0.359028922002963,
+      "p_value": 0.719573453122281,
+      "effect_size": 0.0022725057142763,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "credit_score (missingness) is stable: rate_difference 0.002 against a 0.03 gate, p=0.720",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "approved",
+      "test_name": "chi_squared",
+      "statistic": 0.00938805944471328,
+      "p_value": 0.922812162888883,
+      "effect_size": 0.00220795666009671,
+      "threshold": 0.06,
+      "drift_detected": false,
+      "explanation": "approved (categorical) is stable: total_variation 0.002 against a 0.06 gate, p=0.923",
+      "scenario": "healthy"
+    },
+    {
+      "column_name": "approved",
+      "test_name": "chi_squared",
+      "statistic": 0.00654827337831203,
+      "p_value": 0.935504459068937,
+      "effect_size": 0.00192673312514263,
+      "threshold": 0.06,
+      "drift_detected": false,
+      "explanation": "approved (categorical) is stable: total_variation 0.002 against a 0.06 gate, p=0.936",
+      "scenario": "volume_drop"
+    },
+    {
+      "column_name": "annual_income",
+      "test_name": "two_proportion_z",
+      "statistic": 0.237289190540377,
+      "p_value": 0.812432447366631,
+      "effect_size": 0.000732135842279982,
+      "threshold": 0.03,
+      "drift_detected": false,
+      "explanation": "annual_income (missingness) is stable: rate_difference 0.001 against a 0.03 gate, p=0.812",
+      "scenario": "income_shift"
+    }
+  ],
+  "model_metrics": [
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-03",
+      "metric_name": "actual_approval_rate",
+      "metric_value": 0.587982832618026,
+      "sample_count": 466
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-03",
+      "metric_name": "approval_rate_gap",
+      "metric_value": 0.0407725321888412,
+      "sample_count": 466
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-03",
+      "metric_name": "brier",
+      "metric_value": 0.193253608410331,
+      "sample_count": 466
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-03",
+      "metric_name": "calibration_error",
+      "metric_value": 0.0471537325914235,
+      "sample_count": 466
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-03",
+      "metric_name": "f1",
+      "metric_value": 0.751322751322751,
+      "sample_count": 466
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-03",
+      "metric_name": "precision",
+      "metric_value": 0.726962457337884,
+      "sample_count": 466
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-03",
+      "metric_name": "predicted_approval_rate",
+      "metric_value": 0.628755364806867,
+      "sample_count": 466
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-03",
+      "metric_name": "recall",
+      "metric_value": 0.777372262773723,
+      "sample_count": 466
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-03",
+      "metric_name": "roc_auc",
+      "metric_value": 0.758876976885645,
+      "sample_count": 466
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-04",
+      "metric_name": "actual_approval_rate",
+      "metric_value": 0.56,
+      "sample_count": 475
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-04",
+      "metric_name": "approval_rate_gap",
+      "metric_value": 0.0399999999999999,
+      "sample_count": 475
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-04",
+      "metric_name": "brier",
+      "metric_value": 0.196205111529283,
+      "sample_count": 475
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-04",
+      "metric_name": "calibration_error",
+      "metric_value": 0.041960354195953,
+      "sample_count": 475
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-04",
+      "metric_name": "f1",
+      "metric_value": 0.751361161524501,
+      "sample_count": 475
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-04",
+      "metric_name": "precision",
+      "metric_value": 0.726315789473684,
+      "sample_count": 475
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-04",
+      "metric_name": "predicted_approval_rate",
+      "metric_value": 0.6,
+      "sample_count": 475
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-04",
+      "metric_name": "recall",
+      "metric_value": 0.778195488721805,
+      "sample_count": 475
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-04",
+      "metric_name": "roc_auc",
+      "metric_value": 0.761808828290823,
+      "sample_count": 475
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-05",
+      "metric_name": "actual_approval_rate",
+      "metric_value": 0.533731853116994,
+      "sample_count": 1171
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-05",
+      "metric_name": "approval_rate_gap",
+      "metric_value": 0.0657557643040136,
+      "sample_count": 1171
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-05",
+      "metric_name": "brier",
+      "metric_value": 0.202871031062654,
+      "sample_count": 1171
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-05",
+      "metric_name": "calibration_error",
+      "metric_value": 0.0256497833276267,
+      "sample_count": 1171
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-05",
+      "metric_name": "f1",
+      "metric_value": 0.727957799547852,
+      "sample_count": 1171
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-05",
+      "metric_name": "precision",
+      "metric_value": 0.688034188034188,
+      "sample_count": 1171
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-05",
+      "metric_name": "predicted_approval_rate",
+      "metric_value": 0.599487617421008,
+      "sample_count": 1171
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-05",
+      "metric_name": "recall",
+      "metric_value": 0.7728,
+      "sample_count": 1171
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-05",
+      "metric_name": "roc_auc",
+      "metric_value": 0.747791941391941,
+      "sample_count": 1171
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-06",
+      "metric_name": "actual_approval_rate",
+      "metric_value": 0.595667870036101,
+      "sample_count": 1108
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-06",
+      "metric_name": "approval_rate_gap",
+      "metric_value": 0.0342960288808664,
+      "sample_count": 1108
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-06",
+      "metric_name": "brier",
+      "metric_value": 0.19510589860029,
+      "sample_count": 1108
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-06",
+      "metric_name": "calibration_error",
+      "metric_value": 0.0299114253076305,
+      "sample_count": 1108
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-06",
+      "metric_name": "f1",
+      "metric_value": 0.75699558173785,
+      "sample_count": 1108
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-06",
+      "metric_name": "precision",
+      "metric_value": 0.736389684813754,
+      "sample_count": 1108
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-06",
+      "metric_name": "predicted_approval_rate",
+      "metric_value": 0.629963898916967,
+      "sample_count": 1108
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-06",
+      "metric_name": "recall",
+      "metric_value": 0.778787878787879,
+      "sample_count": 1108
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-06",
+      "metric_name": "roc_auc",
+      "metric_value": 0.755739312770563,
+      "sample_count": 1108
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-07",
+      "metric_name": "actual_approval_rate",
+      "metric_value": 0.297619047619048,
+      "sample_count": 1260
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-07",
+      "metric_name": "approval_rate_gap",
+      "metric_value": 0.14047619047619,
+      "sample_count": 1260
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-07",
+      "metric_name": "brier",
+      "metric_value": 0.182633882093101,
+      "sample_count": 1260
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-07",
+      "metric_name": "calibration_error",
+      "metric_value": 0.156221995077456,
+      "sample_count": 1260
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-07",
+      "metric_name": "f1",
+      "metric_value": 0.634304207119741,
+      "sample_count": 1260
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-07",
+      "metric_name": "precision",
+      "metric_value": 0.532608695652174,
+      "sample_count": 1260
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-07",
+      "metric_name": "predicted_approval_rate",
+      "metric_value": 0.438095238095238,
+      "sample_count": 1260
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-07",
+      "metric_name": "recall",
+      "metric_value": 0.784,
+      "sample_count": 1260
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-07",
+      "metric_name": "roc_auc",
+      "metric_value": 0.810223728813559,
+      "sample_count": 1260
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-08",
+      "metric_name": "actual_approval_rate",
+      "metric_value": 0.55632183908046,
+      "sample_count": 435
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-08",
+      "metric_name": "approval_rate_gap",
+      "metric_value": 0.0528735632183909,
+      "sample_count": 435
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-08",
+      "metric_name": "brier",
+      "metric_value": 0.197005860177533,
+      "sample_count": 435
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-08",
+      "metric_name": "calibration_error",
+      "metric_value": 0.0593500571286082,
+      "sample_count": 435
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-08",
+      "metric_name": "f1",
+      "metric_value": 0.7534516765286,
+      "sample_count": 435
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-08",
+      "metric_name": "precision",
+      "metric_value": 0.720754716981132,
+      "sample_count": 435
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-08",
+      "metric_name": "predicted_approval_rate",
+      "metric_value": 0.609195402298851,
+      "sample_count": 435
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-08",
+      "metric_name": "recall",
+      "metric_value": 0.789256198347107,
+      "sample_count": 435
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-08",
+      "metric_name": "roc_auc",
+      "metric_value": 0.758724789106325,
+      "sample_count": 435
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-09",
+      "metric_name": "actual_approval_rate",
+      "metric_value": 0.555472822040209,
+      "sample_count": 1343
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-09",
+      "metric_name": "approval_rate_gap",
+      "metric_value": 0.0528667163067759,
+      "sample_count": 1343
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-09",
+      "metric_name": "brier",
+      "metric_value": 0.212989686540697,
+      "sample_count": 1343
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-09",
+      "metric_name": "calibration_error",
+      "metric_value": 0.0510329238621626,
+      "sample_count": 1343
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-09",
+      "metric_name": "f1",
+      "metric_value": 0.737044145873321,
+      "sample_count": 1343
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-09",
+      "metric_name": "precision",
+      "metric_value": 0.705018359853121,
+      "sample_count": 1343
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-09",
+      "metric_name": "predicted_approval_rate",
+      "metric_value": 0.608339538346984,
+      "sample_count": 1343
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-09",
+      "metric_name": "recall",
+      "metric_value": 0.772117962466488,
+      "sample_count": 1343
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-09",
+      "metric_name": "roc_auc",
+      "metric_value": 0.726963683475465,
+      "sample_count": 1343
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-10",
+      "metric_name": "actual_approval_rate",
+      "metric_value": 0.529058116232465,
+      "sample_count": 499
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-10",
+      "metric_name": "approval_rate_gap",
+      "metric_value": 0.0821643286573146,
+      "sample_count": 499
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-10",
+      "metric_name": "brier",
+      "metric_value": 0.196665771970285,
+      "sample_count": 499
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-10",
+      "metric_name": "calibration_error",
+      "metric_value": 0.0490162884844303,
+      "sample_count": 499
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-10",
+      "metric_name": "f1",
+      "metric_value": 0.731107205623902,
+      "sample_count": 499
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-10",
+      "metric_name": "precision",
+      "metric_value": 0.681967213114754,
+      "sample_count": 499
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-10",
+      "metric_name": "predicted_approval_rate",
+      "metric_value": 0.61122244488978,
+      "sample_count": 499
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-10",
+      "metric_name": "recall",
+      "metric_value": 0.787878787878788,
+      "sample_count": 499
+    },
+    {
+      "model_name": "approval_classifier",
+      "model_version": "v1",
+      "evaluation_window": "2026-10-10",
+      "metric_name": "roc_auc",
+      "metric_value": 0.76597356544165,
+      "sample_count": 499
+    }
+  ],
+  "checks": [
+    {
+      "check_name": "annual_income_complete",
+      "check_type": "null_rate",
+      "column_name": "annual_income",
+      "severity": "high",
+      "failures": 1,
+      "runs": 8
+    },
+    {
+      "check_name": "credit_score_complete",
+      "check_type": "null_rate",
+      "column_name": "credit_score",
+      "severity": "high",
+      "failures": 1,
+      "runs": 8
+    },
+    {
+      "check_name": "credit_score_in_band",
+      "check_type": "range",
+      "column_name": "credit_score",
+      "severity": "high",
+      "failures": 1,
+      "runs": 8
+    },
+    {
+      "check_name": "customer_age_plausible",
+      "check_type": "range",
+      "column_name": "customer_age",
+      "severity": "high",
+      "failures": 1,
+      "runs": 8
+    },
+    {
+      "check_name": "loan_amount_positive",
+      "check_type": "range",
+      "column_name": "loan_amount",
+      "severity": "high",
+      "failures": 1,
+      "runs": 8
+    },
+    {
+      "check_name": "volume_within_weekday_norms",
+      "check_type": "volume",
+      "column_name": null,
+      "severity": "high",
+      "failures": 1,
+      "runs": 8
+    },
+    {
+      "check_name": "application_date_complete",
+      "check_type": "null_rate",
+      "column_name": "application_date",
+      "severity": "critical",
+      "failures": 0,
+      "runs": 8
+    },
+    {
+      "check_name": "application_id_unique",
+      "check_type": "unique",
+      "column_name": "application_id",
+      "severity": "critical",
+      "failures": 0,
+      "runs": 8
+    },
+    {
+      "check_name": "credit_score_is_numeric",
+      "check_type": "schema_type",
+      "column_name": "credit_score",
+      "severity": "critical",
+      "failures": 0,
+      "runs": 8
+    },
+    {
+      "check_name": "data_is_fresh",
+      "check_type": "freshness",
+      "column_name": "application_date",
+      "severity": "critical",
+      "failures": 0,
+      "runs": 8
+    },
+    {
+      "check_name": "debt_to_income_is_a_ratio",
+      "check_type": "range",
+      "column_name": "debt_to_income_ratio",
+      "severity": "medium",
+      "failures": 0,
+      "runs": 8
+    },
+    {
+      "check_name": "employment_status_complete",
+      "check_type": "null_rate",
+      "column_name": "employment_status",
+      "severity": "low",
+      "failures": 0,
+      "runs": 8
+    },
+    {
+      "check_name": "employment_status_known",
+      "check_type": "allowed_values",
+      "column_name": "employment_status",
+      "severity": "medium",
+      "failures": 0,
+      "runs": 8
+    },
+    {
+      "check_name": "loan_amount_is_numeric",
+      "check_type": "schema_type",
+      "column_name": "loan_amount",
+      "severity": "critical",
+      "failures": 0,
+      "runs": 8
+    },
+    {
+      "check_name": "loan_term_known",
+      "check_type": "allowed_values",
+      "column_name": "loan_term_months",
+      "severity": "medium",
+      "failures": 0,
+      "runs": 8
+    },
+    {
+      "check_name": "no_unexpected_columns",
+      "check_type": "schema_unexpected",
+      "column_name": null,
+      "severity": "medium",
+      "failures": 0,
+      "runs": 8
+    },
+    {
+      "check_name": "required_columns_present",
+      "check_type": "schema_required",
+      "column_name": null,
+      "severity": "critical",
+      "failures": 0,
+      "runs": 8
+    }
+  ]
+}

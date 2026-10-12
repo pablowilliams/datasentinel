@@ -15,3 +15,5 @@ dbt/logs/
 logs/
 *.duckdb
 .DS_Store
+
+.claude/

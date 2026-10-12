@@ -1,0 +1,4404 @@
+{
+  "note": "Whether drift the platform detects corresponds to measurable model damage. Degradation means AUC down 0.02 or calibration error up 0.02 against the healthy median, or a batch the model could not score at all.",
+  "healthy_baseline": {
+    "roc_auc": 0.7720071911731492,
+    "f1": 0.7473789215506828,
+    "calibration_error": 0.02994374216588928,
+    "approval_rate_gap": 0.04612637262494318,
+    "brier": 0.19201779240140265
+  },
+  "healthy_spread": {
+    "roc_auc": 0.015502610380851387,
+    "f1": 0.012816808899482366,
+    "calibration_error": 0.009283904530100827,
+    "approval_rate_gap": 0.018923960222777363,
+    "brier": 0.006167955616375956
+  },
+  "healthy_days": 42,
+  "thresholds": {
+    "derived_from": "99% quantile of healthy days",
+    "auc_floor": 0.7391310993827276,
+    "calibration_ceiling": 0.060706764410198136
+  },
+  "contingency": {
+    "degraded_drift_saw_it": 45,
+    "degraded_only_quality_saw_it": 30,
+    "degraded_nothing_saw_it": 5,
+    "healthy_but_something_raised": 43,
+    "healthy_and_quiet": 73
+  },
+  "observations": [
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-10-09",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7512719487354852,
+        "precision": 0.7025920873124147,
+        "recall": 0.7886676875957122,
+        "f1": 0.7431457431457431,
+        "brier": 0.19905325975197147,
+        "calibration_error": 0.02377486921171604,
+        "predicted_approval_rate": 0.627568493150685,
+        "actual_approval_rate": 0.5590753424657534,
+        "approval_rate_gap": 0.06849315068493156
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-10-08",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7599687810415781,
+        "precision": 0.7150610583446404,
+        "recall": 0.757183908045977,
+        "f1": 0.735519888346127,
+        "brier": 0.1971999062642611,
+        "calibration_error": 0.03253386862457916,
+        "predicted_approval_rate": 0.5835312747426762,
+        "actual_approval_rate": 0.5510688836104513,
+        "approval_rate_gap": 0.03246239113222493
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-10-07",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7446214268906245,
+        "precision": 0.7053941908713693,
+        "recall": 0.7600596125186289,
+        "f1": 0.7317073170731707,
+        "brier": 0.20221187799103482,
+        "calibration_error": 0.03230761502314433,
+        "predicted_approval_rate": 0.600997506234414,
+        "actual_approval_rate": 0.5577722360764755,
+        "approval_rate_gap": 0.04322527015793842
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-10-06",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7557393127705629,
+        "precision": 0.7363896848137536,
+        "recall": 0.7787878787878788,
+        "f1": 0.7569955817378498,
+        "brier": 0.1951058986002899,
+        "calibration_error": 0.029911425307630513,
+        "predicted_approval_rate": 0.6299638989169675,
+        "actual_approval_rate": 0.5956678700361011,
+        "approval_rate_gap": 0.03429602888086636
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-10-05",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7964193767302575,
+        "precision": 0.7337770382695508,
+        "recall": 0.7616580310880829,
+        "f1": 0.747457627118644,
+        "brier": 0.18362661769457192,
+        "calibration_error": 0.028577550088935488,
+        "predicted_approval_rate": 0.5669811320754717,
+        "actual_approval_rate": 0.5462264150943397,
+        "approval_rate_gap": 0.02075471698113207
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-10-04",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7618088282908227,
+        "precision": 0.7263157894736842,
+        "recall": 0.7781954887218046,
+        "f1": 0.7513611615245009,
+        "brier": 0.19620511152928286,
+        "calibration_error": 0.04196035419595296,
+        "predicted_approval_rate": 0.6,
+        "actual_approval_rate": 0.56,
+        "approval_rate_gap": 0.039999999999999925
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-10-03",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7588769768856448,
+        "precision": 0.726962457337884,
+        "recall": 0.7773722627737226,
+        "f1": 0.7513227513227513,
+        "brier": 0.19325360841033126,
+        "calibration_error": 0.047153732591423525,
+        "predicted_approval_rate": 0.628755364806867,
+        "actual_approval_rate": 0.5879828326180258,
+        "approval_rate_gap": 0.04077253218884125
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-10-02",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.768325127573916,
+        "precision": 0.7242921013412816,
+        "recall": 0.7851373182552503,
+        "f1": 0.7534883720930232,
+        "brier": 0.1936262409860018,
+        "calibration_error": 0.029172353877879018,
+        "predicted_approval_rate": 0.597506678539626,
+        "actual_approval_rate": 0.5512021371326803,
+        "approval_rate_gap": 0.04630454140694573
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-10-01",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.793133745197851,
+        "precision": 0.7460732984293194,
+        "recall": 0.7949790794979079,
+        "f1": 0.7697501688048616,
+        "brier": 0.18398675198364065,
+        "calibration_error": 0.035357614377149106,
+        "predicted_approval_rate": 0.6011014948859166,
+        "actual_approval_rate": 0.5641227380015735,
+        "approval_rate_gap": 0.036978756884343045
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-09-30",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7926453697865057,
+        "precision": 0.7259887005649718,
+        "recall": 0.7871362940275651,
+        "f1": 0.7553269654665687,
+        "brier": 0.18445592120709525,
+        "calibration_error": 0.025911522496290255,
+        "predicted_approval_rate": 0.5914786967418546,
+        "actual_approval_rate": 0.545530492898914,
+        "approval_rate_gap": 0.04594820384294063
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-09-29",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.779772847106437,
+        "precision": 0.7390648567119156,
+        "recall": 0.789049919484702,
+        "f1": 0.7632398753894081,
+        "brier": 0.18731397776221778,
+        "calibration_error": 0.02715037648483196,
+        "predicted_approval_rate": 0.6178937558247903,
+        "actual_approval_rate": 0.5787511649580616,
+        "approval_rate_gap": 0.03914259086672878
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-09-28",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7767736014015294,
+        "precision": 0.7291338582677165,
+        "recall": 0.7553017944535073,
+        "f1": 0.7419871794871795,
+        "brier": 0.19091115765888983,
+        "calibration_error": 0.014757485443188029,
+        "predicted_approval_rate": 0.5772727272727273,
+        "actual_approval_rate": 0.5572727272727273,
+        "approval_rate_gap": 0.020000000000000018
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-09-27",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7601727511977865,
+        "precision": 0.6776859504132231,
+        "recall": 0.7488584474885844,
+        "f1": 0.7114967462039046,
+        "brier": 0.20042208779856732,
+        "calibration_error": 0.03678931172630602,
+        "predicted_approval_rate": 0.5734597156398105,
+        "actual_approval_rate": 0.518957345971564,
+        "approval_rate_gap": 0.05450236966824651
+      }
+    },
+    {
+      "scenario": "healthy",
+      "intensity": null,
+      "day": "2026-09-26",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7566536001650506,
+        "precision": 0.6949152542372882,
+        "recall": 0.7824427480916031,
+        "f1": 0.7360861759425493,
+        "brier": 0.19776867439042412,
+        "calibration_error": 0.052588511756016885,
+        "predicted_approval_rate": 0.609504132231405,
+        "actual_approval_rate": 0.5413223140495868,
+        "approval_rate_gap": 0.06818181818181823
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-10-09",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7565702842093712,
+        "precision": 0.7366984993178718,
+        "recall": 0.7703281027104137,
+        "f1": 0.7531380753138075,
+        "brier": 0.19647065934292887,
+        "calibration_error": 0.031121627025437772,
+        "predicted_approval_rate": 0.6003276003276004,
+        "actual_approval_rate": 0.5741195741195741,
+        "approval_rate_gap": 0.026208026208026203
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-10-08",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7720364422612676,
+        "precision": 0.7223926380368099,
+        "recall": 0.7810945273631841,
+        "f1": 0.750597609561753,
+        "brier": 0.19218574902395588,
+        "calibration_error": 0.038621615994847494,
+        "predicted_approval_rate": 0.6053853296193129,
+        "actual_approval_rate": 0.5598885793871866,
+        "approval_rate_gap": 0.04549675023212629
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-10-07",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7930420490343788,
+        "precision": 0.728414442700157,
+        "recall": 0.7785234899328859,
+        "f1": 0.7526358475263585,
+        "brier": 0.184242151264538,
+        "calibration_error": 0.018117097661844852,
+        "predicted_approval_rate": 0.5865561694290976,
+        "actual_approval_rate": 0.5488029465930019,
+        "approval_rate_gap": 0.03775322283609572
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-10-06",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7753208597494976,
+        "precision": 0.7008310249307479,
+        "recall": 0.7563527653213752,
+        "f1": 0.7275341480948958,
+        "brier": 0.19158784844156349,
+        "calibration_error": 0.043404797414104454,
+        "predicted_approval_rate": 0.5918032786885246,
+        "actual_approval_rate": 0.5483606557377049,
+        "approval_rate_gap": 0.04344262295081969
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-10-05",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7953733228458504,
+        "precision": 0.751453488372093,
+        "recall": 0.8116169544740973,
+        "f1": 0.780377358490566,
+        "brier": 0.18141685697681678,
+        "calibration_error": 0.03500446602778147,
+        "predicted_approval_rate": 0.6153846153846154,
+        "actual_approval_rate": 0.5697674418604651,
+        "approval_rate_gap": 0.04561717352415029
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-10-04",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.801480694167018,
+        "precision": 0.761744966442953,
+        "recall": 0.8194945848375451,
+        "f1": 0.7895652173913044,
+        "brier": 0.178807261657924,
+        "calibration_error": 0.05200552097473111,
+        "predicted_approval_rate": 0.6286919831223629,
+        "actual_approval_rate": 0.5843881856540084,
+        "approval_rate_gap": 0.044303797468354444
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-10-03",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7772736438798145,
+        "precision": 0.7142857142857143,
+        "recall": 0.7854406130268199,
+        "f1": 0.7481751824817519,
+        "brier": 0.18951215564416496,
+        "calibration_error": 0.06130988583554575,
+        "predicted_approval_rate": 0.6363636363636364,
+        "actual_approval_rate": 0.5787139689578714,
+        "approval_rate_gap": 0.05764966740576494
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-10-02",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.764644781425318,
+        "precision": 0.72,
+        "recall": 0.7648725212464589,
+        "f1": 0.7417582417582418,
+        "brier": 0.19232989119802169,
+        "calibration_error": 0.04926062101179316,
+        "predicted_approval_rate": 0.6167763157894737,
+        "actual_approval_rate": 0.5805921052631579,
+        "approval_rate_gap": 0.03618421052631582
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-10-01",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7704185089567445,
+        "precision": 0.7334200260078023,
+        "recall": 0.7866108786610879,
+        "f1": 0.7590847913862718,
+        "brier": 0.19229655290622094,
+        "calibration_error": 0.023263436257099458,
+        "predicted_approval_rate": 0.600312256049961,
+        "actual_approval_rate": 0.5597189695550351,
+        "approval_rate_gap": 0.040593286494925884
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-09-30",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7842433357425279,
+        "precision": 0.7327935222672065,
+        "recall": 0.7892441860465116,
+        "f1": 0.7599720083974808,
+        "brier": 0.18712048827522337,
+        "calibration_error": 0.031308898505602104,
+        "predicted_approval_rate": 0.6,
+        "actual_approval_rate": 0.557085020242915,
+        "approval_rate_gap": 0.042914979757085026
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-09-29",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7608634575763251,
+        "precision": 0.7299145299145299,
+        "recall": 0.7597864768683275,
+        "f1": 0.7445510026155188,
+        "brier": 0.194935056946495,
+        "calibration_error": 0.04266897352498693,
+        "predicted_approval_rate": 0.5969387755102041,
+        "actual_approval_rate": 0.573469387755102,
+        "approval_rate_gap": 0.0234693877551021
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-09-28",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7555381615445882,
+        "precision": 0.724376731301939,
+        "recall": 0.7612809315866085,
+        "f1": 0.7423704755145494,
+        "brier": 0.19792242891793724,
+        "calibration_error": 0.023082374935494098,
+        "predicted_approval_rate": 0.5932621199671323,
+        "actual_approval_rate": 0.5645028759244043,
+        "approval_rate_gap": 0.028759244042728005
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-09-27",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7562876454089844,
+        "precision": 0.7213740458015268,
+        "recall": 0.7907949790794979,
+        "f1": 0.7544910179640718,
+        "brier": 0.19641487511460093,
+        "calibration_error": 0.03043892118670667,
+        "predicted_approval_rate": 0.6223277909738717,
+        "actual_approval_rate": 0.5676959619952494,
+        "approval_rate_gap": 0.05463182897862229
+      }
+    },
+    {
+      "scenario": "minor_noise",
+      "intensity": null,
+      "day": "2026-09-26",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7824568089430894,
+        "precision": 0.725925925925926,
+        "recall": 0.7967479674796748,
+        "f1": 0.7596899224806202,
+        "brier": 0.1881490791276945,
+        "calibration_error": 0.04895376139595374,
+        "predicted_approval_rate": 0.6164383561643836,
+        "actual_approval_rate": 0.5616438356164384,
+        "approval_rate_gap": 0.0547945205479452
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-10-09",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7630207905333224,
+        "precision": 0.7353951890034365,
+        "recall": 0.7561837455830389,
+        "f1": 0.7456445993031359,
+        "brier": 0.19517464434992898,
+        "calibration_error": 0.04725454050331362,
+        "predicted_approval_rate": 0.5843373493975904,
+        "actual_approval_rate": 0.5682730923694779,
+        "approval_rate_gap": 0.01606425702811254
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-10-08",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7580823717046626,
+        "precision": 0.7475083056478405,
+        "recall": 0.7894736842105263,
+        "f1": 0.7679180887372014,
+        "brier": 0.1919328566868158,
+        "calibration_error": 0.05875334285235241,
+        "predicted_approval_rate": 0.6377118644067796,
+        "actual_approval_rate": 0.6038135593220338,
+        "approval_rate_gap": 0.03389830508474578
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-10-07",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.774239110625114,
+        "precision": 0.7251908396946565,
+        "recall": 0.8050847457627118,
+        "f1": 0.7630522088353414,
+        "brier": 0.18923680264389073,
+        "calibration_error": 0.04708880558816219,
+        "predicted_approval_rate": 0.6208530805687204,
+        "actual_approval_rate": 0.5592417061611374,
+        "approval_rate_gap": 0.06161137440758291
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-10-06",
+      "drift_columns": [
+        "approved"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.745758642765685,
+        "precision": 0.7559322033898305,
+        "recall": 0.7852112676056338,
+        "f1": 0.770293609671848,
+        "brier": 0.19569779598674036,
+        "calibration_error": 0.06456319457936655,
+        "predicted_approval_rate": 0.6413043478260869,
+        "actual_approval_rate": 0.6173913043478261,
+        "approval_rate_gap": 0.023913043478260843
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-10-05",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7926456984273821,
+        "precision": 0.7420382165605095,
+        "recall": 0.8262411347517731,
+        "f1": 0.7818791946308725,
+        "brier": 0.18323630914476352,
+        "calibration_error": 0.05620311340561047,
+        "predicted_approval_rate": 0.61328125,
+        "actual_approval_rate": 0.55078125,
+        "approval_rate_gap": 0.0625
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-10-04",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7745684464070655,
+        "precision": 0.7527272727272727,
+        "recall": 0.7811320754716982,
+        "f1": 0.7666666666666667,
+        "brier": 0.18902315792480923,
+        "calibration_error": 0.04489818343980638,
+        "predicted_approval_rate": 0.6070640176600441,
+        "actual_approval_rate": 0.5849889624724062,
+        "approval_rate_gap": 0.02207505518763797
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-10-03",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7851275311126629,
+        "precision": 0.7360594795539034,
+        "recall": 0.7888446215139442,
+        "f1": 0.7615384615384615,
+        "brier": 0.1880784451049397,
+        "calibration_error": 0.04143115969423043,
+        "predicted_approval_rate": 0.604494382022472,
+        "actual_approval_rate": 0.5640449438202247,
+        "approval_rate_gap": 0.04044943820224722
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-10-02",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7799712276214834,
+        "precision": 0.6993670886075949,
+        "recall": 0.8125,
+        "f1": 0.7517006802721088,
+        "brier": 0.1904683207317698,
+        "calibration_error": 0.03206697946365478,
+        "predicted_approval_rate": 0.6294820717131474,
+        "actual_approval_rate": 0.5418326693227091,
+        "approval_rate_gap": 0.08764940239043828
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-10-01",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7784036289353521,
+        "precision": 0.7218543046357616,
+        "recall": 0.7465753424657534,
+        "f1": 0.734006734006734,
+        "brier": 0.19030632107489073,
+        "calibration_error": 0.059867069000111565,
+        "predicted_approval_rate": 0.5807692307692308,
+        "actual_approval_rate": 0.5615384615384615,
+        "approval_rate_gap": 0.019230769230769273
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-09-30",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.753714339516053,
+        "precision": 0.6798561151079137,
+        "recall": 0.7651821862348178,
+        "f1": 0.72,
+        "brier": 0.20050659418277633,
+        "calibration_error": 0.06455734890642555,
+        "predicted_approval_rate": 0.6017316017316018,
+        "actual_approval_rate": 0.5346320346320347,
+        "approval_rate_gap": 0.0670995670995671
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-09-29",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8204258526474467,
+        "precision": 0.8082191780821918,
+        "recall": 0.8137931034482758,
+        "f1": 0.8109965635738832,
+        "brier": 0.17080563181834255,
+        "calibration_error": 0.081661208020833,
+        "predicted_approval_rate": 0.6173361522198731,
+        "actual_approval_rate": 0.6131078224101479,
+        "approval_rate_gap": 0.0042283298097252064
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-09-28",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7529930478722527,
+        "precision": 0.7243589743589743,
+        "recall": 0.7874564459930313,
+        "f1": 0.7545909849749582,
+        "brier": 0.19804324072476107,
+        "calibration_error": 0.04296054599393405,
+        "predicted_approval_rate": 0.6265060240963856,
+        "actual_approval_rate": 0.5763052208835341,
+        "approval_rate_gap": 0.050200803212851475
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-09-27",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7898150641888859,
+        "precision": 0.749003984063745,
+        "recall": 0.7932489451476793,
+        "f1": 0.7704918032786885,
+        "brier": 0.18567852748290126,
+        "calibration_error": 0.03767536867657662,
+        "predicted_approval_rate": 0.5905882352941176,
+        "actual_approval_rate": 0.5576470588235294,
+        "approval_rate_gap": 0.03294117647058825
+      }
+    },
+    {
+      "scenario": "weekend",
+      "intensity": null,
+      "day": "2026-09-26",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.8207188940092166,
+        "precision": 0.7232472324723247,
+        "recall": 0.784,
+        "f1": 0.7523992322456814,
+        "brier": 0.17437851224249415,
+        "calibration_error": 0.05539041766750229,
+        "predicted_approval_rate": 0.5802997858672377,
+        "actual_approval_rate": 0.5353319057815846,
+        "approval_rate_gap": 0.04496788008565311
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-10-09",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7925469781615032,
+        "precision": 0.7194719471947195,
+        "recall": 0.8119180633147114,
+        "f1": 0.7629046369203849,
+        "brier": 0.18386314164994544,
+        "calibration_error": 0.029745578450514062,
+        "predicted_approval_rate": 0.6202661207778914,
+        "actual_approval_rate": 0.5496417604912999,
+        "approval_rate_gap": 0.07062436028659158
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-10-08",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7684894638651865,
+        "precision": 0.7203791469194313,
+        "recall": 0.7238095238095238,
+        "f1": 0.7220902612826603,
+        "brier": 0.19466555370176922,
+        "calibration_error": 0.028641273083826746,
+        "predicted_approval_rate": 0.5509138381201044,
+        "actual_approval_rate": 0.5483028720626631,
+        "approval_rate_gap": 0.0026109660574412663
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-10-07",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7631369211649647,
+        "precision": 0.6991473812423873,
+        "recall": 0.771505376344086,
+        "f1": 0.7335463258785943,
+        "brier": 0.1958730277929188,
+        "calibration_error": 0.018518227776173738,
+        "predicted_approval_rate": 0.6122296793437733,
+        "actual_approval_rate": 0.5548098434004475,
+        "approval_rate_gap": 0.05741983594332578
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-10-06",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7768582457155473,
+        "precision": 0.7345276872964169,
+        "recall": 0.765704584040747,
+        "f1": 0.7497921862011637,
+        "brier": 0.18971665405026225,
+        "calibration_error": 0.03051292946502716,
+        "predicted_approval_rate": 0.5932367149758454,
+        "actual_approval_rate": 0.5690821256038647,
+        "approval_rate_gap": 0.024154589371980673
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-10-05",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.77787245836675,
+        "precision": 0.7225352112676057,
+        "recall": 0.7820121951219512,
+        "f1": 0.7510980966325037,
+        "brier": 0.18913450016690875,
+        "calibration_error": 0.0137378930911297,
+        "predicted_approval_rate": 0.6052855924978687,
+        "actual_approval_rate": 0.5592497868712702,
+        "approval_rate_gap": 0.04603580562659848
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-10-04",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7752916134525331,
+        "precision": 0.708029197080292,
+        "recall": 0.7432950191570882,
+        "f1": 0.7252336448598131,
+        "brier": 0.19188724142932528,
+        "calibration_error": 0.05721272989194076,
+        "predicted_approval_rate": 0.5637860082304527,
+        "actual_approval_rate": 0.5370370370370371,
+        "approval_rate_gap": 0.02674897119341557
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-10-03",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7784428442844286,
+        "precision": 0.6848249027237354,
+        "recall": 0.8,
+        "f1": 0.7379454926624738,
+        "brier": 0.19435385085758394,
+        "calibration_error": 0.055262924623643885,
+        "predicted_approval_rate": 0.6090047393364929,
+        "actual_approval_rate": 0.5213270142180095,
+        "approval_rate_gap": 0.08767772511848337
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-10-02",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7634296872275882,
+        "precision": 0.7115689381933439,
+        "recall": 0.7546218487394958,
+        "f1": 0.732463295269168,
+        "brier": 0.1951705494143069,
+        "calibration_error": 0.027614507066198512,
+        "predicted_approval_rate": 0.585886722376973,
+        "actual_approval_rate": 0.552460538532962,
+        "approval_rate_gap": 0.03342618384401108
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-10-01",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7784948647171741,
+        "precision": 0.7285513361462729,
+        "recall": 0.7766116941529235,
+        "f1": 0.7518142235123367,
+        "brier": 0.1886819712007872,
+        "calibration_error": 0.03291087584595769,
+        "predicted_approval_rate": 0.591514143094842,
+        "actual_approval_rate": 0.5549084858569051,
+        "approval_rate_gap": 0.03660565723793685
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-09-30",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.765706073388331,
+        "precision": 0.7023809523809523,
+        "recall": 0.7576243980738363,
+        "f1": 0.728957528957529,
+        "brier": 0.19546930923985736,
+        "calibration_error": 0.03736240771634087,
+        "predicted_approval_rate": 0.5899912203687445,
+        "actual_approval_rate": 0.5469710272168569,
+        "approval_rate_gap": 0.043020193151887653
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-09-29",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7587010649670497,
+        "precision": 0.7286356821589205,
+        "recall": 0.7546583850931677,
+        "f1": 0.7414187643020596,
+        "brier": 0.1951988896434547,
+        "calibration_error": 0.03439995908612355,
+        "predicted_approval_rate": 0.6047144152311876,
+        "actual_approval_rate": 0.5838621940163191,
+        "approval_rate_gap": 0.020852221214868516
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-09-28",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7907204541819925,
+        "precision": 0.7029850746268657,
+        "recall": 0.7956081081081081,
+        "f1": 0.7464342313787639,
+        "brier": 0.18701463419078476,
+        "calibration_error": 0.04670840672799671,
+        "predicted_approval_rate": 0.6096451319381255,
+        "actual_approval_rate": 0.5386715195632393,
+        "approval_rate_gap": 0.0709736123748862
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-09-27",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.8024713185604274,
+        "precision": 0.7404580152671756,
+        "recall": 0.7698412698412699,
+        "f1": 0.754863813229572,
+        "brier": 0.17981743765421818,
+        "calibration_error": 0.051650983093769254,
+        "predicted_approval_rate": 0.5770925110132159,
+        "actual_approval_rate": 0.5550660792951542,
+        "approval_rate_gap": 0.022026431718061734
+      }
+    },
+    {
+      "scenario": "trivial_income_tick",
+      "intensity": null,
+      "day": "2026-09-26",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7477993546046475,
+        "precision": 0.6945454545454546,
+        "recall": 0.7549407114624506,
+        "f1": 0.7234848484848485,
+        "brier": 0.20138199687533678,
+        "calibration_error": 0.03670683651340543,
+        "predicted_approval_rate": 0.5978260869565217,
+        "actual_approval_rate": 0.55,
+        "approval_rate_gap": 0.047826086956521685
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-10-09",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7712283044058745,
+        "precision": 0.702513966480447,
+        "recall": 0.7834890965732088,
+        "f1": 0.7407952871870398,
+        "brier": 0.19407276030622767,
+        "calibration_error": 0.029452182682798922,
+        "predicted_approval_rate": 0.5956738768718802,
+        "actual_approval_rate": 0.5341098169717138,
+        "approval_rate_gap": 0.061564059900166446
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-10-08",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7778756930259701,
+        "precision": 0.6967840735068913,
+        "recall": 0.7634228187919463,
+        "f1": 0.7285828662930345,
+        "brier": 0.19341646665706222,
+        "calibration_error": 0.035997090179358385,
+        "predicted_approval_rate": 0.5576430401366353,
+        "actual_approval_rate": 0.5089666951323655,
+        "approval_rate_gap": 0.04867634500426987
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-10-07",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7734320987654322,
+        "precision": 0.7095490716180372,
+        "recall": 0.7925925925925926,
+        "f1": 0.7487753673897831,
+        "brier": 0.1922771703499298,
+        "calibration_error": 0.023688356441498307,
+        "predicted_approval_rate": 0.5984126984126984,
+        "actual_approval_rate": 0.5357142857142857,
+        "approval_rate_gap": 0.0626984126984127
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-10-06",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7716099921765551,
+        "precision": 0.6751677852348993,
+        "recall": 0.7726574500768049,
+        "f1": 0.7206303724928367,
+        "brier": 0.19393765886932393,
+        "calibration_error": 0.03413855670750027,
+        "predicted_approval_rate": 0.5998389694041868,
+        "actual_approval_rate": 0.5241545893719807,
+        "approval_rate_gap": 0.07568438003220612
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-10-05",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.777507472678755,
+        "precision": 0.6887686062246279,
+        "recall": 0.7631184407796102,
+        "f1": 0.7240398293029872,
+        "brier": 0.19342105520898895,
+        "calibration_error": 0.04347405528541644,
+        "predicted_approval_rate": 0.5671527244819647,
+        "actual_approval_rate": 0.5118956254796623,
+        "approval_rate_gap": 0.05525709900230247
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-10-04",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7791417407240915,
+        "precision": 0.690566037735849,
+        "recall": 0.756198347107438,
+        "f1": 0.7218934911242604,
+        "brier": 0.1931177437760099,
+        "calibration_error": 0.043188158285279055,
+        "predicted_approval_rate": 0.5509355509355509,
+        "actual_approval_rate": 0.5031185031185031,
+        "approval_rate_gap": 0.047817047817047764
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-10-03",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7990237691001698,
+        "precision": 0.7556390977443609,
+        "recall": 0.8104838709677419,
+        "f1": 0.7821011673151751,
+        "brier": 0.18083338104109062,
+        "calibration_error": 0.05136006184144782,
+        "predicted_approval_rate": 0.6073059360730594,
+        "actual_approval_rate": 0.5662100456621004,
+        "approval_rate_gap": 0.04109589041095896
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-10-02",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7749680170575692,
+        "precision": 0.7115646258503401,
+        "recall": 0.7471428571428571,
+        "f1": 0.7289198606271777,
+        "brier": 0.19198099623089065,
+        "calibration_error": 0.028505533868836662,
+        "predicted_approval_rate": 0.5640828856485035,
+        "actual_approval_rate": 0.5372217958557176,
+        "approval_rate_gap": 0.026861089792785897
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-10-01",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7866605279148141,
+        "precision": 0.702513966480447,
+        "recall": 0.7822706065318819,
+        "f1": 0.7402501839587933,
+        "brier": 0.18880021238124806,
+        "calibration_error": 0.030481568071676277,
+        "predicted_approval_rate": 0.5849673202614379,
+        "actual_approval_rate": 0.5253267973856209,
+        "approval_rate_gap": 0.059640522875817004
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-09-30",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.788468809073724,
+        "precision": 0.6949685534591195,
+        "recall": 0.7892857142857143,
+        "f1": 0.7391304347826086,
+        "brier": 0.18870352615556468,
+        "calibration_error": 0.03692184274186478,
+        "predicted_approval_rate": 0.5840220385674931,
+        "actual_approval_rate": 0.5142332415059688,
+        "approval_rate_gap": 0.0697887970615243
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-09-29",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7624622704545978,
+        "precision": 0.6875891583452212,
+        "recall": 0.766295707472178,
+        "f1": 0.724812030075188,
+        "brier": 0.19767035694818955,
+        "calibration_error": 0.02948457448349773,
+        "predicted_approval_rate": 0.5935647756138865,
+        "actual_approval_rate": 0.5325994919559696,
+        "approval_rate_gap": 0.06096528365791698
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-09-28",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7674276249459887,
+        "precision": 0.71760391198044,
+        "recall": 0.7468193384223919,
+        "f1": 0.7319201995012469,
+        "brier": 0.19320737293009535,
+        "calibration_error": 0.023288046837593036,
+        "predicted_approval_rate": 0.5752461322081576,
+        "actual_approval_rate": 0.5527426160337553,
+        "approval_rate_gap": 0.02250351617440227
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-09-27",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7864711111111111,
+        "precision": 0.6832740213523132,
+        "recall": 0.768,
+        "f1": 0.7231638418079096,
+        "brier": 0.18762204612480068,
+        "calibration_error": 0.053880103259800353,
+        "predicted_approval_rate": 0.5915789473684211,
+        "actual_approval_rate": 0.5263157894736842,
+        "approval_rate_gap": 0.06526315789473691
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.05,
+      "day": "2026-09-26",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.71552924320452,
+        "precision": 0.6423841059602649,
+        "recall": 0.7158671586715867,
+        "f1": 0.6771378708551483,
+        "brier": 0.21790545488057186,
+        "calibration_error": 0.06399494518786503,
+        "predicted_approval_rate": 0.5551470588235294,
+        "actual_approval_rate": 0.49816176470588236,
+        "approval_rate_gap": 0.05698529411764708
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-10-09",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7820280657451709,
+        "precision": 0.6882183908045977,
+        "recall": 0.787828947368421,
+        "f1": 0.7346625766871165,
+        "brier": 0.19186544379912387,
+        "calibration_error": 0.0409139858958077,
+        "predicted_approval_rate": 0.5790349417637272,
+        "actual_approval_rate": 0.5058236272878536,
+        "approval_rate_gap": 0.07321131447587359
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-10-08",
+      "drift_columns": [
+        "approved"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7808101472995088,
+        "precision": 0.670846394984326,
+        "recall": 0.7642857142857142,
+        "f1": 0.7145242070116862,
+        "brier": 0.19351263490775078,
+        "calibration_error": 0.05040887479202374,
+        "predicted_approval_rate": 0.5448334756618275,
+        "actual_approval_rate": 0.47822374039282667,
+        "approval_rate_gap": 0.06660973526900082
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-10-07",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7699319556451613,
+        "precision": 0.686382393397524,
+        "recall": 0.7796875,
+        "f1": 0.7300658376005852,
+        "brier": 0.19547752998048024,
+        "calibration_error": 0.030129723805238727,
+        "predicted_approval_rate": 0.5769841269841269,
+        "actual_approval_rate": 0.5079365079365079,
+        "approval_rate_gap": 0.06904761904761902
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-10-06",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7728433734314913,
+        "precision": 0.6629526462395543,
+        "recall": 0.7689822294022617,
+        "f1": 0.7120418848167539,
+        "brier": 0.19539065118116627,
+        "calibration_error": 0.04108770488573467,
+        "predicted_approval_rate": 0.5780998389694042,
+        "actual_approval_rate": 0.49838969404186795,
+        "approval_rate_gap": 0.07971014492753625
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-10-05",
+      "drift_columns": [
+        "approved"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7818136367066637,
+        "precision": 0.6731301939058172,
+        "recall": 0.7702060221870047,
+        "f1": 0.7184035476718403,
+        "brier": 0.19300430790621736,
+        "calibration_error": 0.05105360732275006,
+        "predicted_approval_rate": 0.5541059094397545,
+        "actual_approval_rate": 0.48426707597851115,
+        "approval_rate_gap": 0.06983883346124331
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-10-04",
+      "drift_columns": [
+        "approved"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7902540898016011,
+        "precision": 0.6627906976744186,
+        "recall": 0.7737556561085973,
+        "f1": 0.7139874739039666,
+        "brier": 0.19108709153928571,
+        "calibration_error": 0.06671503897235183,
+        "predicted_approval_rate": 0.5363825363825364,
+        "actual_approval_rate": 0.4594594594594595,
+        "approval_rate_gap": 0.07692307692307693
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-10-03",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8139768728004023,
+        "precision": 0.7431906614785992,
+        "recall": 0.8162393162393162,
+        "f1": 0.7780040733197556,
+        "brier": 0.17721599156837928,
+        "calibration_error": 0.07031167924922756,
+        "predicted_approval_rate": 0.58675799086758,
+        "actual_approval_rate": 0.5342465753424658,
+        "approval_rate_gap": 0.05251141552511418
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-10-02",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7760180995475112,
+        "precision": 0.693502824858757,
+        "recall": 0.7405731523378583,
+        "f1": 0.7162654996353027,
+        "brier": 0.19270336574183028,
+        "calibration_error": 0.029899874668760047,
+        "predicted_approval_rate": 0.5433614735226401,
+        "actual_approval_rate": 0.508825786646201,
+        "approval_rate_gap": 0.03453568687643904
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-10-01",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7876947888963655,
+        "precision": 0.6885007278020379,
+        "recall": 0.7805280528052805,
+        "f1": 0.731631863882444,
+        "brier": 0.18993609152908297,
+        "calibration_error": 0.048410719088665934,
+        "predicted_approval_rate": 0.5612745098039216,
+        "actual_approval_rate": 0.4950980392156863,
+        "approval_rate_gap": 0.06617647058823528
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-09-30",
+      "drift_columns": [
+        "approved"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7859910098405799,
+        "precision": 0.678513731825525,
+        "recall": 0.7894736842105263,
+        "f1": 0.7298001737619462,
+        "brier": 0.19093719981134272,
+        "calibration_error": 0.05689793680729416,
+        "predicted_approval_rate": 0.5684113865932048,
+        "actual_approval_rate": 0.4885215794306703,
+        "approval_rate_gap": 0.07988980716253447
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-09-29",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7666213487528969,
+        "precision": 0.6760772659732541,
+        "recall": 0.7621440536013401,
+        "f1": 0.7165354330708661,
+        "brier": 0.19797718946581846,
+        "calibration_error": 0.034417885109646267,
+        "predicted_approval_rate": 0.5698560541913632,
+        "actual_approval_rate": 0.5055038103302286,
+        "approval_rate_gap": 0.06435224386113458
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-09-28",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7658101591129018,
+        "precision": 0.6975,
+        "recall": 0.7479892761394102,
+        "f1": 0.7218628719275549,
+        "brier": 0.19561230699865995,
+        "calibration_error": 0.026047229146497194,
+        "predicted_approval_rate": 0.5625879043600562,
+        "actual_approval_rate": 0.5246132208157525,
+        "approval_rate_gap": 0.03797468354430378
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-09-27",
+      "drift_columns": [],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7913829787234042,
+        "precision": 0.673992673992674,
+        "recall": 0.7666666666666667,
+        "f1": 0.7173489278752436,
+        "brier": 0.1866334197526167,
+        "calibration_error": 0.0600619786589543,
+        "predicted_approval_rate": 0.5747368421052632,
+        "actual_approval_rate": 0.5052631578947369,
+        "approval_rate_gap": 0.06947368421052635
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "day": "2026-09-26",
+      "drift_columns": [
+        "approved"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7078770608589458,
+        "precision": 0.5993265993265994,
+        "recall": 0.6980392156862745,
+        "f1": 0.644927536231884,
+        "brier": 0.22225671808145095,
+        "calibration_error": 0.07512930179608206,
+        "predicted_approval_rate": 0.5459558823529411,
+        "actual_approval_rate": 0.46875,
+        "approval_rate_gap": 0.07720588235294112
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-10-09",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.792290427561441,
+        "precision": 0.6462480857580398,
+        "recall": 0.793233082706767,
+        "f1": 0.7122362869198312,
+        "brier": 0.19080484924762886,
+        "calibration_error": 0.07621594276385425,
+        "predicted_approval_rate": 0.543261231281198,
+        "actual_approval_rate": 0.4425956738768719,
+        "approval_rate_gap": 0.10066555740432609
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-10-08",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7931607262143334,
+        "precision": 0.631578947368421,
+        "recall": 0.7454909819639278,
+        "f1": 0.6838235294117647,
+        "brier": 0.18987154418863925,
+        "calibration_error": 0.08099307961412935,
+        "predicted_approval_rate": 0.5029888983774552,
+        "actual_approval_rate": 0.426131511528608,
+        "approval_rate_gap": 0.07685738684884719
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-10-07",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7801586554724438,
+        "precision": 0.6421207658321061,
+        "recall": 0.7662565905096661,
+        "f1": 0.6987179487179487,
+        "brier": 0.19412531525909238,
+        "calibration_error": 0.0667952727758337,
+        "predicted_approval_rate": 0.5388888888888889,
+        "actual_approval_rate": 0.4515873015873016,
+        "approval_rate_gap": 0.08730158730158727
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-10-06",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7615673053768619,
+        "precision": 0.597037037037037,
+        "recall": 0.7560975609756098,
+        "f1": 0.6672185430463576,
+        "brier": 0.20382897080578188,
+        "calibration_error": 0.08870754425837397,
+        "predicted_approval_rate": 0.5434782608695652,
+        "actual_approval_rate": 0.42914653784219003,
+        "approval_rate_gap": 0.11433172302737515
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-10-05",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7966940802085729,
+        "precision": 0.6438953488372093,
+        "recall": 0.781305114638448,
+        "f1": 0.7059760956175298,
+        "brier": 0.18779693063329547,
+        "calibration_error": 0.07680743370916066,
+        "predicted_approval_rate": 0.5280122793553338,
+        "actual_approval_rate": 0.4351496546431312,
+        "approval_rate_gap": 0.09286262471220258
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-10-04",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7925573747050833,
+        "precision": 0.6276150627615062,
+        "recall": 0.7614213197969543,
+        "f1": 0.6880733944954128,
+        "brier": 0.19017273401297974,
+        "calibration_error": 0.0929111334408261,
+        "predicted_approval_rate": 0.4968814968814969,
+        "actual_approval_rate": 0.4095634095634096,
+        "approval_rate_gap": 0.08731808731808732
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-10-03",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8066872599766237,
+        "precision": 0.7049180327868853,
+        "recall": 0.8113207547169812,
+        "f1": 0.7543859649122807,
+        "brier": 0.1827319643469788,
+        "calibration_error": 0.06975816291541394,
+        "predicted_approval_rate": 0.5570776255707762,
+        "actual_approval_rate": 0.4840182648401826,
+        "approval_rate_gap": 0.0730593607305936
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-10-02",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.776117307133915,
+        "precision": 0.6497005988023952,
+        "recall": 0.7406143344709898,
+        "f1": 0.6921850079744817,
+        "brier": 0.19419295673346032,
+        "calibration_error": 0.05562991072025739,
+        "predicted_approval_rate": 0.5126630851880276,
+        "actual_approval_rate": 0.44973138910207217,
+        "approval_rate_gap": 0.06293169608595545
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-10-01",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7854558963901423,
+        "precision": 0.6352201257861635,
+        "recall": 0.753731343283582,
+        "f1": 0.689419795221843,
+        "brier": 0.1926355848283646,
+        "calibration_error": 0.07080930926781215,
+        "predicted_approval_rate": 0.5196078431372549,
+        "actual_approval_rate": 0.43790849673202614,
+        "approval_rate_gap": 0.0816993464052288
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-09-30",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.773464927259067,
+        "precision": 0.6305841924398625,
+        "recall": 0.7582644628099173,
+        "f1": 0.6885553470919324,
+        "brier": 0.19761206916248256,
+        "calibration_error": 0.0742638334465266,
+        "predicted_approval_rate": 0.5344352617079889,
+        "actual_approval_rate": 0.4444444444444444,
+        "approval_rate_gap": 0.08999081726354452
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-09-29",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7832887832887833,
+        "precision": 0.6234375,
+        "recall": 0.7702702702702703,
+        "f1": 0.689119170984456,
+        "brier": 0.19420598760049437,
+        "calibration_error": 0.07660590054907825,
+        "predicted_approval_rate": 0.541913632514818,
+        "actual_approval_rate": 0.4386113463166808,
+        "approval_rate_gap": 0.10330228619813714
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-09-28",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7765815472870687,
+        "precision": 0.6479250334672021,
+        "recall": 0.7423312883435583,
+        "f1": 0.6919228020014296,
+        "brier": 0.19427523181834216,
+        "calibration_error": 0.05461023825897596,
+        "predicted_approval_rate": 0.5253164556962026,
+        "actual_approval_rate": 0.45850914205344584,
+        "approval_rate_gap": 0.06680731364275672
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-09-27",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7711818961818961,
+        "precision": 0.6264591439688716,
+        "recall": 0.7453703703703703,
+        "f1": 0.6807610993657506,
+        "brier": 0.19676287571188683,
+        "calibration_error": 0.08026827124858514,
+        "predicted_approval_rate": 0.5410526315789473,
+        "actual_approval_rate": 0.45473684210526316,
+        "approval_rate_gap": 0.08631578947368418
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "day": "2026-09-26",
+      "drift_columns": [
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7334117972860703,
+        "precision": 0.5884476534296029,
+        "recall": 0.7086956521739131,
+        "f1": 0.6429980276134122,
+        "brier": 0.2130045675743971,
+        "calibration_error": 0.08226268665435461,
+        "predicted_approval_rate": 0.5091911764705882,
+        "actual_approval_rate": 0.4227941176470588,
+        "approval_rate_gap": 0.08639705882352938
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-10-09",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8188490501246961,
+        "precision": 0.4875239923224568,
+        "recall": 0.7673716012084593,
+        "f1": 0.596244131455399,
+        "brier": 0.183838714586093,
+        "calibration_error": 0.18132590153803818,
+        "predicted_approval_rate": 0.4334442595673877,
+        "actual_approval_rate": 0.2753743760399334,
+        "approval_rate_gap": 0.15806988352745427
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-10-08",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7997714318780198,
+        "precision": 0.5264270613107822,
+        "recall": 0.7591463414634146,
+        "f1": 0.6217228464419475,
+        "brier": 0.18469545137262522,
+        "calibration_error": 0.1636163332374356,
+        "predicted_approval_rate": 0.4039282664389411,
+        "actual_approval_rate": 0.28010247651579845,
+        "approval_rate_gap": 0.12382578992314264
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-10-07",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8102237288135592,
+        "precision": 0.532608695652174,
+        "recall": 0.784,
+        "f1": 0.6343042071197411,
+        "brier": 0.18263388209310089,
+        "calibration_error": 0.15622199507745643,
+        "predicted_approval_rate": 0.4380952380952381,
+        "actual_approval_rate": 0.2976190476190476,
+        "approval_rate_gap": 0.14047619047619048
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-10-06",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7698335028573079,
+        "precision": 0.44802867383512546,
+        "recall": 0.7163323782234957,
+        "f1": 0.5512679162072768,
+        "brier": 0.1994040267237046,
+        "calibration_error": 0.17293568933005454,
+        "predicted_approval_rate": 0.4492753623188406,
+        "actual_approval_rate": 0.2809983896940419,
+        "approval_rate_gap": 0.16827697262479868
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-10-05",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8123837479655894,
+        "precision": 0.5080789946140036,
+        "recall": 0.7690217391304348,
+        "f1": 0.6118918918918919,
+        "brier": 0.18164961489572187,
+        "calibration_error": 0.1666462663732857,
+        "predicted_approval_rate": 0.4274750575594781,
+        "actual_approval_rate": 0.28242517267843437,
+        "approval_rate_gap": 0.14504988488104376
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-10-04",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8020393332424945,
+        "precision": 0.48633879781420764,
+        "recall": 0.7235772357723578,
+        "f1": 0.5816993464052288,
+        "brier": 0.1843151736712998,
+        "calibration_error": 0.18430300533162244,
+        "predicted_approval_rate": 0.3804573804573805,
+        "actual_approval_rate": 0.25571725571725573,
+        "approval_rate_gap": 0.12474012474012475
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-10-03",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7990102778835172,
+        "precision": 0.5645161290322581,
+        "recall": 0.7394366197183099,
+        "f1": 0.6402439024390244,
+        "brier": 0.1865854658394672,
+        "calibration_error": 0.1376891962724019,
+        "predicted_approval_rate": 0.4246575342465753,
+        "actual_approval_rate": 0.3242009132420091,
+        "approval_rate_gap": 0.1004566210045662
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-10-02",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7814982184757103,
+        "precision": 0.4971857410881801,
+        "recall": 0.7162162162162162,
+        "f1": 0.5869324473975637,
+        "brier": 0.18897766184627907,
+        "calibration_error": 0.15688163322796886,
+        "predicted_approval_rate": 0.40905602455871065,
+        "actual_approval_rate": 0.283960092095165,
+        "approval_rate_gap": 0.12509593246354567
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-10-01",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7889426541748171,
+        "precision": 0.49284253578732107,
+        "recall": 0.7067448680351907,
+        "f1": 0.5807228915662651,
+        "brier": 0.1874872659663044,
+        "calibration_error": 0.16495403233742234,
+        "predicted_approval_rate": 0.39950980392156865,
+        "actual_approval_rate": 0.2785947712418301,
+        "approval_rate_gap": 0.12091503267973858
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-09-30",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7812323801852596,
+        "precision": 0.4957805907172996,
+        "recall": 0.7230769230769231,
+        "f1": 0.5882352941176471,
+        "brier": 0.1933612229908885,
+        "calibration_error": 0.15795875386088756,
+        "predicted_approval_rate": 0.43526170798898073,
+        "actual_approval_rate": 0.29843893480257117,
+        "approval_rate_gap": 0.13682277318640956
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-09-29",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7886710091054803,
+        "precision": 0.504835589941973,
+        "recall": 0.7352112676056338,
+        "f1": 0.5986238532110092,
+        "brier": 0.19013465926674747,
+        "calibration_error": 0.1526526059882118,
+        "predicted_approval_rate": 0.4377646062658764,
+        "actual_approval_rate": 0.3005927180355631,
+        "approval_rate_gap": 0.1371718882303133
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-09-28",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8036927783240467,
+        "precision": 0.5033557046979866,
+        "recall": 0.7407407407407407,
+        "f1": 0.5994005994005994,
+        "brier": 0.18481520788336425,
+        "calibration_error": 0.16526747376324938,
+        "predicted_approval_rate": 0.4191279887482419,
+        "actual_approval_rate": 0.2848101265822785,
+        "approval_rate_gap": 0.13431786216596342
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-09-27",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7927509680642878,
+        "precision": 0.5118483412322274,
+        "recall": 0.7397260273972602,
+        "f1": 0.6050420168067226,
+        "brier": 0.18926099333274665,
+        "calibration_error": 0.1494943655593212,
+        "predicted_approval_rate": 0.4442105263157895,
+        "actual_approval_rate": 0.30736842105263157,
+        "approval_rate_gap": 0.13684210526315793
+      }
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "day": "2026-09-26",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "loan_amount"
+      ],
+      "quality_categories": [],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7571235194585448,
+        "precision": 0.4517543859649123,
+        "recall": 0.6866666666666666,
+        "f1": 0.544973544973545,
+        "brier": 0.19871552835042416,
+        "calibration_error": 0.1634730473385222,
+        "predicted_approval_rate": 0.41911764705882354,
+        "actual_approval_rate": 0.2757352941176471,
+        "approval_rate_gap": 0.14338235294117646
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-10-09",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7749178245057815,
+        "precision": 0.49364791288566245,
+        "recall": 0.7101827676240209,
+        "f1": 0.582441113490364,
+        "brier": 0.19327045483646815,
+        "calibration_error": 0.1500414088846539,
+        "predicted_approval_rate": 0.43080531665363564,
+        "actual_approval_rate": 0.29945269741985925,
+        "approval_rate_gap": 0.1313526192337764
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-10-08",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7929108495556991,
+        "precision": 0.5058275058275058,
+        "recall": 0.7457044673539519,
+        "f1": 0.6027777777777777,
+        "brier": 0.18761440945091548,
+        "calibration_error": 0.16306944799678794,
+        "predicted_approval_rate": 0.41853658536585364,
+        "actual_approval_rate": 0.2839024390243902,
+        "approval_rate_gap": 0.13463414634146342
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-10-07",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.805551489056333,
+        "precision": 0.5133079847908745,
+        "recall": 0.72,
+        "f1": 0.5993340732519423,
+        "brier": 0.18102228363525946,
+        "calibration_error": 0.15526028269951747,
+        "predicted_approval_rate": 0.40337423312883436,
+        "actual_approval_rate": 0.2875766871165644,
+        "approval_rate_gap": 0.11579754601226994
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-10-06",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8030938667496886,
+        "precision": 0.5074309978768577,
+        "recall": 0.746875,
+        "f1": 0.6042983565107459,
+        "brier": 0.18395445250608786,
+        "calibration_error": 0.1618142743444718,
+        "predicted_approval_rate": 0.41941228851291185,
+        "actual_approval_rate": 0.28495102404274264,
+        "approval_rate_gap": 0.1344612644701692
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-10-05",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7978494623655914,
+        "precision": 0.4802494802494803,
+        "recall": 0.7451612903225806,
+        "f1": 0.584070796460177,
+        "brier": 0.1865800898728749,
+        "calibration_error": 0.16924601017815144,
+        "predicted_approval_rate": 0.4237885462555066,
+        "actual_approval_rate": 0.27312775330396477,
+        "approval_rate_gap": 0.15066079295154183
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-10-04",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8098311335403726,
+        "precision": 0.5139664804469274,
+        "recall": 0.71875,
+        "f1": 0.5993485342019544,
+        "brier": 0.17877463571759222,
+        "calibration_error": 0.15475730799372822,
+        "predicted_approval_rate": 0.3977777777777778,
+        "actual_approval_rate": 0.28444444444444444,
+        "approval_rate_gap": 0.11333333333333334
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-10-03",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7479432624113476,
+        "precision": 0.5025125628140703,
+        "recall": 0.7092198581560284,
+        "f1": 0.5882352941176471,
+        "brier": 0.20604314772538143,
+        "calibration_error": 0.1419457327069794,
+        "predicted_approval_rate": 0.4512471655328798,
+        "actual_approval_rate": 0.3197278911564626,
+        "approval_rate_gap": 0.1315192743764172
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-10-02",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8138769798737645,
+        "precision": 0.5027124773960217,
+        "recall": 0.7722222222222223,
+        "f1": 0.6089813800657174,
+        "brier": 0.18247582412115423,
+        "calibration_error": 0.1734328156993145,
+        "predicted_approval_rate": 0.4276875483372003,
+        "actual_approval_rate": 0.27842227378190254,
+        "approval_rate_gap": 0.14926527455529776
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-10-01",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7904523056456758,
+        "precision": 0.5152091254752852,
+        "recall": 0.7486187845303868,
+        "f1": 0.6103603603603603,
+        "brier": 0.19116722213223358,
+        "calibration_error": 0.15561579398816633,
+        "predicted_approval_rate": 0.44727891156462585,
+        "actual_approval_rate": 0.3078231292517007,
+        "approval_rate_gap": 0.13945578231292516
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-09-30",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7723548562126967,
+        "precision": 0.48807339449541287,
+        "recall": 0.7,
+        "f1": 0.5751351351351351,
+        "brier": 0.1954906095776294,
+        "calibration_error": 0.15397368777557754,
+        "predicted_approval_rate": 0.4349561053471668,
+        "actual_approval_rate": 0.3032721468475658,
+        "approval_rate_gap": 0.13168395849960096
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-09-29",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8199808534294155,
+        "precision": 0.5089928057553957,
+        "recall": 0.7628032345013477,
+        "f1": 0.6105717367853291,
+        "brier": 0.17722550334470732,
+        "calibration_error": 0.16572439484784426,
+        "predicted_approval_rate": 0.4124629080118694,
+        "actual_approval_rate": 0.27522255192878337,
+        "approval_rate_gap": 0.13724035608308605
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-09-28",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category",
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8105679551228495,
+        "precision": 0.5050251256281407,
+        "recall": 0.7642585551330798,
+        "f1": 0.6081694402420574,
+        "brier": 0.18206724632044796,
+        "calibration_error": 0.1681601999827378,
+        "predicted_approval_rate": 0.4270386266094421,
+        "actual_approval_rate": 0.2821888412017167,
+        "approval_rate_gap": 0.14484978540772536
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-09-27",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7158893280632412,
+        "precision": 0.3622448979591837,
+        "recall": 0.6173913043478261,
+        "f1": 0.4565916398713826,
+        "brier": 0.20734721683944418,
+        "calibration_error": 0.197019546970913,
+        "predicted_approval_rate": 0.392,
+        "actual_approval_rate": 0.23,
+        "approval_rate_gap": 0.162
+      }
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "day": "2026-09-26",
+      "drift_columns": [
+        "annual_income",
+        "approved",
+        "employment_status",
+        "loan_amount"
+      ],
+      "quality_categories": [
+        "category"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7777599486521181,
+        "precision": 0.5096153846153846,
+        "recall": 0.6973684210526315,
+        "f1": 0.5888888888888889,
+        "brier": 0.19415703724191527,
+        "calibration_error": 0.14268402781219877,
+        "predicted_approval_rate": 0.43333333333333335,
+        "actual_approval_rate": 0.31666666666666665,
+        "approval_rate_gap": 0.1166666666666667
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-10-09",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7577175418877591,
+        "precision": 0.7167487684729064,
+        "recall": 0.7896879240162822,
+        "f1": 0.7514525500322788,
+        "brier": 0.1961604058567686,
+        "calibration_error": 0.0392145606744429,
+        "predicted_approval_rate": 0.6207951070336392,
+        "actual_approval_rate": 0.5634556574923547,
+        "approval_rate_gap": 0.05733944954128445
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-10-08",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7749458818678485,
+        "precision": 0.6966442953020134,
+        "recall": 0.7935779816513762,
+        "f1": 0.7419585418155825,
+        "brier": 0.19201058916557182,
+        "calibration_error": 0.020079019055982212,
+        "predicted_approval_rate": 0.627104377104377,
+        "actual_approval_rate": 0.5505050505050505,
+        "approval_rate_gap": 0.07659932659932656
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-10-07",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7811610803990903,
+        "precision": 0.7180232558139535,
+        "recall": 0.7954911433172303,
+        "f1": 0.7547746371275783,
+        "brier": 0.18849352908496708,
+        "calibration_error": 0.022536665257118664,
+        "predicted_approval_rate": 0.6220614828209765,
+        "actual_approval_rate": 0.5614828209764918,
+        "approval_rate_gap": 0.06057866184448468
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-10-06",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7664218517907245,
+        "precision": 0.7181571815718157,
+        "recall": 0.7981927710843374,
+        "f1": 0.7560627674750356,
+        "brier": 0.19364677965358015,
+        "calibration_error": 0.023009617697954662,
+        "predicted_approval_rate": 0.6280851063829788,
+        "actual_approval_rate": 0.5651063829787234,
+        "approval_rate_gap": 0.06297872340425537
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-10-05",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7477919413919414,
+        "precision": 0.688034188034188,
+        "recall": 0.7728,
+        "f1": 0.7279577995478523,
+        "brier": 0.202871031062654,
+        "calibration_error": 0.025649783327626727,
+        "predicted_approval_rate": 0.5994876174210076,
+        "actual_approval_rate": 0.533731853116994,
+        "approval_rate_gap": 0.06575576430401364
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-10-04",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7684424150177575,
+        "precision": 0.7045454545454546,
+        "recall": 0.8037037037037037,
+        "f1": 0.7508650519031141,
+        "brier": 0.19309288585070536,
+        "calibration_error": 0.018696347006230404,
+        "predicted_approval_rate": 0.6298568507157464,
+        "actual_approval_rate": 0.5521472392638037,
+        "approval_rate_gap": 0.07770961145194266
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-10-03",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7492238449526959,
+        "precision": 0.7244897959183674,
+        "recall": 0.7473684210526316,
+        "f1": 0.7357512953367875,
+        "brier": 0.19835160693783285,
+        "calibration_error": 0.047738492839219895,
+        "predicted_approval_rate": 0.6176470588235294,
+        "actual_approval_rate": 0.5987394957983193,
+        "approval_rate_gap": 0.018907563025210128
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-10-02",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7570475162850178,
+        "precision": 0.7112211221122112,
+        "recall": 0.756140350877193,
+        "f1": 0.7329931972789115,
+        "brier": 0.19651898187542102,
+        "calibration_error": 0.023943293563062653,
+        "predicted_approval_rate": 0.6005946481665014,
+        "actual_approval_rate": 0.5649157581764123,
+        "approval_rate_gap": 0.03567888999008917
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-10-01",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7534470246734397,
+        "precision": 0.7131367292225201,
+        "recall": 0.772133526850508,
+        "f1": 0.7414634146341463,
+        "brier": 0.19769713566562305,
+        "calibration_error": 0.02151676381503697,
+        "predicted_approval_rate": 0.6170388751033913,
+        "actual_approval_rate": 0.5698924731182796,
+        "approval_rate_gap": 0.04714640198511166
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-09-30",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7454521223429067,
+        "precision": 0.7058823529411765,
+        "recall": 0.7736389684813754,
+        "f1": 0.7382091592617909,
+        "brier": 0.1998821638885664,
+        "calibration_error": 0.02025501599758777,
+        "predicted_approval_rate": 0.6301482701812191,
+        "actual_approval_rate": 0.5749588138385503,
+        "approval_rate_gap": 0.05518945634266881
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-09-29",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7767740952380953,
+        "precision": 0.70042194092827,
+        "recall": 0.7968,
+        "f1": 0.7455089820359282,
+        "brier": 0.19208531753935842,
+        "calibration_error": 0.026726984901455458,
+        "predicted_approval_rate": 0.6182608695652174,
+        "actual_approval_rate": 0.5434782608695652,
+        "approval_rate_gap": 0.07478260869565223
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-09-28",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7706570812365205,
+        "precision": 0.7043596730245232,
+        "recall": 0.7953846153846154,
+        "f1": 0.7471098265895953,
+        "brier": 0.1948027731933227,
+        "calibration_error": 0.026156792587994315,
+        "predicted_approval_rate": 0.619409282700422,
+        "actual_approval_rate": 0.5485232067510548,
+        "approval_rate_gap": 0.07088607594936713
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-09-27",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7889610389610389,
+        "precision": 0.7283018867924528,
+        "recall": 0.7658730158730159,
+        "f1": 0.746615087040619,
+        "brier": 0.18474963073915535,
+        "calibration_error": 0.06541215515745137,
+        "predicted_approval_rate": 0.6036446469248291,
+        "actual_approval_rate": 0.5740318906605922,
+        "approval_rate_gap": 0.029612756264236872
+      }
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "day": "2026-09-26",
+      "drift_columns": [
+        "annual_income",
+        "credit_score"
+      ],
+      "quality_categories": [
+        "completeness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7131276150627615,
+        "precision": 0.6596491228070176,
+        "recall": 0.7866108786610879,
+        "f1": 0.7175572519083969,
+        "brier": 0.21296792800350384,
+        "calibration_error": 0.05182086154899857,
+        "predicted_approval_rate": 0.6612529002320185,
+        "actual_approval_rate": 0.5545243619489559,
+        "approval_rate_gap": 0.10672853828306261
+      }
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-10-09",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-10-08",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-10-07",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-10-06",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-10-05",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-10-04",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-10-03",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-10-02",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-10-01",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-09-30",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-09-29",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-09-28",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-09-27",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "schema_break",
+      "intensity": null,
+      "day": "2026-09-26",
+      "drift_columns": [],
+      "quality_categories": [
+        "schema"
+      ],
+      "scored": false,
+      "reason": "label absent; the batch cannot be evaluated",
+      "degraded": true,
+      "metrics": {}
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-10-09",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness",
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7803027213658483,
+        "precision": 0.7027027027027027,
+        "recall": 0.7761194029850746,
+        "f1": 0.7375886524822695,
+        "brier": 0.1911130812817554,
+        "calibration_error": 0.02436662569672271,
+        "predicted_approval_rate": 0.578125,
+        "actual_approval_rate": 0.5234375,
+        "approval_rate_gap": 0.0546875
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-10-08",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7469435823779357,
+        "precision": 0.699501246882793,
+        "recall": 0.7362204724409449,
+        "f1": 0.717391304347826,
+        "brier": 0.20141956549007684,
+        "calibration_error": 0.029770569834099883,
+        "predicted_approval_rate": 0.5828488372093024,
+        "actual_approval_rate": 0.5537790697674418,
+        "approval_rate_gap": 0.029069767441860517
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-10-07",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7888117890345174,
+        "precision": 0.7263948497854077,
+        "recall": 0.8078758949880668,
+        "f1": 0.7649717514124293,
+        "brier": 0.1834314669950432,
+        "calibration_error": 0.029702048054304646,
+        "predicted_approval_rate": 0.6225784903139613,
+        "actual_approval_rate": 0.5597862391449566,
+        "approval_rate_gap": 0.06279225116900466
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-10-06",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7723175781549869,
+        "precision": 0.7320099255583127,
+        "recall": 0.7752956636005256,
+        "f1": 0.7530312699425654,
+        "brier": 0.1911150838505384,
+        "calibration_error": 0.03683095386202355,
+        "predicted_approval_rate": 0.6001489203276247,
+        "actual_approval_rate": 0.5666418466120625,
+        "approval_rate_gap": 0.03350707371556216
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-10-05",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7849096380421292,
+        "precision": 0.745928338762215,
+        "recall": 0.765033407572383,
+        "f1": 0.7553600879604178,
+        "brier": 0.18611794522899744,
+        "calibration_error": 0.030998561642756876,
+        "predicted_approval_rate": 0.5930457179652285,
+        "actual_approval_rate": 0.5782356728911784,
+        "approval_rate_gap": 0.014810045074050149
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-10-04",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7508879184861718,
+        "precision": 0.7202572347266881,
+        "recall": 0.7466666666666667,
+        "f1": 0.7332242225859247,
+        "brier": 0.19917171544117027,
+        "calibration_error": 0.062296339083687306,
+        "predicted_approval_rate": 0.5879017013232514,
+        "actual_approval_rate": 0.5671077504725898,
+        "approval_rate_gap": 0.020793950850661602
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-10-03",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness",
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7709302208278269,
+        "precision": 0.7075718015665796,
+        "recall": 0.7900874635568513,
+        "f1": 0.7465564738292011,
+        "brier": 0.19256597843302395,
+        "calibration_error": 0.04995818954856432,
+        "predicted_approval_rate": 0.6060126582278481,
+        "actual_approval_rate": 0.5427215189873418,
+        "approval_rate_gap": 0.06329113924050633
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-10-02",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness",
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7471640932582362,
+        "precision": 0.6919786096256685,
+        "recall": 0.7497103128621089,
+        "f1": 0.7196885428253615,
+        "brier": 0.2016644329911628,
+        "calibration_error": 0.03133355027616941,
+        "predicted_approval_rate": 0.6024484536082474,
+        "actual_approval_rate": 0.5560567010309279,
+        "approval_rate_gap": 0.046391752577319534
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-10-01",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7810758513931888,
+        "precision": 0.7154017857142857,
+        "recall": 0.7667464114832536,
+        "f1": 0.7401847575057737,
+        "brier": 0.18822201589444068,
+        "calibration_error": 0.03289972471425198,
+        "predicted_approval_rate": 0.5910290237467019,
+        "actual_approval_rate": 0.5514511873350924,
+        "approval_rate_gap": 0.0395778364116095
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-09-30",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7492338168265266,
+        "precision": 0.6857142857142857,
+        "recall": 0.7710843373493976,
+        "f1": 0.725897920604915,
+        "brier": 0.2020995797191883,
+        "calibration_error": 0.038586092746273094,
+        "predicted_approval_rate": 0.594059405940594,
+        "actual_approval_rate": 0.5282885431400283,
+        "approval_rate_gap": 0.06577086280056577
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-09-29",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness",
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7729612272690858,
+        "precision": 0.7371727748691099,
+        "recall": 0.7719298245614035,
+        "f1": 0.7541510444563471,
+        "brier": 0.1902870032794777,
+        "calibration_error": 0.03429286227429575,
+        "predicted_approval_rate": 0.6086679413639261,
+        "actual_approval_rate": 0.5812619502868069,
+        "approval_rate_gap": 0.027405991077119163
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-09-28",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7868007054673721,
+        "precision": 0.7141280353200883,
+        "recall": 0.7702380952380953,
+        "f1": 0.7411225658648339,
+        "brier": 0.1863525715748033,
+        "calibration_error": 0.033261658197766324,
+        "predicted_approval_rate": 0.598019801980198,
+        "actual_approval_rate": 0.5544554455445545,
+        "approval_rate_gap": 0.04356435643564349
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-09-27",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness",
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7733264033264033,
+        "precision": 0.6746031746031746,
+        "recall": 0.7846153846153846,
+        "f1": 0.7254623044096729,
+        "brier": 0.1959539352944625,
+        "calibration_error": 0.05413616621406008,
+        "predicted_approval_rate": 0.6086956521739131,
+        "actual_approval_rate": 0.5233494363929146,
+        "approval_rate_gap": 0.08534621578099844
+      }
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "day": "2026-09-26",
+      "drift_columns": [],
+      "quality_categories": [
+        "uniqueness"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7639334542410715,
+        "precision": 0.6890459363957597,
+        "recall": 0.76171875,
+        "f1": 0.7235621521335807,
+        "brier": 0.19715533860594098,
+        "calibration_error": 0.0337546369145436,
+        "predicted_approval_rate": 0.5895833333333333,
+        "actual_approval_rate": 0.5333333333333333,
+        "approval_rate_gap": 0.05625000000000002
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-10-09",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7957430089342147,
+        "precision": 0.714828897338403,
+        "recall": 0.7611336032388664,
+        "f1": 0.7372549019607844,
+        "brier": 0.1848592253715683,
+        "calibration_error": 0.042936251760197205,
+        "predicted_approval_rate": 0.5433884297520661,
+        "actual_approval_rate": 0.5103305785123967,
+        "approval_rate_gap": 0.03305785123966942
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-10-08",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7587247891063247,
+        "precision": 0.720754716981132,
+        "recall": 0.7892561983471075,
+        "f1": 0.7534516765285996,
+        "brier": 0.19700586017753283,
+        "calibration_error": 0.059350057128608226,
+        "predicted_approval_rate": 0.6091954022988506,
+        "actual_approval_rate": 0.5563218390804597,
+        "approval_rate_gap": 0.05287356321839087
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-10-07",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7502362948960303,
+        "precision": 0.7580645161290323,
+        "recall": 0.7430830039525692,
+        "f1": 0.7504990019960079,
+        "brier": 0.20014034328501795,
+        "calibration_error": 0.06427915878064987,
+        "predicted_approval_rate": 0.5675057208237986,
+        "actual_approval_rate": 0.5789473684210527,
+        "approval_rate_gap": -0.011441647597254079
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-10-06",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7606060606060607,
+        "precision": 0.7161716171617162,
+        "recall": 0.7695035460992907,
+        "f1": 0.7418803418803419,
+        "brier": 0.19630758968982268,
+        "calibration_error": 0.020443683712563283,
+        "predicted_approval_rate": 0.603585657370518,
+        "actual_approval_rate": 0.5617529880478087,
+        "approval_rate_gap": 0.04183266932270924
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-10-05",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7991978153268476,
+        "precision": 0.7290969899665551,
+        "recall": 0.8074074074074075,
+        "f1": 0.7662565905096661,
+        "brier": 0.18121225088031875,
+        "calibration_error": 0.04971031044317512,
+        "predicted_approval_rate": 0.6139630390143738,
+        "actual_approval_rate": 0.5544147843942505,
+        "approval_rate_gap": 0.05954825462012325
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-10-04",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7100919913419913,
+        "precision": 0.6703296703296703,
+        "recall": 0.6354166666666666,
+        "f1": 0.6524064171122995,
+        "brier": 0.21260039873012407,
+        "calibration_error": 0.09270107201950736,
+        "predicted_approval_rate": 0.5260115606936416,
+        "actual_approval_rate": 0.5549132947976878,
+        "approval_rate_gap": -0.028901734104046173
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-10-03",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.6772681620354871,
+        "precision": 0.6826923076923077,
+        "recall": 0.6893203883495146,
+        "f1": 0.6859903381642513,
+        "brier": 0.23365931898655232,
+        "calibration_error": 0.11831524658800678,
+        "predicted_approval_rate": 0.5473684210526316,
+        "actual_approval_rate": 0.5421052631578948,
+        "approval_rate_gap": 0.0052631578947368585
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-10-02",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7795240893066979,
+        "precision": 0.7658862876254181,
+        "recall": 0.7736486486486487,
+        "f1": 0.7697478991596639,
+        "brier": 0.18964724632321675,
+        "calibration_error": 0.05578272466768501,
+        "predicted_approval_rate": 0.5944333996023857,
+        "actual_approval_rate": 0.588469184890656,
+        "approval_rate_gap": 0.005964214711729698
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-10-01",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7630406290956748,
+        "precision": 0.7094594594594594,
+        "recall": 0.75,
+        "f1": 0.7291666666666666,
+        "brier": 0.196106962318263,
+        "calibration_error": 0.04356942026191007,
+        "predicted_approval_rate": 0.5943775100401606,
+        "actual_approval_rate": 0.5622489959839357,
+        "approval_rate_gap": 0.032128514056224855
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-09-30",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.8038521836506158,
+        "precision": 0.756,
+        "recall": 0.8042553191489362,
+        "f1": 0.7793814432989691,
+        "brier": 0.17924865456092193,
+        "calibration_error": 0.04383612388357719,
+        "predicted_approval_rate": 0.5882352941176471,
+        "actual_approval_rate": 0.5529411764705883,
+        "approval_rate_gap": 0.03529411764705881
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-09-29",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7955939132409722,
+        "precision": 0.7509157509157509,
+        "recall": 0.7915057915057915,
+        "f1": 0.7706766917293233,
+        "brier": 0.17964202694946474,
+        "calibration_error": 0.03747481731367077,
+        "predicted_approval_rate": 0.6121076233183856,
+        "actual_approval_rate": 0.5807174887892377,
+        "approval_rate_gap": 0.03139013452914796
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-09-28",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7365992484526966,
+        "precision": 0.7031700288184438,
+        "recall": 0.782051282051282,
+        "f1": 0.7405159332321699,
+        "brier": 0.20348712317258374,
+        "calibration_error": 0.04586273840570899,
+        "predicted_approval_rate": 0.6378676470588235,
+        "actual_approval_rate": 0.5735294117647058,
+        "approval_rate_gap": 0.06433823529411764
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-09-27",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.8264390243902439,
+        "precision": 0.8253968253968254,
+        "recall": 0.832,
+        "f1": 0.8286852589641435,
+        "brier": 0.16737409144171142,
+        "calibration_error": 0.09207943669860046,
+        "predicted_approval_rate": 0.6086956521739131,
+        "actual_approval_rate": 0.6038647342995169,
+        "approval_rate_gap": 0.004830917874396157
+      }
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "day": "2026-09-26",
+      "drift_columns": [],
+      "quality_categories": [
+        "volume"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7314285714285714,
+        "precision": 0.7142857142857143,
+        "recall": 0.7727272727272727,
+        "f1": 0.74235807860262,
+        "brier": 0.2023569260040049,
+        "calibration_error": 0.08130599771008197,
+        "predicted_approval_rate": 0.6611111111111111,
+        "actual_approval_rate": 0.6111111111111112,
+        "approval_rate_gap": 0.04999999999999993
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-10-09",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7269636834754649,
+        "precision": 0.7050183598531212,
+        "recall": 0.7721179624664879,
+        "f1": 0.7370441458733206,
+        "brier": 0.21298968654069678,
+        "calibration_error": 0.051032923862162606,
+        "predicted_approval_rate": 0.6083395383469844,
+        "actual_approval_rate": 0.5554728220402085,
+        "approval_rate_gap": 0.05286671630677586
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-10-08",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.771134308520954,
+        "precision": 0.7213114754098361,
+        "recall": 0.809052333804809,
+        "f1": 0.7626666666666667,
+        "brier": 0.19368931214375296,
+        "calibration_error": 0.039741998589226904,
+        "predicted_approval_rate": 0.6323763955342903,
+        "actual_approval_rate": 0.5637958532695375,
+        "approval_rate_gap": 0.06858054226475274
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-10-07",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7340225289027605,
+        "precision": 0.7061452513966481,
+        "recall": 0.8040712468193384,
+        "f1": 0.7519333729922665,
+        "brier": 0.20841871230952327,
+        "calibration_error": 0.054004997649374345,
+        "predicted_approval_rate": 0.6415770609318996,
+        "actual_approval_rate": 0.5634408602150538,
+        "approval_rate_gap": 0.0781362007168458
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-10-06",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7201506198772272,
+        "precision": 0.6675094816687737,
+        "recall": 0.7916041979010495,
+        "f1": 0.7242798353909465,
+        "brier": 0.21705577076907173,
+        "calibration_error": 0.05660317420392518,
+        "predicted_approval_rate": 0.6441368078175895,
+        "actual_approval_rate": 0.5431596091205212,
+        "approval_rate_gap": 0.10097719869706834
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-10-05",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7403833175867188,
+        "precision": 0.6961832061068702,
+        "recall": 0.7741935483870968,
+        "f1": 0.7331189710610932,
+        "brier": 0.2084679307135483,
+        "calibration_error": 0.050364886405537296,
+        "predicted_approval_rate": 0.6138706654170571,
+        "actual_approval_rate": 0.5520149953139644,
+        "approval_rate_gap": 0.061855670103092786
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-10-04",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.734515847630125,
+        "precision": 0.7105263157894737,
+        "recall": 0.7651821862348178,
+        "f1": 0.7368421052631579,
+        "brier": 0.20637661553268472,
+        "calibration_error": 0.09656138485475829,
+        "predicted_approval_rate": 0.6214953271028038,
+        "actual_approval_rate": 0.5771028037383178,
+        "approval_rate_gap": 0.04439252336448596
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-10-03",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7553328047721524,
+        "precision": 0.675,
+        "recall": 0.7777777777777778,
+        "f1": 0.722753346080306,
+        "brier": 0.2048974440745713,
+        "calibration_error": 0.08181373980749607,
+        "predicted_approval_rate": 0.6073752711496746,
+        "actual_approval_rate": 0.527114967462039,
+        "approval_rate_gap": 0.08026030368763559
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-10-02",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7463341912228264,
+        "precision": 0.7061728395061728,
+        "recall": 0.7933425797503467,
+        "f1": 0.7472240365774004,
+        "brier": 0.2045217107504637,
+        "calibration_error": 0.04211020201461026,
+        "predicted_approval_rate": 0.6318252730109204,
+        "actual_approval_rate": 0.5624024960998439,
+        "approval_rate_gap": 0.06942277691107646
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-10-01",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7467666570261379,
+        "precision": 0.7328881469115192,
+        "recall": 0.789568345323741,
+        "f1": 0.7601731601731602,
+        "brier": 0.2014355383892731,
+        "calibration_error": 0.0656334429860199,
+        "predicted_approval_rate": 0.6278825995807128,
+        "actual_approval_rate": 0.5828092243186582,
+        "approval_rate_gap": 0.04507337526205457
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-09-30",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7448955266576873,
+        "precision": 0.6971736204576043,
+        "recall": 0.8119122257053292,
+        "f1": 0.7501810282404056,
+        "brier": 0.20646333508272083,
+        "calibration_error": 0.05547000362639337,
+        "predicted_approval_rate": 0.6383161512027491,
+        "actual_approval_rate": 0.5481099656357389,
+        "approval_rate_gap": 0.09020618556701021
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-09-29",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.726854889754772,
+        "precision": 0.7078804347826086,
+        "recall": 0.7729970326409495,
+        "f1": 0.7390070921985815,
+        "brier": 0.21255585542767175,
+        "calibration_error": 0.055571400655528756,
+        "predicted_approval_rate": 0.6210970464135022,
+        "actual_approval_rate": 0.5687763713080168,
+        "approval_rate_gap": 0.052320675105485326
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-09-28",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.6826722412807319,
+        "precision": 0.6490727532097005,
+        "recall": 0.7804459691252144,
+        "f1": 0.7087227414330218,
+        "brier": 0.23337395149540097,
+        "calibration_error": 0.08279538861753086,
+        "predicted_approval_rate": 0.6594543744120414,
+        "actual_approval_rate": 0.548447789275635,
+        "approval_rate_gap": 0.11100658513640638
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-09-27",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": false,
+      "metrics": {
+        "roc_auc": 0.7684455040039121,
+        "precision": 0.7055214723926381,
+        "recall": 0.8013937282229965,
+        "f1": 0.7504078303425775,
+        "brier": 0.19465501475947614,
+        "calibration_error": 0.048306889950763196,
+        "predicted_approval_rate": 0.6330097087378641,
+        "actual_approval_rate": 0.5572815533980583,
+        "approval_rate_gap": 0.07572815533980581
+      }
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "day": "2026-09-26",
+      "drift_columns": [],
+      "quality_categories": [
+        "validity"
+      ],
+      "scored": true,
+      "reason": null,
+      "degraded": true,
+      "metrics": {
+        "roc_auc": 0.7232760595647194,
+        "precision": 0.6747967479674797,
+        "recall": 0.7377777777777778,
+        "f1": 0.7048832271762208,
+        "brier": 0.2152688680376803,
+        "calibration_error": 0.058770345649440725,
+        "predicted_approval_rate": 0.5871121718377088,
+        "actual_approval_rate": 0.5369928400954654,
+        "approval_rate_gap": 0.05011933174224337
+      }
+    }
+  ]
+}

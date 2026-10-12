@@ -44,3 +44,9 @@ monitor-model:  ## score recent batches and record model metrics
 
 decay:  ## does detected drift correspond to model damage?
 	$(VENV)/python -m datasentinel.cli model decay
+
+site:  ## rebuild the published dashboard's data from a real pipeline run
+	$(VENV)/python scripts/build_site.py
+
+serve-site:  ## preview the dashboard locally
+	$(VENV)/python -m http.server 8787 --directory site

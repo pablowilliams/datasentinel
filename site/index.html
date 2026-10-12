@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DataSentinel</title>
+<meta name="description" content="Data quality and ML monitoring for batch pipelines, characterised by the smallest fault it can actually see.">
+<style>
+:root{
+  --bg:#fbfbfd; --panel:#fff; --ink:#15181d; --muted:#5b6472; --line:#e3e6ec;
+  --accent:#2f5fe0; --crit:#b3261e; --high:#c2610a; --med:#8a6d0b; --low:#4a5563;
+  --ok:#1f7a4d; --grid:#eef0f4;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1116; --panel:#151a21; --ink:#e8ebf0; --muted:#98a2b3; --line:#242b35;
+    --accent:#7aa2ff; --crit:#f2766a; --high:#f0a35e; --med:#ddc05a; --low:#9aa5b4;
+    --ok:#5fd39b; --grid:#1d242e;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1116; --panel:#151a21; --ink:#e8ebf0; --muted:#98a2b3; --line:#242b35;
+  --accent:#7aa2ff; --crit:#f2766a; --high:#f0a35e; --med:#ddc05a; --low:#9aa5b4;
+  --ok:#5fd39b; --grid:#1d242e;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px 72px}
+header{padding:44px 0 8px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.1;margin:0 0 10px;letter-spacing:-.02em}
+.tag{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.note{margin:18px 0 0;padding:12px 14px;border-left:3px solid var(--accent);
+  background:var(--panel);border-radius:0 8px 8px 0;color:var(--muted);font-size:13.5px;max-width:72ch}
+h2{font-size:21px;margin:44px 0 4px;letter-spacing:-.01em}
+h2 + .sub{color:var(--muted);margin:0 0 16px;font-size:14px;max-width:70ch}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.grid{display:grid;gap:12px}
+.cards{grid-template-columns:repeat(auto-fit,minmax(168px,1fr))}
+.card .k{font-size:27px;font-weight:650;letter-spacing:-.02em}
+.card .l{color:var(--muted);font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+.card .d{color:var(--muted);font-size:12.5px;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;color:var(--muted);font-weight:600;font-size:11.5px;
+  text-transform:uppercase;letter-spacing:.05em;padding:0 10px 8px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid var(--grid);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.num{font-variant-numeric:tabular-nums;text-align:right}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11px;
+  font-weight:650;text-transform:uppercase;letter-spacing:.04em;border:1px solid currentColor}
+.critical{color:var(--crit)} .high{color:var(--high)} .medium{color:var(--med)} .low{color:var(--low)}
+.good{color:var(--ok)}
+.scroll{overflow-x:auto}
+details{border-top:1px solid var(--grid)}
+details:first-of-type{border-top:0}
+summary{cursor:pointer;padding:11px 4px;display:grid;
+  grid-template-columns:86px 1fr auto;gap:12px;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:var(--grid)}
+.ev{margin:0 4px 14px;padding:12px;background:var(--bg);border:1px solid var(--line);
+  border-radius:8px;font-size:12.5px;overflow-x:auto}
+.ev pre{margin:0;white-space:pre-wrap;word-break:break-word}
+.bar{height:7px;border-radius:4px;background:var(--grid);overflow:hidden;min-width:70px}
+.bar>i{display:block;height:100%;background:var(--accent)}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:13px}
+a{color:var(--accent)}
+.err{color:var(--crit);padding:16px}
+svg{display:block;width:100%;height:auto;overflow:visible}
+.lg{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:12.5px;margin-top:10px}
+.lg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.q{font-size:13.5px;color:var(--muted)}
+.q b{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>DataSentinel</h1>
+  <p class="tag">Data quality and ML monitoring for a daily batch of loan applications,
+  characterised by the smallest fault it can actually see rather than by how often it
+  catches an obvious one.</p>
+  <p class="note" id="caveat">Loading.</p>
+</header>
+
+<main id="app"></main>
+
+<footer>
+  <p><strong>What this is.</strong> Synthetic data throughout. The faults were injected by
+  the author and the thresholds set by the author, so this is a real test of the wiring
+  and a weak test of the world. The benign scenarios and the false-alarm counts are what
+  keep it from being circular; the detection floors are what make it informative.</p>
+  <p>GitHub Pages serves files rather than processes, so this page reads a committed
+  snapshot of one pipeline run. It is a record, not a live console.</p>
+  <p><a href="https://github.com/pablowilliams/datasentinel">Source and measurement
+  methodology on GitHub</a></p>
+</footer>
+</div>
+
+<script>
+const $ = (h) => { const t = document.createElement("template"); t.innerHTML = h.trim(); return t.content; };
+const pct = (v, d=0) => v === null || v === undefined || Number.isNaN(v) ? "n/a" : (v*100).toFixed(d) + "%";
+const fx = (v, d=3) => v === null || v === undefined || Number.isNaN(v) ? "n/a" : Number(v).toFixed(d);
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+async function grab(name){
+  try { const r = await fetch("data/" + name); return r.ok ? await r.json() : null; }
+  catch { return null; }
+}
+
+function scorecard(ev, sens){
+  const floors = sens ? sens.floors : {};
+  const units = sens ? sens.units : {};
+  const strict = ev ? ev.strict : null;
+  const cards = [];
+  if (strict) {
+    const negatives = strict.false_positive + strict.true_negative;
+    cards.push(["Failures detected", `${strict.true_positive} / ${strict.true_positive + strict.false_negative}`,
+      "by the right incident category, not merely something firing"]);
+    cards.push(["False alarms", `${strict.false_positive} / ${negatives}`,
+      "on days where nothing was wrong"]);
+  }
+  if (ev && ev.false_positive_rate_healthy !== null)
+    cards.push(["Healthy days", pct(ev.false_positive_rate_healthy), "false alarm rate on untroubled days"]);
+  if (ev) cards.push(["Observations", ev.scenario_days, "scenario-days evaluated"]);
+
+  const order = ["duplicates","invalid_values","missing_income","volume_drop","income_shift"];
+  const rows = order.filter(k => floors[k] !== undefined).map(k =>
+    `<tr><td>${esc(k)}</td><td class="q">${esc(units[k] || "")}</td>
+     <td class="num"><b>${floors[k] === null ? "not in range" : pct(floors[k], 1)}</b></td></tr>`).join("");
+
+  return $(`<section>
+    <h2>Does it work</h2>
+    <p class="sub">Recall against a fault chosen to be large measures the choice of fault. Both
+    numbers are here, and the floors below are the ones worth reading.</p>
+    <div class="grid cards">${cards.map(([l,k,d]) =>
+      `<div class="panel card"><div class="k">${esc(k)}</div><div class="l">${esc(l)}</div>
+       <div class="d">${esc(d)}</div></div>`).join("")}</div>
+
+    <h2>The smallest fault reliably caught</h2>
+    <p class="sub">Each fault swept from negligible to severe. The floor is the smallest version
+    detected on at least 90% of days. Read <b>income_shift</b> as the real limitation: a
+    population that has moved less than that passes unnoticed.</p>
+    <div class="panel scroll"><table><thead><tr><th>Fault</th><th>Severity measured as</th>
+      <th class="num">Floor</th></tr></thead><tbody>${rows}</tbody></table></div>
+  </section>`);
+}
+
+function curves(sens){
+  if (!sens) return $("<section></section>");
+  const byScenario = {};
+  sens.points.forEach(p => (byScenario[p.scenario] ||= []).push(p));
+  const W = 1000, rowH = 124, pad = 46;
+  const names = Object.keys(byScenario);
+  const H = names.length * rowH + 24;
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Detection rate against fault severity">`;
+  names.forEach((name, i) => {
+    const pts = byScenario[name].sort((a,b) => a.intensity - b.intensity);
+    const y0 = i * rowH + 30, h = 58;
+    const xs = pts.map((_, j) => pad + (j / Math.max(pts.length - 1, 1)) * (W - pad - 150));
+    svg += `<text x="0" y="${y0 - 12}" fill="var(--ink)" font-size="13" font-weight="600">${esc(name)}</text>`;
+    [0, 0.5, 0.9, 1].forEach(g => {
+      const y = y0 + h - g * h;
+      svg += `<line x1="${pad}" y1="${y}" x2="${W-150}" y2="${y}" stroke="var(--grid)" stroke-width="1"/>`;
+      svg += `<text x="${pad-6}" y="${y+4}" fill="var(--muted)" font-size="10" text-anchor="end">${g*100}%</text>`;
+    });
+    const path = pts.map((p, j) => `${j ? "L" : "M"}${xs[j]},${y0 + h - p.rate * h}`).join(" ");
+    svg += `<path d="${path}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>`;
+    pts.forEach((p, j) => {
+      const reliable = p.rate >= 0.9;
+      svg += `<circle cx="${xs[j]}" cy="${y0 + h - p.rate*h}" r="3.4"
+        fill="${reliable ? "var(--ok)" : "var(--panel)"}" stroke="var(--accent)" stroke-width="1.6"/>`;
+      svg += `<text x="${xs[j]}" y="${y0 + h + 15}" fill="var(--muted)" font-size="9.5"
+        text-anchor="middle">${(p.intensity*100).toFixed(p.intensity < 0.01 ? 1 : 0)}</text>`;
+    });
+    const floor = sens.floors[name];
+    svg += `<text x="${W-142}" y="${y0 + 16}" fill="var(--muted)" font-size="11">floor</text>`;
+    svg += `<text x="${W-142}" y="${y0 + 34}" fill="var(--ink)" font-size="15" font-weight="650">${
+      floor === null || floor === undefined ? "none" : (floor*100).toFixed(1) + "%"}</text>`;
+  });
+  svg += "</svg>";
+  return $(`<section><h2>Detection against severity</h2>
+    <p class="sub">Horizontal axis is how severe the injected fault is, in the units above.
+    Green points are caught on at least 90% of days.</p>
+    <div class="panel">${svg}
+    <div class="lg"><span><i style="background:var(--ok)"></i>reliably caught</span>
+    <span><i style="background:var(--accent)"></i>detection rate</span></div></div></section>`);
+}
+
+function week(snap){
+  if (!snap || !snap.runs.length) return $("<section></section>");
+  const runs = snap.runs.filter(r => r.scenario !== "healthy" || true)
+    .slice().reverse().filter(r => r.total_checks > 0);
+  const rows = runs.map(r => {
+    const sev = r.incidents > 0 ? (r.failed_checks === 0 ? "high" : "critical") : "good";
+    const day = r.business_date || (r.started_at || "").slice(0, 10);
+    return `<tr>
+      <td class="mono">${esc(day)}</td>
+      <td>${esc(r.scenario)}</td>
+      <td class="num">${(r.rows_processed ?? 0).toLocaleString()}</td>
+      <td class="num">${r.failed_checks} / ${r.total_checks}</td>
+      <td class="num"><span class="${sev}">${r.incidents}</span></td>
+      <td class="q">${r.failed_checks === 0 && r.incidents > 0
+        ? "every deterministic rule passed; only the distribution comparison saw it"
+        : (r.incidents === 0 ? "quiet" : "")}</td></tr>`;
+  }).join("");
+  return $(`<section><h2>A week through the pipeline</h2>
+    <p class="sub">Run end to end on synthetic batches. The row with failed checks at zero and
+    incidents above zero is the case that justifies having a drift layer at all.</p>
+    <div class="panel scroll"><table><thead><tr><th>Day</th><th>Scenario</th>
+      <th class="num">Rows</th><th class="num">Failed checks</th><th class="num">Incidents</th>
+      <th>Note</th></tr></thead><tbody>${rows}</tbody></table></div></section>`);
+}
+
+function modelChart(snap){
+  if (!snap || !snap.model_metrics.length) return $("<section></section>");
+  const byDay = {};
+  snap.model_metrics.forEach(m => {
+    (byDay[m.evaluation_window] ||= {})[m.metric_name] = Number(m.metric_value);
+  });
+  const days = Object.keys(byDay).sort();
+  if (days.length < 2) return $("<section></section>");
+  const scen = {};
+  snap.runs.forEach(r => { if (r.business_date) scen[r.business_date] = r.scenario; });
+
+  const W = 1000, H = 300, L = 54, R = 54, T = 20, B = 58;
+  const x = (i) => L + (i / Math.max(days.length - 1, 1)) * (W - L - R);
+  const auc = days.map(d => byDay[d].roc_auc);
+  const ece = days.map(d => byDay[d].calibration_error);
+  const eceMax = Math.max(...ece.filter(v => v !== undefined), 0.05) * 1.15;
+  const yA = (v) => T + (1 - (v - 0.5) / 0.5) * (H - T - B);
+  const yE = (v) => T + (1 - v / eceMax) * (H - T - B);
+
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Model AUC and calibration error by day">`;
+  [0.5,0.6,0.7,0.8,0.9,1.0].forEach(g => {
+    svg += `<line x1="${L}" y1="${yA(g)}" x2="${W-R}" y2="${yA(g)}" stroke="var(--grid)"/>`;
+    svg += `<text x="${L-8}" y="${yA(g)+4}" fill="var(--muted)" font-size="10" text-anchor="end">${g.toFixed(1)}</text>`;
+  });
+  svg += `<text x="${L-8}" y="${T-6}" fill="var(--accent)" font-size="10.5" text-anchor="end">AUC</text>`;
+  svg += `<text x="${W-R+8}" y="${T-6}" fill="var(--crit)" font-size="10.5">calib err</text>`;
+  [0, eceMax/2, eceMax].forEach(g => {
+    svg += `<text x="${W-R+8}" y="${yE(g)+4}" fill="var(--muted)" font-size="10">${g.toFixed(2)}</text>`;
+  });
+  const line = (vals, fn, colour) => vals.map((v,i) =>
+    v === undefined ? "" : `${i ? "L" : "M"}${x(i)},${fn(v)}`).join(" ");
+  svg += `<path d="${line(ece,yE)}" fill="none" stroke="var(--crit)" stroke-width="2.5"/>`;
+  svg += `<path d="${line(auc,yA)}" fill="none" stroke="var(--accent)" stroke-width="2.5"/>`;
+  days.forEach((d,i) => {
+    if (ece[i] !== undefined) svg += `<circle cx="${x(i)}" cy="${yE(ece[i])}" r="3.6" fill="var(--crit)"/>`;
+    if (auc[i] !== undefined) svg += `<circle cx="${x(i)}" cy="${yA(auc[i])}" r="3.6" fill="var(--accent)"/>`;
+    svg += `<text x="${x(i)}" y="${H-B+20}" fill="var(--muted)" font-size="9.5" text-anchor="middle">${d.slice(5)}</text>`;
+    const s = scen[d];
+    if (s && s !== "healthy")
+      svg += `<text x="${x(i)}" y="${H-B+34}" fill="var(--high)" font-size="9" text-anchor="middle">${esc(s)}</text>`;
+  });
+  svg += "</svg>";
+
+  return $(`<section><h2>What breaks first in the model</h2>
+    <p class="sub">The approval classifier scored on each day's batch. Under a population shift
+    its ranking holds while its probabilities come loose, so a platform watching AUC alone
+    would call it healthy. A credit threshold is applied to the probability, not the ranking.</p>
+    <div class="panel">${svg}
+    <div class="lg"><span><i style="background:var(--accent)"></i>ROC AUC, left axis</span>
+    <span><i style="background:var(--crit)"></i>calibration error, right axis</span></div></div></section>`);
+}
+
+function decaySection(decay){
+  if (!decay || !decay.contingency) return $("<section></section>");
+  const c = decay.contingency;
+  const labels = [
+    ["degraded_drift_saw_it","Degraded, the drift tests caught it",""],
+    ["degraded_only_quality_saw_it","Degraded, only the quality checks caught it","neither layer is sufficient alone"],
+    ["degraded_nothing_saw_it","Degraded, nothing caught it","three are benign days clearing a 99% band; two are real"],
+    ["healthy_but_something_raised","Model fine, something was raised","true about the data, not yet a problem"],
+    ["healthy_and_quiet","Model fine, silence",""],
+  ];
+  const total = Object.values(c).reduce((a,b)=>a+b,0);
+  const rows = labels.filter(([k]) => c[k] !== undefined).map(([k,l,n]) =>
+    `<tr><td>${esc(l)}</td><td class="num">${c[k]}</td>
+     <td><div class="bar"><i style="width:${(c[k]/total*100).toFixed(1)}%"></i></div></td>
+     <td class="q">${esc(n)}</td></tr>`).join("");
+  return $(`<section><h2>Does detected drift mean actual damage</h2>
+    <p class="sub">Measured over ${total} observations rather than assumed. Damage means a metric
+    outside the 99% band of untroubled days, or a batch the model could not score at all.
+    Fixed thresholds picked by eye sat 1.7 standard deviations into ordinary noise and
+    reported ten silent failures that were all quiet Saturdays.</p>
+    <div class="panel scroll"><table><thead><tr><th>Outcome</th><th class="num">Count</th>
+      <th></th><th></th></tr></thead><tbody>${rows}</tbody></table></div></section>`);
+}
+
+function incidents(snap){
+  if (!snap || !snap.incidents.length) return $("<section></section>");
+  const items = snap.incidents.slice(0, 24).map(i => {
+    const ev = JSON.stringify(i.evidence, null, 2);
+    return `<details><summary>
+      <span class="pill ${esc(i.severity)}">${esc(i.severity)}</span>
+      <span>${esc(i.description)}</span>
+      <span class="q mono">${esc(i.category)}</span></summary>
+      <div class="ev"><pre>${esc(ev)}</pre></div></details>`;
+  }).join("");
+  return $(`<section><h2>Incidents, with the evidence for each claim</h2>
+    <p class="sub">Every incident states what was expected, what arrived and how many rows are
+    affected. An alert that does not say that is a reason to go and read the SQL, which is
+    not an alert. Expand any row.</p>
+    <div class="panel">${items}</div></section>`);
+}
+
+(async function(){
+  const [snap, ev, sens, decay] = await Promise.all(
+    ["snapshot.json","evaluation.json","sensitivity.json","model_decay.json"].map(grab));
+  const app = document.getElementById("app");
+  const cav = document.getElementById("caveat");
+
+  if (!snap && !ev && !sens) {
+    cav.textContent = "Could not load the exported data.";
+    app.innerHTML = `<p class="err">No data found. Run <code>make site</code> to build it.</p>`;
+    return;
+  }
+  cav.innerHTML = (snap ? esc(snap.caveat) + " Exported " + esc(snap.generated_at.replace("T"," ")) + "."
+                        : "A snapshot of one pipeline run on synthetic data.")
+    + " Every number on this page was produced by the code in the repository.";
+
+  [scorecard(ev, sens), week(snap), modelChart(snap), curves(sens),
+   decaySection(decay), incidents(snap)].forEach(n => app.appendChild(n));
+})();
+</script>
+</body>
+</html>

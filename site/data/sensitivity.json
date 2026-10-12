@@ -1,0 +1,371 @@
+{
+  "note": "Detection rate against injected fault severity. The floor is the smallest fault caught on at least 90% of days, and is a more informative figure than recall against a fault chosen to be large.",
+  "units": {
+    "missing_income": "null rate forced into annual_income",
+    "duplicates": "share of batch duplicated",
+    "invalid_values": "share of rows corrupted",
+    "volume_drop": "share of rows lost",
+    "population_shift": "fractional uplift in income, plus a new category",
+    "income_shift": "fractional uplift in income, nothing else wrong"
+  },
+  "floors": {
+    "missing_income": 0.05,
+    "duplicates": 0.002,
+    "invalid_values": 0.002,
+    "volume_drop": 0.3,
+    "population_shift": 0.02,
+    "income_shift": 0.15
+  },
+  "points": [
+    {
+      "scenario": "missing_income",
+      "intensity": 0.01,
+      "days": 21,
+      "detected": 0,
+      "rate": 0.0
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.02,
+      "days": 21,
+      "detected": 1,
+      "rate": 0.047619047619047616
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.03,
+      "days": 21,
+      "detected": 3,
+      "rate": 0.14285714285714285
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.04,
+      "days": 21,
+      "detected": 13,
+      "rate": 0.6190476190476191
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.05,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.06,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.07,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.08,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.1,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.15,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "missing_income",
+      "intensity": 0.2,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.002,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.005,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.01,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.02,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.05,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.1,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "duplicates",
+      "intensity": 0.18,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.001,
+      "days": 21,
+      "detected": 16,
+      "rate": 0.7619047619047619
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.002,
+      "days": 21,
+      "detected": 20,
+      "rate": 0.9523809523809523
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.005,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.01,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.02,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.04,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "invalid_values",
+      "intensity": 0.06,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.05,
+      "days": 21,
+      "detected": 1,
+      "rate": 0.047619047619047616
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.1,
+      "days": 21,
+      "detected": 2,
+      "rate": 0.09523809523809523
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.15,
+      "days": 21,
+      "detected": 7,
+      "rate": 0.3333333333333333
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.2,
+      "days": 21,
+      "detected": 10,
+      "rate": 0.47619047619047616
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.25,
+      "days": 21,
+      "detected": 17,
+      "rate": 0.8095238095238095
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.3,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.4,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "volume_drop",
+      "intensity": 0.6,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.02,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.05,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.08,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.1,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.15,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.2,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.3,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "population_shift",
+      "intensity": 0.5,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.02,
+      "days": 21,
+      "detected": 0,
+      "rate": 0.0
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.04,
+      "days": 21,
+      "detected": 0,
+      "rate": 0.0
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.06,
+      "days": 21,
+      "detected": 2,
+      "rate": 0.09523809523809523
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.08,
+      "days": 21,
+      "detected": 3,
+      "rate": 0.14285714285714285
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.1,
+      "days": 21,
+      "detected": 6,
+      "rate": 0.2857142857142857
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.15,
+      "days": 21,
+      "detected": 20,
+      "rate": 0.9523809523809523
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.2,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.3,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    },
+    {
+      "scenario": "income_shift",
+      "intensity": 0.5,
+      "days": 21,
+      "detected": 21,
+      "rate": 1.0
+    }
+  ]
+}

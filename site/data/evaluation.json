@@ -1,0 +1,98 @@
+{
+  "days": 60,
+  "scenario_days": 720,
+  "caveat": "Injected faults on synthetic data, detected by rules the same author configured. A test of the wiring, not of the world. The benign scenarios and the false-positive count are what keep it from being circular.",
+  "loose": {
+    "true_positive": 480,
+    "false_negative": 0,
+    "false_positive": 3,
+    "true_negative": 237,
+    "precision": 0.9937888198757764,
+    "recall": 1.0,
+    "f1": 0.9968847352024921
+  },
+  "strict": {
+    "true_positive": 480,
+    "false_negative": 0,
+    "false_positive": 3,
+    "true_negative": 237,
+    "precision": 0.9937888198757764,
+    "recall": 1.0,
+    "f1": 0.9968847352024921
+  },
+  "false_positive_rate_healthy": 0.0,
+  "per_scenario": {
+    "healthy": {
+      "kind": "healthy",
+      "days": 60,
+      "alerted": 0,
+      "expected_hit": 0
+    },
+    "missing_income": {
+      "kind": "failure",
+      "days": 60,
+      "alerted": 60,
+      "expected_hit": 60
+    },
+    "schema_break": {
+      "kind": "failure",
+      "days": 60,
+      "alerted": 60,
+      "expected_hit": 60
+    },
+    "population_shift": {
+      "kind": "failure",
+      "days": 60,
+      "alerted": 60,
+      "expected_hit": 60
+    },
+    "income_shift": {
+      "kind": "failure",
+      "days": 60,
+      "alerted": 60,
+      "expected_hit": 60
+    },
+    "stale": {
+      "kind": "failure",
+      "days": 60,
+      "alerted": 60,
+      "expected_hit": 60
+    },
+    "duplicates": {
+      "kind": "failure",
+      "days": 60,
+      "alerted": 60,
+      "expected_hit": 60
+    },
+    "volume_drop": {
+      "kind": "failure",
+      "days": 60,
+      "alerted": 60,
+      "expected_hit": 60
+    },
+    "invalid_values": {
+      "kind": "failure",
+      "days": 60,
+      "alerted": 60,
+      "expected_hit": 60
+    },
+    "minor_noise": {
+      "kind": "benign",
+      "days": 60,
+      "alerted": 0,
+      "expected_hit": 0
+    },
+    "weekend": {
+      "kind": "benign",
+      "days": 60,
+      "alerted": 3,
+      "expected_hit": 0
+    },
+    "trivial_income_tick": {
+      "kind": "benign",
+      "days": 60,
+      "alerted": 0,
+      "expected_hit": 0
+    }
+  }
+}
