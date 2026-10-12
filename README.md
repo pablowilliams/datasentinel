@@ -8,11 +8,11 @@ against declared rules, compares the population against a reference window, and
 raises incidents that state what was expected, what arrived, and how much data is
 affected.
 
-Built with: Python 3.12 · PostgreSQL 17 · pandas · SciPy · pytest
+Built with: Python 3.12 · PostgreSQL 17 · pandas · SciPy · scikit-learn · pytest
 
-Installed and planned but **not yet used by any code**: dbt, FastAPI, Streamlit,
-scikit-learn. See [State of the work](#state-of-the-work) before taking the
-architecture diagram as a description of what runs.
+Installed and planned but **not yet used by any code**: dbt, FastAPI, Streamlit.
+See [State of the work](#state-of-the-work) before taking the architecture
+diagram as a description of what runs.
 
 ## The number that matters is not the recall
 
@@ -108,6 +108,90 @@ up it stops protecting anything: the p-value falls through the floor while the
 shift stays at a tenth of a PSI point, true and significant and of no consequence
 to anybody.
 
+## The model being monitored, and what breaks first
+
+A logistic regression predicts the approval decision. Deliberately plain: the
+project is about whether the platform notices a model going wrong, and
+coefficients you can read make it obvious when something has.
+
+**One column is excluded on purpose.** `interest_rate` is priced after a loan is
+approved, so it only exists for applications that got that far. A model given it
+would score beautifully and be undeployable, because at decision time the field
+is not there. The feature module raises on it rather than trusting anyone to
+remember.
+
+**AUC 0.772 is the ceiling, not a mediocre score.** The label is a Bernoulli draw
+from a known logistic function, so the generator's own logit is the best any
+model can do. Measured over 30 held-out days on complete rows:
+
+| | AUC |
+|---|---|
+| The classifier | 0.7724 |
+| The oracle, which knows the true logit | 0.7727 |
+| Gap | **0.0003** |
+
+It recovers essentially all the attainable ranking skill. A number materially
+higher than this would mean a leak, and that comparison is a test in the suite
+rather than a remark.
+
+### Calibration dies while ranking survives
+
+Under a 50% income shift, against the healthy baseline:
+
+| | healthy | shifted | change |
+|---|---|---|---|
+| ROC AUC | 0.772 | 0.796 | **+0.024** |
+| Calibration error | 0.030 | 0.163 | **+0.133** |
+| F1 | 0.747 | 0.597 | -0.150 |
+| Approval rate gap | +0.046 | +0.137 | +0.091 |
+
+**AUC goes up.** A platform watching discrimination alone would report the model
+as fine while it approved the wrong share of applicants, because the ranking is
+still broadly right and the probabilities are no longer anchored to anything. A
+threshold is applied to the probability, not to the ranking. That is why
+calibration error and the approval-rate gap are tracked beside AUC rather than
+behind it.
+
+### Does drift mean damage? Mostly, and the exceptions matter
+
+196 observations across twelve scenarios, with model damage defined as a metric
+outside the 99% band of untroubled days:
+
+| | count |
+|---|---|
+| Degraded, drift caught it | 45 |
+| Degraded, only the quality checks caught it | 30 |
+| **Degraded, nothing caught it** | **5** |
+| Model fine, something was raised | 43 |
+| Model fine, silence | 73 |
+
+Of those five, three are benign days that cleared a 99th percentile, which is
+what a 99% band does by construction. Two are genuine: income shifts of 5% and
+10%, both below the 15% detection floor the sensitivity sweep already found. The
+two analyses agree about where this platform stops seeing, which is the most
+reassuring thing in the repository.
+
+Two cases are worth naming. `missing_income` produces drift with no damage:
+median imputation absorbs a 20% hole in income and the model barely moves. Paging
+someone for it would teach them to ignore the next alert. And `invalid_values`
+damages the model with no drift at all, because credit scores of 9999 corrupt the
+input without moving the distribution in a way the drift tests examine. The range
+check catches it. Neither layer is sufficient alone, and that is the argument for
+having both.
+
+### The threshold was wrong the first time, again
+
+Damage was originally defined as a 0.02 drop in AUC or a 0.02 rise in calibration
+error, picked by eye. Calibration error on untroubled days has a standard
+deviation of 0.0093, so that threshold sat 1.7 standard deviations out and fired
+on ordinary variation. It reported ten silent model failures, every one of them a
+quiet Saturday or an unremarkable Tuesday.
+
+Damage is now a metric outside the 99% band of 42 measured healthy days, which
+also absorbs the fact that a 470-row Saturday measures calibration less precisely
+than a 1,200-row Wednesday. The silent-failure count fell from 10 in 140 to 5 in
+196, and the ones that remain are real.
+
 ## Benign scenarios are what make precision mean anything
 
 Three of the twelve scenarios change without being wrong, and the correct
@@ -150,7 +234,7 @@ CSV or API  ->  ingestion  ->  PostgreSQL raw  ->  [dbt staging and marts]
                     |                |
                     |                +------------+------------+
                     |                v            v            v
-                    |         quality checks  drift tests  [model metrics]
+                    |         quality checks  drift tests  model metrics
                     |                +------------+------------+
                     |                             v
                     +-------> pipeline_runs   incidents  ->  [API]  [dashboard]
@@ -179,7 +263,15 @@ make init           # schema plus 90 days of healthy reference data
 make demo           # a healthy run, then three different failures
 make evaluate       # score detection across every scenario
 make sensitivity    # find the smallest fault reliably caught
-make test           # 91 tests
+make test           # 114 tests
+```
+
+Model monitoring:
+
+```bash
+make train-model    # train the approval classifier on healthy history
+make monitor-model  # score recent batches, record to model_metrics
+make decay          # does detected drift correspond to model damage?
 ```
 
 Individual runs:
@@ -190,25 +282,23 @@ Individual runs:
 ```
 
 Machine-readable results land in `results/evaluation.json` and
-`results/sensitivity.json`.
+`results/sensitivity.json`, and `results/model_decay.json`.
 
 ## State of the work
 
 Built and measured: the generator with twelve scenarios, ingestion with run
 tracking and idempotency, nine check types driven by YAML, drift across numeric,
 categorical and missingness dimensions with FDR control, the incident model with
-severity escalation on business-critical columns, the evaluation harness, the
-sensitivity sweep, and 91 tests including integration tests against a real
-PostgreSQL.
+severity escalation on business-critical columns, the approval classifier with a
+leakage guard and an oracle comparison, model metric persistence, the
+drift-to-damage analysis, the evaluation harness, the sensitivity sweep, and 114
+tests including integration tests against a real PostgreSQL.
 
 Not built yet, stated precisely because an earlier draft of this section said the
 dbt models were "scaffolded but empty" when the directory holds no files at all:
 
 - **dbt**: nothing. No `dbt_project.yml`, no models, no sources, no dbt tests. The
   package is installed and the directories exist. Checks read the raw layer.
-- **Model monitoring**: nothing. No classifier is trained, and `model_metrics` is
-  a declared table that no code writes to. This is the largest gap relative to
-  the project's own name.
 - **FastAPI service**: nothing beyond an empty package.
 - **Streamlit dashboard**: nothing.
 - **Docker and Compose**: nothing. Docker is not installed on this machine, so
@@ -223,7 +313,10 @@ dbt models were "scaffolded but empty" when the directory holds no files at all:
 
 - Synthetic data throughout. No claim here transfers to a real pipeline.
 - The faults were injected by the author and the thresholds set by the author.
-- A population shift under 15% in income is not reliably detected.
+- A population shift under 15% in income is not reliably detected, and the model
+  damage it causes at 5% and 10% passes both layers unnoticed.
+- The approval model is trained once and never retrained. Nothing here measures
+  whether retraining on drifted data would recover the calibration it lost.
 - The reference window is a fixed 90 days with no seasonality beyond day of week,
   so a genuine annual cycle would read as drift.
 - Severity mapping is a judgement encoded as a lookup table, not a derived

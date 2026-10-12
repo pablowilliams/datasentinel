@@ -35,3 +35,12 @@ typecheck:
 	$(VENV)/mypy src
 
 all: lint test evaluate sensitivity
+
+train-model:  ## train the approval classifier on healthy history
+	$(VENV)/python -m datasentinel.cli model train
+
+monitor-model:  ## score recent batches and record model metrics
+	$(VENV)/python -m datasentinel.cli model monitor
+
+decay:  ## does detected drift correspond to model damage?
+	$(VENV)/python -m datasentinel.cli model decay
