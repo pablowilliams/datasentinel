@@ -3,6 +3,15 @@
 **Data quality and ML monitoring for batch pipelines, characterised by the smallest
 fault it can actually see.**
 
+[![live dashboard](https://img.shields.io/badge/live_dashboard-open-2f5fe0?style=flat-square)](https://pablowilliams.github.io/datasentinel/)
+[![CI](https://img.shields.io/github/actions/workflow/status/pablowilliams/datasentinel/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/pablowilliams/datasentinel/actions/workflows/ci.yml)
+[![licence: MIT](https://img.shields.io/badge/licence-MIT-15181d?style=flat-square)](LICENSE)
+
+[**Open the dashboard →**](https://pablowilliams.github.io/datasentinel/)
+It is a committed snapshot of one pipeline run, not a live console: GitHub Pages
+serves files rather than processes. Every figure on it was produced by the code
+in `src/`.
+
 DataSentinel watches a daily batch of loan applications. It loads them, checks them
 against declared rules, compares the population against a reference window, and
 raises incidents that state what was expected, what arrived, and how much data is
@@ -300,12 +309,16 @@ dbt models were "scaffolded but empty" when the directory holds no files at all:
 - **dbt**: nothing. No `dbt_project.yml`, no models, no sources, no dbt tests. The
   package is installed and the directories exist. Checks read the raw layer.
 - **FastAPI service**: nothing beyond an empty package.
-- **Streamlit dashboard**: nothing.
+- **Streamlit dashboard**: not built. The published dashboard is a static page
+  reading an exported snapshot, which is what GitHub Pages can host. An
+  interactive Streamlit app querying PostgreSQL live would need somewhere to run.
 - **Docker and Compose**: nothing. Docker is not installed on this machine, so
   when those files are written they will be untested and labelled as such.
 - **Orchestration**: a Makefile and a CLI, not Prefect or Dagster.
 - **Docs**: `docs/` is empty. No architecture document, data dictionary or
   decision records.
+- **Pipeline freshness on the page**: the dashboard is rebuilt by hand with
+  `make site`, so it is only as current as the last commit of `site/data`.
 - **Dataset-driven config**: `datasets.freshness_sla_minutes` is stored but never
   read; the 24 hour SLA is hardcoded in `config/checks.yml` instead.
 
