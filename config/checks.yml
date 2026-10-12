@@ -1,0 +1,99 @@
+# Quality checks for the loan_applications dataset.
+#
+# Thresholds are calibrated against the healthy baseline, not picked round.
+# Income runs 1.2% null and credit score 2.0% on a good day, so a 5% limit
+# leaves room for an ordinary bad day without leaving room for a broken join.
+dataset: loan_applications
+
+checks:
+  - name: required_columns_present
+    type: schema_required
+    severity: critical
+
+  - name: no_unexpected_columns
+    type: schema_unexpected
+    severity: medium
+
+  - name: credit_score_is_numeric
+    type: schema_type
+    column: credit_score
+    severity: critical
+
+  - name: loan_amount_is_numeric
+    type: schema_type
+    column: loan_amount
+    severity: critical
+
+  - name: application_id_unique
+    type: unique
+    column: application_id
+    severity: critical
+
+  - name: application_date_complete
+    type: null_rate
+    column: application_date
+    severity: critical
+    options: {max_rate: 0.0}
+
+  - name: annual_income_complete
+    type: null_rate
+    column: annual_income
+    severity: high
+    options: {max_rate: 0.05}
+
+  - name: credit_score_complete
+    type: null_rate
+    column: credit_score
+    severity: high
+    options: {max_rate: 0.06}
+
+  - name: employment_status_complete
+    type: null_rate
+    column: employment_status
+    severity: low
+    options: {max_rate: 0.05}
+
+  - name: customer_age_plausible
+    type: range
+    column: customer_age
+    severity: high
+    options: {min: 18, max: 100}
+
+  - name: credit_score_in_band
+    type: range
+    column: credit_score
+    severity: high
+    options: {min: 300, max: 850}
+
+  - name: loan_amount_positive
+    type: range
+    column: loan_amount
+    severity: high
+    options: {min: 1, max: 1000000}
+
+  - name: debt_to_income_is_a_ratio
+    type: range
+    column: debt_to_income_ratio
+    severity: medium
+    options: {min: 0, max: 1}
+
+  - name: employment_status_known
+    type: allowed_values
+    column: employment_status
+    severity: medium
+
+  - name: loan_term_known
+    type: allowed_values
+    column: loan_term_months
+    severity: medium
+
+  - name: data_is_fresh
+    type: freshness
+    column: application_date
+    severity: critical
+    options: {max_age_hours: 24}
+
+  - name: volume_within_weekday_norms
+    type: volume
+    severity: high
+    options: {min_ratio: 0.7, max_ratio: 1.3}

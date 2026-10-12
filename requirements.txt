@@ -1,0 +1,17 @@
+pandas
+duckdb
+sqlalchemy
+psycopg[binary]
+pydantic
+pydantic-settings
+pyyaml
+scipy
+scikit-learn
+fastapi
+uvicorn[standard]
+streamlit
+altair
+typer
+rich
+dbt-core
+dbt-postgres

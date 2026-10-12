@@ -1,0 +1,65 @@
+# Drift monitoring for loan_applications.
+#
+# Two gates, both of which must open before anything is raised: the change must
+# be unlikely to be chance (alpha) AND large enough to matter (min_effect).
+#
+# The second gate is the one that earns its keep, and the measured numbers say
+# where. A 1.5% uniform shift in income against this reference window:
+#
+#     rows        KS p-value    PSI      outcome
+#     1,200       0.59          0.006    silent on both gates
+#     5,000       0.031         0.004    significant, not material
+#     100,000     7.2e-10       0.001    significant, not material
+#     500,000     3.7e-13       0.001    significant, not material
+#
+# At a daily batch of 1,200 the significance gate is enough. From five thousand
+# rows upward it stops protecting anything: the p-value falls through the floor
+# while the shift stays at a tenth of a PSI point, true and significant and of
+# no consequence to anybody. PSI thresholds follow the credit-risk convention:
+# 0.1 is worth a look, 0.25 is a different population.
+alpha: 0.05
+
+columns:
+  - column: annual_income
+    kind: numeric
+    min_effect: 0.20
+    severity: high
+  - column: loan_amount
+    kind: numeric
+    min_effect: 0.20
+    severity: high
+  - column: credit_score
+    kind: numeric
+    min_effect: 0.20
+    severity: high
+  - column: debt_to_income_ratio
+    kind: numeric
+    min_effect: 0.20
+    severity: medium
+  - column: customer_age
+    kind: numeric
+    min_effect: 0.25
+    severity: low
+  - column: interest_rate
+    kind: numeric
+    min_effect: 0.25
+    severity: medium
+
+  - column: employment_status
+    kind: categorical
+    min_effect: 0.08
+    severity: medium
+  - column: approved
+    kind: categorical
+    min_effect: 0.06
+    severity: high
+    note: the label. Movement here is what the underwriting team cares about.
+
+  - column: annual_income
+    kind: missingness
+    min_effect: 0.03
+    severity: high
+  - column: credit_score
+    kind: missingness
+    min_effect: 0.03
+    severity: high

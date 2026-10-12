@@ -1,0 +1,29 @@
+name: ci
+on:
+  push: {branches: [main]}
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: datasentinel
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 10s
+          --health-timeout 5s --health-retries 5
+    env:
+      DATASENTINEL_DSN: postgresql+psycopg://postgres:postgres@localhost:5432/datasentinel
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+      - run: pip install -e .
+      - run: ruff check src tests
+      - run: mypy src || true   # advisory while the API and dashboard land
+      - run: pytest -q
