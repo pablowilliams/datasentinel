@@ -8,7 +8,11 @@ against declared rules, compares the population against a reference window, and
 raises incidents that state what was expected, what arrived, and how much data is
 affected.
 
-Python 3.12 · PostgreSQL 17 · pandas · SciPy · scikit-learn · dbt · FastAPI · pytest
+Built with: Python 3.12 · PostgreSQL 17 · pandas · SciPy · pytest
+
+Installed and planned but **not yet used by any code**: dbt, FastAPI, Streamlit,
+scikit-learn. See [State of the work](#state-of-the-work) before taking the
+architecture diagram as a description of what runs.
 
 ## The number that matters is not the recall
 
@@ -139,16 +143,21 @@ the 99.7% F1 as scene-setting.
 
 ## Architecture
 
+Solid lines are built and tested. Bracketed boxes are not written yet.
+
 ```
-CSV or API  ->  ingestion  ->  PostgreSQL raw  ->  dbt staging and marts
-                    |                                      |
-                    |                      +---------------+---------------+
-                    |                      v               v               v
-                    |               quality checks    drift tests    model metrics
-                    |                      +---------------+---------------+
-                    |                                      v
-                    +-------------> pipeline_runs      incidents  ->  API, dashboard
+CSV or API  ->  ingestion  ->  PostgreSQL raw  ->  [dbt staging and marts]
+                    |                |
+                    |                +------------+------------+
+                    |                v            v            v
+                    |         quality checks  drift tests  [model metrics]
+                    |                +------------+------------+
+                    |                             v
+                    +-------> pipeline_runs   incidents  ->  [API]  [dashboard]
 ```
+
+The checks and drift tests read the raw layer directly, because the dbt layer
+does not exist yet.
 
 PostgreSQL holds the business data and the monitoring metadata side by side: an
 incident is only meaningful next to the run that produced it. Loading is
@@ -192,12 +201,23 @@ severity escalation on business-critical columns, the evaluation harness, the
 sensitivity sweep, and 91 tests including integration tests against a real
 PostgreSQL.
 
-Not built yet: the dbt staging and mart models are scaffolded but empty, so the
-checks currently read the raw layer directly. The FastAPI service, the Streamlit
-dashboard, the baseline approval classifier and its performance-decay monitoring,
-and the Docker Compose setup are all still to come. Docker is not installed on the
-machine this was developed on, so the compose file will be written untested and
-labelled as such.
+Not built yet, stated precisely because an earlier draft of this section said the
+dbt models were "scaffolded but empty" when the directory holds no files at all:
+
+- **dbt**: nothing. No `dbt_project.yml`, no models, no sources, no dbt tests. The
+  package is installed and the directories exist. Checks read the raw layer.
+- **Model monitoring**: nothing. No classifier is trained, and `model_metrics` is
+  a declared table that no code writes to. This is the largest gap relative to
+  the project's own name.
+- **FastAPI service**: nothing beyond an empty package.
+- **Streamlit dashboard**: nothing.
+- **Docker and Compose**: nothing. Docker is not installed on this machine, so
+  when those files are written they will be untested and labelled as such.
+- **Orchestration**: a Makefile and a CLI, not Prefect or Dagster.
+- **Docs**: `docs/` is empty. No architecture document, data dictionary or
+  decision records.
+- **Dataset-driven config**: `datasets.freshness_sla_minutes` is stored but never
+  read; the 24 hour SLA is hardcoded in `config/checks.yml` instead.
 
 ## Limitations worth stating before an interviewer finds them
 
