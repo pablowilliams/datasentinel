@@ -159,8 +159,7 @@ def observe(
         for intensity in intensities or (None,):
             for offset in range(days):
                 day = until - timedelta(days=offset)
-                kw = {} if intensity is None else {"intensity": intensity}
-                batch = generate(scenario, day, seed=seed, **kw)
+                batch = generate(scenario, day, seed=seed, intensity=intensity)
                 drifted = [
                     f.spec.column
                     for f in detect(reference, batch, drift_config)

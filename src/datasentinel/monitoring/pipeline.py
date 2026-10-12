@@ -29,7 +29,7 @@ class RunReport:
     rows: int
     status: str
     quality: list[CheckResult]
-    drift_raised: list[dict]
+    drift_raised: list[Incident]
     incidents: list[Incident]
 
     @property

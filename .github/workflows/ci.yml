@@ -25,5 +25,5 @@ jobs:
       - run: pip install -r requirements.txt -r requirements-dev.txt
       - run: pip install -e .
       - run: ruff check src tests
-      - run: mypy src || true   # advisory while the API and dashboard land
+      - run: mypy src
       - run: pytest -q
