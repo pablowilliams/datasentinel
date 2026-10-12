@@ -266,6 +266,10 @@ the pipeline.
 Needs PostgreSQL on localhost. `brew services start postgresql@17`, then
 `createdb datasentinel`.
 
+`requirements.txt` lists only what the code imports. Packages for work that is
+planned but unwritten are in `requirements-planned.txt`, so nobody installs
+400MB of dbt, FastAPI and Streamlit to run a test suite that uses none of it.
+
 ```bash
 make install        # venv and dependencies
 make init           # schema plus 90 days of healthy reference data
@@ -315,12 +319,29 @@ dbt models were "scaffolded but empty" when the directory holds no files at all:
 - **Docker and Compose**: nothing. Docker is not installed on this machine, so
   when those files are written they will be untested and labelled as such.
 - **Orchestration**: a Makefile and a CLI, not Prefect or Dagster.
-- **Docs**: `docs/` is empty. No architecture document, data dictionary or
-  decision records.
 - **Pipeline freshness on the page**: the dashboard is rebuilt by hand with
   `make site`, so it is only as current as the last commit of `site/data`.
 - **Dataset-driven config**: `datasets.freshness_sla_minutes` is stored but never
   read; the 24 hour SLA is hardcoded in `config/checks.yml` instead.
+
+## Documentation
+
+- [Architecture](docs/architecture.md) — the three layers, why none subsumes another
+- [Data dictionary](docs/data-dictionary.md) — columns, bounds, tables, known gaps
+- Decision records, which are where the reasoning lives:
+  - [0001](docs/decisions/0001-volume-floor-from-an-operating-curve.md) the volume
+    floor comes from a measured curve, and that curve was wrong the first time
+  - [0002](docs/decisions/0002-drift-needs-two-gates.md) drift needs two gates
+  - [0003](docs/decisions/0003-fdr-control-measured-redundant.md) a correction kept
+    although measurement said it changed nothing
+  - [0004](docs/decisions/0004-degradation-thresholds-from-measured-noise.md) model
+    damage defined by the model's own quiet days, after a threshold picked by eye
+    reported ten failures that were all ordinary days
+  - [0005](docs/decisions/0005-interest-rate-is-not-a-feature.md) why
+    `interest_rate` is excluded and the exclusion is enforced in code
+  - [0006](docs/decisions/0006-checks-live-in-yaml.md) checks are code, results are data
+  - [0007](docs/decisions/0007-the-published-dashboard-is-static.md) why the
+    published dashboard is a snapshot
 
 ## Limitations worth stating before an interviewer finds them
 

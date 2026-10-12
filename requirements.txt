@@ -1,17 +1,14 @@
+# What the code imports, plus the driver SQLAlchemy needs at runtime.
+# Packages for work that is planned but not written live in
+# requirements-planned.txt, so nobody installs 400MB to run a test suite that
+# does not use any of it.
 pandas
-duckdb
-sqlalchemy
-psycopg[binary]
-pydantic
-pydantic-settings
-pyyaml
+numpy
 scipy
 scikit-learn
-fastapi
-uvicorn[standard]
-streamlit
-altair
+sqlalchemy
+psycopg[binary]        # not imported directly; the driver behind postgresql+psycopg://
+pydantic-settings
+pyyaml
 typer
 rich
-dbt-core
-dbt-postgres

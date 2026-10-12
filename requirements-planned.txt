@@ -1,0 +1,13 @@
+# Not used by any code yet. Listed so the intent is recorded and the main
+# requirements file stays honest about what the project actually runs on.
+#
+# dbt-core, dbt-postgres  the staging and mart models (docs/decisions/0006)
+# fastapi, uvicorn        the REST service
+# streamlit, altair       an interactive dashboard; the published one is static
+#                         because GitHub Pages serves files, not processes
+dbt-core
+dbt-postgres
+fastapi
+uvicorn[standard]
+streamlit
+altair
