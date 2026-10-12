@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: datasentinel
+Version: 0.1.0
+Summary: Data quality and ML monitoring platform for batch pipelines
+Requires-Python: >=3.12

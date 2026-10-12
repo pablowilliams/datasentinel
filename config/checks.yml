@@ -96,4 +96,20 @@ checks:
   - name: volume_within_weekday_norms
     type: volume
     severity: high
-    options: {min_ratio: 0.7, max_ratio: 1.3}
+    # Chosen from a measured operating curve, not picked round. Intake varies
+    # with a standard deviation of 8%, so the floor trades missed losses against
+    # false alarms on ordinary days. Over 60 days and 240 quiet days:
+    #
+    #   floor   10%   15%   20%   25%   30%   40%  loss caught | false alarms
+    #   0.70      0%    0%    5%   23%   58%  100%             |  0.0%
+    #   0.80      7%   30%   58%   85%   97%  100%             |  0.4%
+    #   0.85     30%   58%   83%   97%  100%  100%             |  3.8%
+    #   0.90     58%   83%   97%  100%  100%  100%             | 12.9%
+    #   0.95     83%   95%  100%  100%  100%  100%             | 27.9%
+    #
+    # 0.70 was the original floor and could not see a quarter of the data go
+    # missing: a 30% loss was caught on 58% of days and a 25% loss on 23%. 0.80
+    # reliably catches a 30% loss for one false alarm in 240 quiet days. Past
+    # 0.85 the false alarms arrive faster than the detections, and an alert
+    # people learn to ignore protects nothing.
+    options: {min_ratio: 0.80, max_ratio: 1.3}

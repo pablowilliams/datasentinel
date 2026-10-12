@@ -82,7 +82,11 @@ def schema_required(frame: pd.DataFrame, spec: CheckSpec, ctx: Context) -> Check
         return _fail(
             spec,
             f"required columns absent: {', '.join(missing)}",
-            observed={"missing": missing, "present": list(frame.columns), "affected_rows": len(frame)},
+            observed={
+                "missing": missing,
+                "present": list(frame.columns),
+                "affected_rows": len(frame),
+            },
             expected={"required": list(REQUIRED)},
         )
     return _ok(spec, "all required columns present", expected={"required": list(REQUIRED)})
@@ -147,8 +151,10 @@ def value_range(frame: pd.DataFrame, spec: CheckSpec, ctx: Context) -> CheckResu
     if column not in frame.columns:
         return _ok(spec, f"{column} absent; the required-columns check owns this")
     declared = BY_NAME[column]
-    low = float(spec.options.get("min", declared.minimum if declared.minimum is not None else -1e18))
-    high = float(spec.options.get("max", declared.maximum if declared.maximum is not None else 1e18))
+    floor = declared.minimum if declared.minimum is not None else -1e18
+    ceiling = declared.maximum if declared.maximum is not None else 1e18
+    low = float(spec.options.get("min", floor))
+    high = float(spec.options.get("max", ceiling))
     values = pd.to_numeric(frame[column], errors="coerce")
     outside = values.notna() & ((values < low) | (values > high))
     affected = int(outside.sum())
@@ -196,7 +202,11 @@ def unique(frame: pd.DataFrame, spec: CheckSpec, ctx: Context) -> CheckResult:
     duplicated = frame[column].duplicated(keep="first")
     affected = int(duplicated.sum())
     rate = affected / max(len(frame), 1)
-    observed = {"duplicate_rows": affected, "duplicate_rate": round(rate, 5), "affected_rows": affected}
+    observed = {
+        "duplicate_rows": affected,
+        "duplicate_rate": round(rate, 5),
+        "affected_rows": affected,
+    }
     if affected:
         return _fail(
             spec,
@@ -221,8 +231,13 @@ def freshness(frame: pd.DataFrame, spec: CheckSpec, ctx: Context) -> CheckResult
     latest = pd.to_datetime(frame[column], errors="coerce").max()
     if pd.isna(latest):
         return _fail(spec, f"{column} holds no parseable dates", expected={"max_age_hours": limit})
-    age = (ctx.as_of - latest.to_pydatetime().replace(tzinfo=ctx.as_of.tzinfo)).total_seconds() / 3600
-    observed = {"latest": str(latest.date()), "age_hours": round(age, 1), "affected_rows": len(frame)}
+    newest = latest.to_pydatetime().replace(tzinfo=ctx.as_of.tzinfo)
+    age = (ctx.as_of - newest).total_seconds() / 3600
+    observed = {
+        "latest": str(latest.date()),
+        "age_hours": round(age, 1),
+        "affected_rows": len(frame),
+    }
     expected = {"max_age_hours": limit}
     if age > limit:
         return _fail(

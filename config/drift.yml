@@ -63,3 +63,8 @@ columns:
     kind: missingness
     min_effect: 0.03
     severity: high
+
+# Significance is decided across all columns tested in a run, not per column,
+# because a run tests ten of them at once. Set false to see the uncorrected
+# behaviour, which raised a false alarm on a 470-row Saturday.
+fdr_control: true

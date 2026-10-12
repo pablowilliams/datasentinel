@@ -30,6 +30,14 @@ Kind = Literal["healthy", "failure", "benign"]
 
 WEEKDAY_VOLUME = 1_200
 WEEKEND_VOLUME = 470
+VOLUME_NOISE = 0.08
+"""Day-to-day variation in how many applications arrive.
+
+Without this the generator delivers exactly the same count every weekday, the
+volume check never sees an ordinary fluctuation, and a threshold sweep reports
+that any floor whatsoever is free of false alarms. That answer was an artefact
+of constant volume, not a property of the check. Real intake wobbles, so the
+threshold has to be chosen against a distribution rather than a constant."""
 
 
 @dataclass(frozen=True)
@@ -72,6 +80,14 @@ SCENARIOS: dict[str, Scenario] = {
         "A different population: incomes up by half, loans much larger, approval "
         "rate moved, and a sixth employment category that has never been seen.",
         ("drift", "category"),
+    ),
+    "income_shift": Scenario(
+        "income_shift",
+        "failure",
+        "The population's income and borrowing move, with no new category and no "
+        "invalid value anywhere. Every deterministic check passes. This is the "
+        "fault only drift detection can see.",
+        ("drift",),
     ),
     "stale": Scenario(
         "stale",
@@ -126,7 +142,14 @@ def _rng(scenario: str, day: date, seed: int) -> np.random.Generator:
 
 
 def expected_volume(day: date) -> int:
+    """The volume this weekday typically brings, before daily variation."""
     return WEEKEND_VOLUME if day.weekday() >= 5 else WEEKDAY_VOLUME
+
+
+def actual_volume(day: date, rng: np.random.Generator) -> int:
+    """What actually turned up: the weekday norm with ordinary noise around it."""
+    base = expected_volume(day)
+    return max(round(base * (1.0 + rng.normal(0.0, VOLUME_NOISE))), 1)
 
 
 def _population(
@@ -156,7 +179,9 @@ def _population(
     credit = np.clip(rng.normal(690, 80, n) + 22 * income_z, 300, 850).round(0)
 
     dti = np.clip(rng.beta(2.4, 6.0, n) + 0.04 * (-income_z), 0.0, 1.0).round(4)
-    loan = np.clip(income * rng.beta(2.0, 5.5, n) * 2.4 * loan_multiplier, 1_000, 1_000_000).round(2)
+    loan = np.clip(
+        income * rng.beta(2.0, 5.5, n) * 2.4 * loan_multiplier, 1_000, 1_000_000
+    ).round(2)
     term = rng.choice(TERMS, n, p=[0.08, 0.17, 0.32, 0.23, 0.20])
 
     defaults = rng.poisson(np.clip(0.9 - credit / 850, 0.01, None) * 0.8, n).astype("int64")
@@ -199,24 +224,51 @@ def _blank(frame: pd.DataFrame, column: str, rate: float, rng: np.random.Generat
     frame.loc[mask, column] = None
 
 
-def generate(scenario_name: str, day: date, *, seed: int, rows: int | None = None) -> pd.DataFrame:
-    """One day's batch of applications under the named scenario."""
-    scenario = SCENARIOS[scenario_name]
+# How severe each injected fault is by default. The sweep in
+# monitoring.sensitivity varies these to find where detection actually starts,
+# because recall against a fault chosen to be obvious measures the choice, not
+# the detector.
+DEFAULT_INTENSITY: dict[str, float] = {
+    "missing_income": 0.20,    # null rate forced into annual_income
+    "duplicates": 0.18,        # share of the batch appended a second time
+    "invalid_values": 0.06,    # share of rows given impossible values
+    "population_shift": 0.50,  # fractional uplift in income
+    "income_shift": 0.50,      # the same uplift, without a new category
+    "volume_drop": 0.60,       # share of rows lost upstream
+}
+
+
+def generate(
+    scenario_name: str,
+    day: date,
+    *,
+    seed: int,
+    rows: int | None = None,
+    intensity: float | None = None,
+) -> pd.DataFrame:
+    """One day's batch of applications under the named scenario.
+
+    `intensity` overrides how severe the injected fault is; see
+    DEFAULT_INTENSITY for what the number means per scenario.
+    """
     rng = _rng(scenario_name, day, seed)
+    severity = DEFAULT_INTENSITY.get(scenario_name, 0.0) if intensity is None else intensity
 
     if scenario_name == "weekend":
         day = day - timedelta(days=day.weekday() - 5) if day.weekday() < 5 else day
-    n = rows if rows is not None else expected_volume(day)
+    n = rows if rows is not None else actual_volume(day, rng)
 
     income_multiplier = 1.0
     loan_multiplier = 1.0
     approval_shift = 0.0
-    if scenario_name == "population_shift":
-        income_multiplier, loan_multiplier, approval_shift = 1.5, 1.9, -0.9
+    if scenario_name in {"population_shift", "income_shift"}:
+        income_multiplier = 1.0 + severity
+        loan_multiplier = 1.0 + 1.8 * severity
+        approval_shift = -1.8 * severity
     elif scenario_name == "trivial_income_tick":
         income_multiplier = 1.015
     elif scenario_name == "volume_drop":
-        n = int(n * 0.40)
+        n = max(int(n * (1.0 - severity)), 1)
 
     frame = _population(
         n,
@@ -238,21 +290,22 @@ def generate(scenario_name: str, day: date, *, seed: int, rows: int | None = Non
         _blank(frame, column, rate, rng)
 
     if scenario_name == "missing_income":
-        _blank(frame, "annual_income", 0.20, rng)
-        _blank(frame, "credit_score", 0.15, rng)
+        _blank(frame, "annual_income", severity, rng)
+        _blank(frame, "credit_score", severity * 0.75, rng)
     elif scenario_name == "population_shift":
-        # A category nobody has configured a rule for.
-        newcomers = rng.random(len(frame)) < 0.11
+        # A category nobody has configured a rule for, arriving in proportion to
+        # how far the population has moved.
+        newcomers = rng.random(len(frame)) < 0.22 * severity
         frame.loc[newcomers, "employment_status"] = "gig_economy"
     elif scenario_name == "duplicates":
-        repeat = frame.sample(frac=0.18, random_state=int(rng.integers(0, 2**31)))
+        repeat = frame.sample(frac=severity, random_state=int(rng.integers(0, 2**31)))
         frame = pd.concat([frame, repeat], ignore_index=True)
     elif scenario_name == "invalid_values":
-        bad_credit = rng.random(len(frame)) < 0.06
+        bad_credit = rng.random(len(frame)) < severity
         frame.loc[bad_credit, "credit_score"] = 9999.0
-        bad_loan = rng.random(len(frame)) < 0.03
+        bad_loan = rng.random(len(frame)) < severity * 0.5
         frame.loc[bad_loan, "loan_amount"] = -1.0
-        bad_age = rng.random(len(frame)) < 0.02
+        bad_age = rng.random(len(frame)) < severity * 0.33
         frame.loc[bad_age, "customer_age"] = 7
     elif scenario_name == "schema_break":
         frame = frame.rename(columns={"loan_amount": "requested_amount"})

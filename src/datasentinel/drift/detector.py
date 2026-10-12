@@ -52,6 +52,40 @@ class DriftFinding:
 class DriftConfig:
     alpha: float
     specs: list[DriftSpec]
+    fdr_control: bool = True
+
+
+def benjamini_hochberg(p_values: list[float | None], alpha: float) -> list[bool]:
+    """Which p-values survive once you admit how many tests you ran.
+
+    Ten columns are tested every run. At alpha = 0.05 that is a one-in-two
+    chance per run of some column looking significant for no reason, and over a
+    month of runs it is a certainty. Benjamini-Hochberg controls the share of
+    raised findings that are false rather than the chance of any false finding,
+    which is the right trade for monitoring: a little tolerance for noise in
+    exchange for still being able to see a real shift.
+
+    Measured here: an uncorrected run produced a false alarm on a 470-row
+    Saturday, where the approval rate sat 6.7 points off a reference built from
+    89,020 rows. Nothing was wrong with the data. There were simply three
+    hundred opportunities to be unlucky.
+    """
+    usable = [(i, p) for i, p in enumerate(p_values) if p is not None]
+    rejected = [False] * len(p_values)
+    if not usable:
+        return rejected
+
+    order = sorted(usable, key=lambda pair: pair[1])
+    m = len(order)
+    cutoff: float | None = None
+    for rank, (_, p) in enumerate(order, start=1):
+        if p <= alpha * rank / m:
+            cutoff = p
+    if cutoff is None:
+        return rejected
+    for i, p in usable:
+        rejected[i] = p <= cutoff
+    return rejected
 
 
 def load_config(path: Path) -> DriftConfig:
@@ -65,7 +99,11 @@ def load_config(path: Path) -> DriftConfig:
         )
         for entry in document.get("columns", [])
     ]
-    return DriftConfig(alpha=float(document.get("alpha", 0.05)), specs=specs)
+    return DriftConfig(
+        alpha=float(document.get("alpha", 0.05)),
+        specs=specs,
+        fdr_control=bool(document.get("fdr_control", True)),
+    )
 
 
 def _explain(spec: DriftSpec, result: dist.TestResult, significant: bool, material: bool) -> str:
@@ -93,7 +131,10 @@ def _explain(spec: DriftSpec, result: dist.TestResult, significant: bool, materi
             "Reported, not raised."
         )
     if material and not significant:
-        return f"{where} shows a large {effect} that could still be chance, {p}. Reported, not raised."
+        return (
+            f"{where} shows a large {effect} that could still be chance, {p}. "
+            "Reported, not raised."
+        )
     return f"{where} is stable: {effect}, {p}"
 
 
@@ -102,12 +143,23 @@ def detect(
     current: pd.DataFrame,
     config: DriftConfig,
 ) -> list[DriftFinding]:
-    findings: list[DriftFinding] = []
+    tested: list[tuple[DriftSpec, dist.TestResult]] = []
     for spec in config.specs:
         if spec.column not in reference.columns or spec.column not in current.columns:
             continue
-        result = TESTS[spec.kind](reference[spec.column], current[spec.column])
-        significant = result.p_value is not None and result.p_value < config.alpha
+        tested.append((spec, TESTS[spec.kind](reference[spec.column], current[spec.column])))
+
+    # Significance is decided across the whole run, not per column, because the
+    # run is what tests ten columns at once.
+    if config.fdr_control:
+        verdicts = benjamini_hochberg([r.p_value for _, r in tested], config.alpha)
+    else:
+        verdicts = [
+            r.p_value is not None and r.p_value < config.alpha for _, r in tested
+        ]
+
+    findings: list[DriftFinding] = []
+    for (spec, result), significant in zip(tested, verdicts, strict=True):
         material = result.effect_size >= spec.min_effect
         findings.append(
             DriftFinding(
