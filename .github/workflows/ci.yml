@@ -24,6 +24,6 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install -r requirements.txt -r requirements-dev.txt
       - run: pip install -e .
-      - run: ruff check src tests
+      - run: ruff check src tests scripts
       - run: mypy src
       - run: pytest -q

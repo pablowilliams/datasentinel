@@ -13,13 +13,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from datasentinel.api.export import write  # noqa: E402
-from datasentinel.config import ROOT, settings  # noqa: E402
-from datasentinel.db import engine, reset  # noqa: E402
-from datasentinel.generator import baseline  # noqa: E402
-from datasentinel.model.baseline import load, save, train  # noqa: E402
-from datasentinel.model.monitor import evaluate_batch, record  # noqa: E402
-from datasentinel.monitoring.pipeline import run_once, seed_history  # noqa: E402
+from datasentinel.api.export import write
+from datasentinel.config import ROOT, settings
+from datasentinel.db import engine, reset
+from datasentinel.generator import baseline, generate
+from datasentinel.model.baseline import load, save, train
+from datasentinel.model.monitor import evaluate_batch, record
+from datasentinel.monitoring.pipeline import run_once, seed_history
 
 HISTORY_DAYS = 90
 TRAIN_END = date(2026, 8, 1)
@@ -58,9 +58,8 @@ def main() -> None:
     for offset, scenario in NARRATIVE:
         day = START + timedelta(days=offset)
         report = run_once(eng, scenario=scenario, day=day)
-        result = evaluate_batch(pipeline, __import__(
-            "datasentinel.generator", fromlist=["generate"]
-        ).generate(scenario, day, seed=config.seed), window=day)
+        batch = generate(scenario, day, seed=config.seed)
+        result = evaluate_batch(pipeline, batch, window=day)
         metrics = record(eng, result, model_name=card.name, model_version=card.version)
         note = "" if result.scored else f"  model unscoreable: {result.reason}"
         print(

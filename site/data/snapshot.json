@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-12T19:44:21",
+  "generated_at": "2026-10-13T15:24:53",
   "caveat": "A snapshot of one run of the pipeline on synthetic data, exported to static files. Not a live service.",
   "runs": [
     {
-      "run_id": "1ba71403-601c-4582-8903-5a6639f04796",
+      "run_id": "1287a8c7-cfbd-4e3d-b00e-dbb8e28b86b4",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 499,
-      "started_at": "2026-10-12T19:44:19.548113+01:00",
-      "completed_at": "2026-10-12T19:44:19.579607+01:00",
+      "started_at": "2026-10-13T15:24:51.492588+01:00",
+      "completed_at": "2026-10-13T15:24:51.521544+01:00",
       "error_message": null,
       "business_date": "2026-10-10",
       "incidents": 0,
@@ -16,12 +16,12 @@
       "total_checks": 17
     },
     {
-      "run_id": "6f033a59-ab79-4d7e-966e-739ffe3646d3",
+      "run_id": "76521bcf-b79d-4003-9651-960a2b905fb7",
       "scenario": "invalid_values",
       "status": "success",
       "rows_processed": 1343,
-      "started_at": "2026-10-12T19:44:18.129358+01:00",
-      "completed_at": "2026-10-12T19:44:18.183376+01:00",
+      "started_at": "2026-10-13T15:24:49.450868+01:00",
+      "completed_at": "2026-10-13T15:24:49.517717+01:00",
       "error_message": null,
       "business_date": "2026-10-09",
       "incidents": 3,
@@ -29,12 +29,12 @@
       "total_checks": 17
     },
     {
-      "run_id": "5d78c7c4-5361-44fc-95da-ccc2ec6e3820",
+      "run_id": "cb73be61-20aa-438c-b18d-84920497f033",
       "scenario": "volume_drop",
       "status": "success",
       "rows_processed": 435,
-      "started_at": "2026-10-12T19:44:16.720602+01:00",
-      "completed_at": "2026-10-12T19:44:16.752912+01:00",
+      "started_at": "2026-10-13T15:24:47.396277+01:00",
+      "completed_at": "2026-10-13T15:24:47.424870+01:00",
       "error_message": null,
       "business_date": "2026-10-08",
       "incidents": 1,
@@ -42,12 +42,12 @@
       "total_checks": 17
     },
     {
-      "run_id": "71851bbc-b79d-45ed-b084-6043d2dc4f1d",
+      "run_id": "3feca86f-62ec-47f4-882f-30f1859496b9",
       "scenario": "income_shift",
       "status": "success",
       "rows_processed": 1260,
-      "started_at": "2026-10-12T19:44:15.247650+01:00",
-      "completed_at": "2026-10-12T19:44:15.308667+01:00",
+      "started_at": "2026-10-13T15:24:45.275707+01:00",
+      "completed_at": "2026-10-13T15:24:45.344004+01:00",
       "error_message": null,
       "business_date": "2026-10-07",
       "incidents": 3,
@@ -55,12 +55,12 @@
       "total_checks": 17
     },
     {
-      "run_id": "354f80fc-1229-4bc3-8727-63aca3908a17",
+      "run_id": "7c082e0c-bc28-457a-b74e-b23d5b9a7e1e",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1108,
-      "started_at": "2026-10-12T19:44:13.658802+01:00",
-      "completed_at": "2026-10-12T19:44:13.710824+01:00",
+      "started_at": "2026-10-13T15:24:43.172995+01:00",
+      "completed_at": "2026-10-13T15:24:43.230713+01:00",
       "error_message": null,
       "business_date": "2026-10-06",
       "incidents": 0,
@@ -68,12 +68,12 @@
       "total_checks": 17
     },
     {
-      "run_id": "2aad9305-99c0-4353-91df-d6005c88beba",
+      "run_id": "0b12f3a5-1651-4740-bb5f-567680a1c81b",
       "scenario": "missing_income",
       "status": "success",
       "rows_processed": 1171,
-      "started_at": "2026-10-12T19:44:12.249387+01:00",
-      "completed_at": "2026-10-12T19:44:12.299339+01:00",
+      "started_at": "2026-10-13T15:24:41.083336+01:00",
+      "completed_at": "2026-10-13T15:24:41.145666+01:00",
       "error_message": null,
       "business_date": "2026-10-05",
       "incidents": 4,
@@ -81,12 +81,12 @@
       "total_checks": 17
     },
     {
-      "run_id": "6301c1a6-d4d4-42bb-9bb7-82d4beaae3c3",
+      "run_id": "7d3cd826-4075-4af0-ba2f-9e6cd8bd9579",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 475,
-      "started_at": "2026-10-12T19:44:10.782701+01:00",
-      "completed_at": "2026-10-12T19:44:10.810914+01:00",
+      "started_at": "2026-10-13T15:24:38.997958+01:00",
+      "completed_at": "2026-10-13T15:24:39.027038+01:00",
       "error_message": null,
       "business_date": "2026-10-04",
       "incidents": 0,
@@ -94,12 +94,12 @@
       "total_checks": 17
     },
     {
-      "run_id": "9715f89f-cc4f-4d68-8b18-2b41a298bd22",
+      "run_id": "575468a0-25c2-47df-b0c9-3ddf93e85c25",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 466,
-      "started_at": "2026-10-12T19:44:09.386122+01:00",
-      "completed_at": "2026-10-12T19:44:09.417871+01:00",
+      "started_at": "2026-10-13T15:24:36.850418+01:00",
+      "completed_at": "2026-10-13T15:24:36.879992+01:00",
       "error_message": null,
       "business_date": "2026-10-03",
       "incidents": 0,
@@ -107,12 +107,12 @@
       "total_checks": 17
     },
     {
-      "run_id": "150713ba-26e4-4ce8-9ea0-40a2099d4309",
+      "run_id": "a843d8a0-bdb6-499d-9f5b-3488c32601a7",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1123,
-      "started_at": "2026-10-12T19:44:08.724484+01:00",
-      "completed_at": "2026-10-12T19:44:08.763653+01:00",
+      "started_at": "2026-10-13T15:24:35.837760+01:00",
+      "completed_at": "2026-10-13T15:24:35.919260+01:00",
       "error_message": null,
       "business_date": "2026-10-02",
       "incidents": 0,
@@ -120,12 +120,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "57adfaf1-eb1f-4f48-8ff3-79926c359660",
+      "run_id": "b1db5adb-8f26-490b-b9bf-593368224510",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1271,
-      "started_at": "2026-10-12T19:44:08.670782+01:00",
-      "completed_at": "2026-10-12T19:44:08.714517+01:00",
+      "started_at": "2026-10-13T15:24:35.741938+01:00",
+      "completed_at": "2026-10-13T15:24:35.822389+01:00",
       "error_message": null,
       "business_date": "2026-10-01",
       "incidents": 0,
@@ -133,12 +133,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "6cb78d4a-af97-4bd6-8905-12009e80a790",
+      "run_id": "b68c0baa-633d-4dbc-8498-0563c6662259",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1197,
-      "started_at": "2026-10-12T19:44:08.620597+01:00",
-      "completed_at": "2026-10-12T19:44:08.660532+01:00",
+      "started_at": "2026-10-13T15:24:35.624467+01:00",
+      "completed_at": "2026-10-13T15:24:35.727463+01:00",
       "error_message": null,
       "business_date": "2026-09-30",
       "incidents": 0,
@@ -146,12 +146,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "813a8622-9ec8-4e7d-9508-dbd97c4cc7ae",
+      "run_id": "bb77fa39-f7ff-47bf-9555-e0e727027b12",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1073,
-      "started_at": "2026-10-12T19:44:08.572794+01:00",
-      "completed_at": "2026-10-12T19:44:08.610567+01:00",
+      "started_at": "2026-10-13T15:24:35.480636+01:00",
+      "completed_at": "2026-10-13T15:24:35.601257+01:00",
       "error_message": null,
       "business_date": "2026-09-29",
       "incidents": 0,
@@ -159,12 +159,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "8bc1e48b-c36b-4145-98f9-583ee4b8a30d",
+      "run_id": "90eebbb6-5adc-48af-8355-098babea6730",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1100,
-      "started_at": "2026-10-12T19:44:08.523099+01:00",
-      "completed_at": "2026-10-12T19:44:08.563084+01:00",
+      "started_at": "2026-10-13T15:24:35.374179+01:00",
+      "completed_at": "2026-10-13T15:24:35.467173+01:00",
       "error_message": null,
       "business_date": "2026-09-28",
       "incidents": 0,
@@ -172,12 +172,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "c6105110-022c-4861-8b52-084a4d8d600a",
+      "run_id": "61a4e4a2-4848-47ae-85ef-e3aa46092cee",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 422,
-      "started_at": "2026-10-12T19:44:08.494976+01:00",
-      "completed_at": "2026-10-12T19:44:08.513185+01:00",
+      "started_at": "2026-10-13T15:24:35.325336+01:00",
+      "completed_at": "2026-10-13T15:24:35.356617+01:00",
       "error_message": null,
       "business_date": "2026-09-27",
       "incidents": 0,
@@ -185,12 +185,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "04e73c64-f00a-4d73-a9c8-8f681ffb3dfa",
+      "run_id": "a7a3129c-f997-470b-b523-3e17c813546b",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 484,
-      "started_at": "2026-10-12T19:44:08.467659+01:00",
-      "completed_at": "2026-10-12T19:44:08.487142+01:00",
+      "started_at": "2026-10-13T15:24:35.258437+01:00",
+      "completed_at": "2026-10-13T15:24:35.315409+01:00",
       "error_message": null,
       "business_date": "2026-09-26",
       "incidents": 0,
@@ -198,12 +198,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "ad08bb0a-8adc-4a7a-8f27-284e43ea2a2c",
+      "run_id": "635cab1b-5d43-44fa-87ce-8d3739fd584b",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1135,
-      "started_at": "2026-10-12T19:44:08.419032+01:00",
-      "completed_at": "2026-10-12T19:44:08.457532+01:00",
+      "started_at": "2026-10-13T15:24:35.182737+01:00",
+      "completed_at": "2026-10-13T15:24:35.249391+01:00",
       "error_message": null,
       "business_date": "2026-09-25",
       "incidents": 0,
@@ -211,12 +211,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "e4421434-9e2d-4987-ab77-1129454233b5",
+      "run_id": "230220be-2df9-445a-b161-39cad85c2212",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1123,
-      "started_at": "2026-10-12T19:44:08.372680+01:00",
-      "completed_at": "2026-10-12T19:44:08.408780+01:00",
+      "started_at": "2026-10-13T15:24:35.107303+01:00",
+      "completed_at": "2026-10-13T15:24:35.169338+01:00",
       "error_message": null,
       "business_date": "2026-09-24",
       "incidents": 0,
@@ -224,12 +224,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "093c140a-94b2-478b-92c2-1ed4a4889af3",
+      "run_id": "41bbeb36-392c-460d-9f05-8bc3b1f709c6",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1226,
-      "started_at": "2026-10-12T19:44:08.313502+01:00",
-      "completed_at": "2026-10-12T19:44:08.363567+01:00",
+      "started_at": "2026-10-13T15:24:35.034444+01:00",
+      "completed_at": "2026-10-13T15:24:35.095486+01:00",
       "error_message": null,
       "business_date": "2026-09-23",
       "incidents": 0,
@@ -237,12 +237,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "b05d115f-3313-45ae-841d-6a24e8636be1",
+      "run_id": "813eccdb-5d83-44f1-af1d-2db800bb67fd",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1266,
-      "started_at": "2026-10-12T19:44:08.262597+01:00",
-      "completed_at": "2026-10-12T19:44:08.303531+01:00",
+      "started_at": "2026-10-13T15:24:34.957193+01:00",
+      "completed_at": "2026-10-13T15:24:35.022454+01:00",
       "error_message": null,
       "business_date": "2026-09-22",
       "incidents": 0,
@@ -250,12 +250,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "792ce3a5-d79d-48cb-9fd2-e463c9e26da3",
+      "run_id": "0555a739-8109-4bcf-90c9-e92aa2514571",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1039,
-      "started_at": "2026-10-12T19:44:08.222423+01:00",
-      "completed_at": "2026-10-12T19:44:08.253822+01:00",
+      "started_at": "2026-10-13T15:24:34.880362+01:00",
+      "completed_at": "2026-10-13T15:24:34.944231+01:00",
       "error_message": null,
       "business_date": "2026-09-21",
       "incidents": 0,
@@ -263,12 +263,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "38beb51a-c9cb-4afe-b31b-36496316dff4",
+      "run_id": "9b180889-1c6e-42bb-a607-692baeab0cb1",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 386,
-      "started_at": "2026-10-12T19:44:08.200286+01:00",
-      "completed_at": "2026-10-12T19:44:08.214610+01:00",
+      "started_at": "2026-10-13T15:24:34.841509+01:00",
+      "completed_at": "2026-10-13T15:24:34.867919+01:00",
       "error_message": null,
       "business_date": "2026-09-20",
       "incidents": 0,
@@ -276,12 +276,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "d379835e-4814-4b22-8b69-9d973383c9f1",
+      "run_id": "e53d1c8d-bf4f-49da-8da5-5b437a58752f",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 473,
-      "started_at": "2026-10-12T19:44:08.177924+01:00",
-      "completed_at": "2026-10-12T19:44:08.194656+01:00",
+      "started_at": "2026-10-13T15:24:34.800707+01:00",
+      "completed_at": "2026-10-13T15:24:34.831946+01:00",
       "error_message": null,
       "business_date": "2026-09-19",
       "incidents": 0,
@@ -289,12 +289,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "1c507d8e-1a52-4321-ab43-adc32df19456",
+      "run_id": "3c67a86f-07f2-4193-99a4-29759bf43324",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1135,
-      "started_at": "2026-10-12T19:44:08.137381+01:00",
-      "completed_at": "2026-10-12T19:44:08.171469+01:00",
+      "started_at": "2026-10-13T15:24:34.668481+01:00",
+      "completed_at": "2026-10-13T15:24:34.791338+01:00",
       "error_message": null,
       "business_date": "2026-09-18",
       "incidents": 0,
@@ -302,12 +302,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "1d1e3a88-3369-4c86-8bd8-355fd6e4fa26",
+      "run_id": "8f21c887-0823-4eec-be1b-7139f8d40754",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1078,
-      "started_at": "2026-10-12T19:44:08.090693+01:00",
-      "completed_at": "2026-10-12T19:44:08.127580+01:00",
+      "started_at": "2026-10-13T15:24:34.580655+01:00",
+      "completed_at": "2026-10-13T15:24:34.652309+01:00",
       "error_message": null,
       "business_date": "2026-09-17",
       "incidents": 0,
@@ -315,12 +315,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "85a08630-4a80-46ce-8493-f9fa2d56bc03",
+      "run_id": "b4b08d4e-1573-4b87-8683-dab31679d900",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1153,
-      "started_at": "2026-10-12T19:44:08.042594+01:00",
-      "completed_at": "2026-10-12T19:44:08.081252+01:00",
+      "started_at": "2026-10-13T15:24:34.510476+01:00",
+      "completed_at": "2026-10-13T15:24:34.569469+01:00",
       "error_message": null,
       "business_date": "2026-09-16",
       "incidents": 0,
@@ -328,12 +328,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "417079ed-d572-4304-a4e3-b510a763de44",
+      "run_id": "67de2330-76c7-4eea-9da3-41a13b444cb6",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1261,
-      "started_at": "2026-10-12T19:44:07.995820+01:00",
-      "completed_at": "2026-10-12T19:44:08.033520+01:00",
+      "started_at": "2026-10-13T15:24:34.427506+01:00",
+      "completed_at": "2026-10-13T15:24:34.496082+01:00",
       "error_message": null,
       "business_date": "2026-09-15",
       "incidents": 0,
@@ -341,12 +341,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "1d0477af-1e13-4f88-893b-0149a507c430",
+      "run_id": "79fb2034-05d5-4373-9e2d-f4daa17eb292",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1213,
-      "started_at": "2026-10-12T19:44:07.949871+01:00",
-      "completed_at": "2026-10-12T19:44:07.986009+01:00",
+      "started_at": "2026-10-13T15:24:34.347410+01:00",
+      "completed_at": "2026-10-13T15:24:34.415012+01:00",
       "error_message": null,
       "business_date": "2026-09-14",
       "incidents": 0,
@@ -354,12 +354,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "53959cbc-d0fc-456c-8cc9-a9cacd86cc14",
+      "run_id": "44329d49-7abc-4898-90b3-cb96386b3d3a",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 501,
-      "started_at": "2026-10-12T19:44:07.924456+01:00",
-      "completed_at": "2026-10-12T19:44:07.941595+01:00",
+      "started_at": "2026-10-13T15:24:34.306410+01:00",
+      "completed_at": "2026-10-13T15:24:34.334443+01:00",
       "error_message": null,
       "business_date": "2026-09-13",
       "incidents": 0,
@@ -367,12 +367,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "b6fb4b90-8020-4471-a3e1-68dd27d601ee",
+      "run_id": "35e7a852-ac15-43ef-a230-afe25d3e7817",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 454,
-      "started_at": "2026-10-12T19:44:07.901477+01:00",
-      "completed_at": "2026-10-12T19:44:07.918309+01:00",
+      "started_at": "2026-10-13T15:24:34.262455+01:00",
+      "completed_at": "2026-10-13T15:24:34.296592+01:00",
       "error_message": null,
       "business_date": "2026-09-12",
       "incidents": 0,
@@ -380,12 +380,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "fa01a03b-3cab-4343-91a7-0bea722f1cf8",
+      "run_id": "a3ccf7b0-c0ab-470c-95b2-b2e4a97812c4",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1086,
-      "started_at": "2026-10-12T19:44:07.858726+01:00",
-      "completed_at": "2026-10-12T19:44:07.894605+01:00",
+      "started_at": "2026-10-13T15:24:34.187534+01:00",
+      "completed_at": "2026-10-13T15:24:34.251966+01:00",
       "error_message": null,
       "business_date": "2026-09-11",
       "incidents": 0,
@@ -393,12 +393,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "0f35ee22-33ca-4dd9-a86d-fa22335a2f31",
+      "run_id": "704898ff-6fa9-4029-9c82-86f013078707",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1065,
-      "started_at": "2026-10-12T19:44:07.812818+01:00",
-      "completed_at": "2026-10-12T19:44:07.849211+01:00",
+      "started_at": "2026-10-13T15:24:34.124395+01:00",
+      "completed_at": "2026-10-13T15:24:34.176728+01:00",
       "error_message": null,
       "business_date": "2026-09-10",
       "incidents": 0,
@@ -406,12 +406,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "2afc021b-67b1-4950-ba9f-de1c583a4827",
+      "run_id": "bbdbc67e-477b-41d5-a004-d23179809a7e",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1181,
-      "started_at": "2026-10-12T19:44:07.762375+01:00",
-      "completed_at": "2026-10-12T19:44:07.803205+01:00",
+      "started_at": "2026-10-13T15:24:34.048934+01:00",
+      "completed_at": "2026-10-13T15:24:34.113606+01:00",
       "error_message": null,
       "business_date": "2026-09-09",
       "incidents": 0,
@@ -419,12 +419,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "8100ee8f-0ef0-4acb-845f-6c6b3f044487",
+      "run_id": "5f9140a8-844f-47a4-9ce1-b50c1e3e2d90",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1163,
-      "started_at": "2026-10-12T19:44:07.712045+01:00",
-      "completed_at": "2026-10-12T19:44:07.752320+01:00",
+      "started_at": "2026-10-13T15:24:33.956279+01:00",
+      "completed_at": "2026-10-13T15:24:34.033889+01:00",
       "error_message": null,
       "business_date": "2026-09-08",
       "incidents": 0,
@@ -432,12 +432,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "3b1ba5c0-b079-4d40-bea7-da8890540732",
+      "run_id": "119055aa-9de4-45a6-b2a7-be6d6fdba8b7",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1186,
-      "started_at": "2026-10-12T19:44:07.664069+01:00",
-      "completed_at": "2026-10-12T19:44:07.702791+01:00",
+      "started_at": "2026-10-13T15:24:33.882162+01:00",
+      "completed_at": "2026-10-13T15:24:33.944296+01:00",
       "error_message": null,
       "business_date": "2026-09-07",
       "incidents": 0,
@@ -445,12 +445,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "a3feba10-96c2-46cc-ae22-f016b4c41fc7",
+      "run_id": "6ae9a406-a260-45de-8025-af732c63c650",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 441,
-      "started_at": "2026-10-12T19:44:07.639954+01:00",
-      "completed_at": "2026-10-12T19:44:07.655822+01:00",
+      "started_at": "2026-10-13T15:24:33.842157+01:00",
+      "completed_at": "2026-10-13T15:24:33.869935+01:00",
       "error_message": null,
       "business_date": "2026-09-06",
       "incidents": 0,
@@ -458,12 +458,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "ead176b5-00b0-4558-8fed-9dd721420f1d",
+      "run_id": "a41ee906-4414-449f-a867-8f503874b958",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 476,
-      "started_at": "2026-10-12T19:44:07.617313+01:00",
-      "completed_at": "2026-10-12T19:44:07.634064+01:00",
+      "started_at": "2026-10-13T15:24:33.802196+01:00",
+      "completed_at": "2026-10-13T15:24:33.833034+01:00",
       "error_message": null,
       "business_date": "2026-09-05",
       "incidents": 0,
@@ -471,12 +471,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "aae269e5-a73f-44ad-bcbf-a07fe93f8cde",
+      "run_id": "b045b93f-9678-4f20-a6bc-59cf21564fbe",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1230,
-      "started_at": "2026-10-12T19:44:07.566353+01:00",
-      "completed_at": "2026-10-12T19:44:07.610951+01:00",
+      "started_at": "2026-10-13T15:24:33.720380+01:00",
+      "completed_at": "2026-10-13T15:24:33.792398+01:00",
       "error_message": null,
       "business_date": "2026-09-04",
       "incidents": 0,
@@ -484,12 +484,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "b665e0ef-1452-4b01-b215-8cbc4191b97d",
+      "run_id": "5b86f2fd-fbb0-4878-a5f6-ed7746d25a5e",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1316,
-      "started_at": "2026-10-12T19:44:07.510083+01:00",
-      "completed_at": "2026-10-12T19:44:07.555731+01:00",
+      "started_at": "2026-10-13T15:24:33.628825+01:00",
+      "completed_at": "2026-10-13T15:24:33.706756+01:00",
       "error_message": null,
       "business_date": "2026-09-03",
       "incidents": 0,
@@ -497,12 +497,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "e61cbe82-0649-4eb1-a245-80e46a15a35c",
+      "run_id": "05101990-9411-4184-b6f4-1b476ee2c642",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1177,
-      "started_at": "2026-10-12T19:44:07.456225+01:00",
-      "completed_at": "2026-10-12T19:44:07.499264+01:00",
+      "started_at": "2026-10-13T15:24:33.550126+01:00",
+      "completed_at": "2026-10-13T15:24:33.615351+01:00",
       "error_message": null,
       "business_date": "2026-09-02",
       "incidents": 0,
@@ -510,12 +510,12 @@
       "total_checks": 0
     },
     {
-      "run_id": "b5ce3841-3791-4c54-90c9-e9734d1ff261",
+      "run_id": "ede46d85-4148-478d-927f-b3983f4a8e40",
       "scenario": "healthy",
       "status": "success",
       "rows_processed": 1285,
-      "started_at": "2026-10-12T19:44:07.393970+01:00",
-      "completed_at": "2026-10-12T19:44:07.446001+01:00",
+      "started_at": "2026-10-13T15:24:33.471962+01:00",
+      "completed_at": "2026-10-13T15:24:33.538421+01:00",
       "error_message": null,
       "business_date": "2026-09-01",
       "incidents": 0,
@@ -525,8 +525,8 @@
   ],
   "incidents": [
     {
-      "incident_id": "e381d6b8-4c51-49e8-a3de-6273a17c97e8",
-      "run_id": "6f033a59-ab79-4d7e-966e-739ffe3646d3",
+      "incident_id": "aae09267-33f7-4f03-a703-5bb2d87d1af0",
+      "run_id": "76521bcf-b79d-4003-9651-960a2b905fb7",
       "category": "validity",
       "severity": "critical",
       "status": "open",
@@ -551,12 +551,12 @@
         },
         "check_type": "range"
       },
-      "created_at": "2026-10-12T19:44:19.495979+01:00",
+      "created_at": "2026-10-13T15:24:51.429333+01:00",
       "scenario": "invalid_values"
     },
     {
-      "incident_id": "68d56e68-4e29-454f-be12-1d7c894d920c",
-      "run_id": "6f033a59-ab79-4d7e-966e-739ffe3646d3",
+      "incident_id": "45607169-62c7-4b2a-9483-b4525d43f87b",
+      "run_id": "76521bcf-b79d-4003-9651-960a2b905fb7",
       "category": "validity",
       "severity": "critical",
       "status": "open",
@@ -581,12 +581,12 @@
         },
         "check_type": "range"
       },
-      "created_at": "2026-10-12T19:44:19.495979+01:00",
+      "created_at": "2026-10-13T15:24:51.429333+01:00",
       "scenario": "invalid_values"
     },
     {
-      "incident_id": "232d938c-a19f-40f6-a10e-9026928fb277",
-      "run_id": "2aad9305-99c0-4353-91df-d6005c88beba",
+      "incident_id": "50e1516f-79da-4336-9543-e05d7348c59b",
+      "run_id": "0b12f3a5-1651-4740-bb5f-567680a1c81b",
       "category": "completeness",
       "severity": "critical",
       "status": "open",
@@ -604,12 +604,12 @@
         },
         "check_type": "null_rate"
       },
-      "created_at": "2026-10-12T19:44:13.600924+01:00",
+      "created_at": "2026-10-13T15:24:43.103786+01:00",
       "scenario": "missing_income"
     },
     {
-      "incident_id": "cab3e400-251d-447b-b061-c384bd000441",
-      "run_id": "2aad9305-99c0-4353-91df-d6005c88beba",
+      "incident_id": "509a24ff-826c-48a4-97b8-4a233a9b0420",
+      "run_id": "0b12f3a5-1651-4740-bb5f-567680a1c81b",
       "category": "completeness",
       "severity": "critical",
       "status": "open",
@@ -627,12 +627,12 @@
         },
         "check_type": "null_rate"
       },
-      "created_at": "2026-10-12T19:44:13.600924+01:00",
+      "created_at": "2026-10-13T15:24:43.103786+01:00",
       "scenario": "missing_income"
     },
     {
-      "incident_id": "d9059996-a7b0-4681-ba2a-d9e404c02cf4",
-      "run_id": "6f033a59-ab79-4d7e-966e-739ffe3646d3",
+      "incident_id": "0dc2ed56-8b1a-40fc-aade-4594774f5340",
+      "run_id": "76521bcf-b79d-4003-9651-960a2b905fb7",
       "category": "validity",
       "severity": "high",
       "status": "open",
@@ -657,12 +657,12 @@
         },
         "check_type": "range"
       },
-      "created_at": "2026-10-12T19:44:19.495979+01:00",
+      "created_at": "2026-10-13T15:24:51.429333+01:00",
       "scenario": "invalid_values"
     },
     {
-      "incident_id": "0d78c206-18e3-43f4-8709-757183ac56c4",
-      "run_id": "5d78c7c4-5361-44fc-95da-ccc2ec6e3820",
+      "incident_id": "25cec8f0-ad9b-4420-834f-f298bdf03c3f",
+      "run_id": "cb73be61-20aa-438c-b18d-84920497f033",
       "category": "volume",
       "severity": "high",
       "status": "open",
@@ -684,12 +684,12 @@
         },
         "check_type": "volume"
       },
-      "created_at": "2026-10-12T19:44:18.077223+01:00",
+      "created_at": "2026-10-13T15:24:49.389684+01:00",
       "scenario": "volume_drop"
     },
     {
-      "incident_id": "df76cc8c-c0ba-4b72-8512-7585cb816a4e",
-      "run_id": "71851bbc-b79d-45ed-b084-6043d2dc4f1d",
+      "incident_id": "be29deaf-6898-4eb1-9804-b0369df38c39",
+      "run_id": "3feca86f-62ec-47f4-882f-30f1859496b9",
       "category": "drift",
       "severity": "high",
       "status": "open",
@@ -708,12 +708,12 @@
         "reference_median": 25861.11,
         "relative_median_change": 1.7045
       },
-      "created_at": "2026-10-12T19:44:16.667796+01:00",
+      "created_at": "2026-10-13T15:24:47.319192+01:00",
       "scenario": "income_shift"
     },
     {
-      "incident_id": "005bbc84-abb0-4338-abcf-1bb4656ea339",
-      "run_id": "71851bbc-b79d-45ed-b084-6043d2dc4f1d",
+      "incident_id": "2d803cce-dda0-462f-867f-126d8a0042fe",
+      "run_id": "3feca86f-62ec-47f4-882f-30f1859496b9",
       "category": "drift",
       "severity": "high",
       "status": "open",
@@ -731,12 +731,12 @@
         "total_variation": 0.26063,
         "degrees_of_freedom": 1
       },
-      "created_at": "2026-10-12T19:44:16.667796+01:00",
+      "created_at": "2026-10-13T15:24:47.319192+01:00",
       "scenario": "income_shift"
     },
     {
-      "incident_id": "1f27dc13-a3f4-4feb-9361-813b370e5f29",
-      "run_id": "71851bbc-b79d-45ed-b084-6043d2dc4f1d",
+      "incident_id": "b4d82d32-52fe-4716-8a26-bd8fa6f2a741",
+      "run_id": "3feca86f-62ec-47f4-882f-30f1859496b9",
       "category": "drift",
       "severity": "high",
       "status": "open",
@@ -755,12 +755,12 @@
         "reference_median": 46083.81,
         "relative_median_change": 0.4694
       },
-      "created_at": "2026-10-12T19:44:16.667796+01:00",
+      "created_at": "2026-10-13T15:24:47.319192+01:00",
       "scenario": "income_shift"
     },
     {
-      "incident_id": "86d2b1cd-aba9-4ba5-9e12-f515133f7e70",
-      "run_id": "2aad9305-99c0-4353-91df-d6005c88beba",
+      "incident_id": "5e35bc02-e9e2-4d0f-b0aa-f3fd6b1c6d80",
+      "run_id": "0b12f3a5-1651-4740-bb5f-567680a1c81b",
       "category": "drift",
       "severity": "high",
       "status": "open",
@@ -778,12 +778,12 @@
         "reference_rows": 90817,
         "rate_difference": 0.13176
       },
-      "created_at": "2026-10-12T19:44:13.600924+01:00",
+      "created_at": "2026-10-13T15:24:43.103786+01:00",
       "scenario": "missing_income"
     },
     {
-      "incident_id": "930e6268-cb37-45ee-9499-3893ee7b6ab2",
-      "run_id": "2aad9305-99c0-4353-91df-d6005c88beba",
+      "incident_id": "fba8563f-2ff4-4d93-beee-2980481620d0",
+      "run_id": "0b12f3a5-1651-4740-bb5f-567680a1c81b",
       "category": "drift",
       "severity": "high",
       "status": "open",
@@ -801,7 +801,7 @@
         "reference_rows": 90817,
         "rate_difference": 0.18953
       },
-      "created_at": "2026-10-12T19:44:13.600924+01:00",
+      "created_at": "2026-10-13T15:24:43.103786+01:00",
       "scenario": "missing_income"
     }
   ],
