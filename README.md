@@ -7,23 +7,34 @@ fault it can actually see.**
 [![CI](https://img.shields.io/github/actions/workflow/status/pablowilliams/datasentinel/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/pablowilliams/datasentinel/actions/workflows/ci.yml)
 [![licence: MIT](https://img.shields.io/badge/licence-MIT-15181d?style=flat-square)](LICENSE)
 
-[**Open the dashboard →**](https://pablowilliams.github.io/datasentinel/)
-It is a committed snapshot of one pipeline run, not a live console: GitHub Pages
-serves files rather than processes. Every figure on it was produced by the code
-in `src/`.
+[**Open the dashboard →**](https://pablowilliams.github.io/datasentinel/) ·
+[Architecture](docs/architecture.md) ·
+[Decision records](#documentation) ·
+[Limitations](#limitations)
 
-DataSentinel watches a daily batch of loan applications. It loads them, checks them
-against declared rules, compares the population against a reference window, and
-raises incidents that state what was expected, what arrived, and how much data is
-affected.
+### In short
 
-Built with: Python 3.12 · PostgreSQL 17 · pandas · SciPy · scikit-learn · pytest
+DataSentinel watches a daily batch of loan applications: it loads them, checks
+them against declared rules, compares the population against a reference window,
+scores an approval model on them, and raises incidents that say what was expected
+and what arrived.
 
-Installed and planned but **not yet used by any code**: dbt, FastAPI, Streamlit.
-See [State of the work](#state-of-the-work) before taking the architecture
-diagram as a description of what runs.
+**It is characterised by the smallest fault it can see, not by its recall.**
+Detection floors: duplicates from 0.2% of a batch, missing income from 5%, rows
+lost upstream from 30%, a pure population shift only from 15%. That last figure
+is a real limitation and it is stated rather than buried.
 
-## The number that matters is not the recall
+**The finding worth the click:** under a population shift the model's ranking
+survives and its probabilities come loose, so a monitor watching AUC alone
+reports a good day while the model approves the wrong people.
+
+![ROC AUC and calibration error across one week; on the income_shift day AUC rises to 0.810 while calibration error jumps from about 0.03 to 0.156](docs/images/model-decay.png)
+
+Synthetic data throughout, so this is a test of the wiring and not of the world.
+Python 3.12, PostgreSQL 17, pandas, SciPy, scikit-learn, 114 tests. No dbt,
+FastAPI or Docker yet; see [what is built](#what-is-built-and-what-is-not).
+
+## What it detects, and from how small
 
 Across 720 scenario-days, twelve scenarios over sixty days:
 
@@ -55,7 +66,43 @@ The missing-income floor of 5% is not a coincidence: it is the configured
 threshold, and detection climbs from 14% to 100% across the three points either
 side of it. That is what a correctly calibrated check looks like.
 
-## Three things measurement changed
+## Run it
+
+Needs PostgreSQL on localhost. `brew services start postgresql@17`, then
+`createdb datasentinel`.
+
+`requirements.txt` lists only what the code imports. Packages for work that is
+planned but unwritten are in `requirements-planned.txt`, so nobody installs
+400MB of dbt, FastAPI and Streamlit to run a test suite that uses none of it.
+
+```bash
+make install        # venv and dependencies
+make init           # schema plus 90 days of healthy reference data
+make demo           # a healthy run, then three different failures
+make evaluate       # score detection across every scenario
+make sensitivity    # find the smallest fault reliably caught
+make test           # 114 tests
+```
+
+Model monitoring:
+
+```bash
+make train-model    # train the approval classifier on healthy history
+make monitor-model  # score recent batches, record to model_metrics
+make decay          # does detected drift correspond to model damage?
+```
+
+Individual runs:
+
+```bash
+.venv/bin/python -m datasentinel.cli scenarios
+.venv/bin/python -m datasentinel.cli run --scenario income_shift --day 2026-10-12
+```
+
+Machine-readable results land in `results/evaluation.json` and
+`results/sensitivity.json`, and `results/model_decay.json`.
+
+## Where measurement changed the design
 
 **The volume floor could not see a quarter of the data go missing.** The original
 `min_ratio` of 0.70 caught a 30% row loss on 58% of days and a 25% loss on 23%.
@@ -96,7 +143,7 @@ because it is cheap and protects the system if the effect gates are ever loosene
 and it is documented as redundant at current thresholds rather than advertised as
 an improvement.
 
-## Two gates, both of which must open
+## How a drift finding is decided
 
 Data quality asks whether the data is valid. Drift asks whether it still describes
 the same world. A batch can pass every rule and be a different population.
@@ -117,7 +164,7 @@ up it stops protecting anything: the p-value falls through the floor while the
 shift stays at a tenth of a PSI point, true and significant and of no consequence
 to anybody.
 
-## The model being monitored, and what breaks first
+## Model monitoring
 
 A logistic regression predicts the approval decision. Deliberately plain: the
 project is about whether the platform notices a model going wrong, and
@@ -201,7 +248,7 @@ also absorbs the fact that a 470-row Saturday measures calibration less precisel
 than a 1,200-row Wednesday. The silent-failure count fell from 10 in 140 to 5 in
 196, and the ones that remain are real.
 
-## Benign scenarios are what make precision mean anything
+## Why there are benign scenarios
 
 Three of the twelve scenarios change without being wrong, and the correct
 behaviour is silence:
@@ -224,7 +271,7 @@ carries a sampling error of about 2.3 points, and a 6.7-point deviation is a 2.9
 sigma day. That is noise behaving as noise, not a bug, and it has not been tuned
 away.
 
-## What these numbers are, and are not
+## What these numbers are not
 
 Injected faults on synthetic data, detected by rules the same author configured.
 That is a real test of the wiring and a weak test of the world. The generator and
@@ -261,43 +308,7 @@ silence is the one outcome a monitoring platform must never produce about itself
 Checks and drift gates live in `config/*.yml`. Adding a rule never means editing
 the pipeline.
 
-## Running it
-
-Needs PostgreSQL on localhost. `brew services start postgresql@17`, then
-`createdb datasentinel`.
-
-`requirements.txt` lists only what the code imports. Packages for work that is
-planned but unwritten are in `requirements-planned.txt`, so nobody installs
-400MB of dbt, FastAPI and Streamlit to run a test suite that uses none of it.
-
-```bash
-make install        # venv and dependencies
-make init           # schema plus 90 days of healthy reference data
-make demo           # a healthy run, then three different failures
-make evaluate       # score detection across every scenario
-make sensitivity    # find the smallest fault reliably caught
-make test           # 114 tests
-```
-
-Model monitoring:
-
-```bash
-make train-model    # train the approval classifier on healthy history
-make monitor-model  # score recent batches, record to model_metrics
-make decay          # does detected drift correspond to model damage?
-```
-
-Individual runs:
-
-```bash
-.venv/bin/python -m datasentinel.cli scenarios
-.venv/bin/python -m datasentinel.cli run --scenario income_shift --day 2026-10-12
-```
-
-Machine-readable results land in `results/evaluation.json` and
-`results/sensitivity.json`, and `results/model_decay.json`.
-
-## State of the work
+## What is built and what is not
 
 Built and measured: the generator with twelve scenarios, ingestion with run
 tracking and idempotency, nine check types driven by YAML, drift across numeric,
@@ -343,7 +354,7 @@ dbt models were "scaffolded but empty" when the directory holds no files at all:
   - [0007](docs/decisions/0007-the-published-dashboard-is-static.md) why the
     published dashboard is a snapshot
 
-## Limitations worth stating before an interviewer finds them
+## Limitations
 
 - Synthetic data throughout. No claim here transfers to a real pipeline.
 - The faults were injected by the author and the thresholds set by the author.

@@ -3,3 +3,4 @@ pytest-cov
 hypothesis
 ruff
 mypy
+matplotlib  # docs only: scripts/make_readme_chart.py

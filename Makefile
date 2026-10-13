@@ -50,3 +50,6 @@ site:  ## rebuild the published dashboard's data from a real pipeline run
 
 serve-site:  ## preview the dashboard locally
 	$(VENV)/python -m http.server 8787 --directory site
+
+chart:  ## regenerate the README chart from the exported snapshot
+	$(VENV)/python scripts/make_readme_chart.py
